@@ -20,7 +20,7 @@ extension String {
         // Alerts
         //*************************
     
-        static var noConnection: String { return "ST_NO_CONECTION".localized }
+        static var noConnection: String { return "NO_CONECTION_ERROR".localized }
     }
 }
 

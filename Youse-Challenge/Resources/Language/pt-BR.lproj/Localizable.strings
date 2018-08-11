@@ -5,3 +5,10 @@
   Created by Michael Douglas on 10/08/18.
   Copyright © 2018 Michael Douglas. All rights reserved.
 */
+
+//*************************
+// Error
+//*************************
+
+"SERVER_ERROR" = "Serviço Indisponível. Por favor, tente novamente mais tarde.";
+"NO_CONNECTION_ERROR" = "Sem conexão disponível. Por favor, verifique sua conectividade e tente novamente.";

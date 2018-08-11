@@ -24,9 +24,8 @@ typealias NetworkResult = (NetworkResponse) -> Void
 enum NetworkResponse {
     
     enum Error: String {
-        case unkown = "ST_SERVER_ERROR"
-        case serviceUnavailable = "ST_SERVICE_UNAVAILABLE"
-        case noConnection = "ST_NO_CONNECTION"
+        case serverError = "SERVER_ERROR"
+        case noConnection = "NO_CONNECTION_ERROR"
     }
     
     case success
@@ -53,17 +52,15 @@ enum NetworkResponse {
         
         if let httpResponse = response {
             switch httpResponse.statusCode {
-            case 200..<300:
+            case 200 ..< 300:
                 self = .success
-            case 503:
-                self = .error(.serviceUnavailable)
             default:
-                self = .error(.unkown)
+                self = .error(.serverError)
             }
         } else if NetworkReachabilityManager()?.isReachable == false {
             self = .error(.noConnection)
         } else {
-            self = .error(.unkown)
+            self = .error(.serverError)
         }
     }
 }

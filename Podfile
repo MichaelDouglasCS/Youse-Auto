@@ -7,6 +7,7 @@ target 'Youse-Challenge' do
 
   # Pods for Youse-Challenge
   pod 'SwiftLint'
+  pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 4.7'
 
   target 'Youse-ChallengeTests' do

@@ -18,9 +18,9 @@
 		61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC0211E58DE009BB88A /* NetworkService.swift */; };
 		61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */; };
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
+		61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC9211E8A37009BB88A /* NetworkTests.swift */; };
 		61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0B9D211E33B400D28BDA /* AppDelegate.swift */; };
 		61DC0BA5211E33B600D28BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DC0BA4211E33B600D28BDA /* Assets.xcassets */; };
-		61DC0BB3211E33B600D28BDA /* Youse_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BB2211E33B600D28BDA /* Youse_ChallengeTests.swift */; };
 		61DC0BBE211E33B600D28BDA /* Youse_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* Youse_ChallengeUITests.swift */; };
 		A4ADB6922D38D418B0EFC970 /* Pods_Youse_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D387A5F6C075383D5B491CC /* Pods_Youse_Challenge.framework */; };
 /* End PBXBuildFile section */
@@ -58,12 +58,12 @@
 		61BD1BC0211E58DE009BB88A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		61BD1BC5211E5CDB009BB88A /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		61BD1BC9211E8A37009BB88A /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		61DC0B9A211E33B400D28BDA /* Youse-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youse-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0B9D211E33B400D28BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DC0BA4211E33B600D28BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61DC0BA9211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DC0BAE211E33B600D28BDA /* Youse-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61DC0BB2211E33B600D28BDA /* Youse_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youse_ChallengeTests.swift; sourceTree = "<group>"; };
 		61DC0BB4211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DC0BB9211E33B600D28BDA /* Youse-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0BBD211E33B600D28BDA /* Youse_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youse_ChallengeUITests.swift; sourceTree = "<group>"; };
@@ -197,6 +197,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		61BD1BC8211E8A18009BB88A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				61BD1BC9211E8A37009BB88A /* NetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		61DC0B91211E33B400D28BDA = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +239,7 @@
 		61DC0BB1211E33B600D28BDA /* Youse-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				61DC0BB2211E33B600D28BDA /* Youse_ChallengeTests.swift */,
+				61BD1BC8211E8A18009BB88A /* Network */,
 				61DC0BB4211E33B600D28BDA /* Info.plist */,
 			);
 			path = "Youse-ChallengeTests";
@@ -483,7 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DC0BB3211E33B600D28BDA /* Youse_ChallengeTests.swift in Sources */,
+				61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,12 +35,21 @@ enum NetworkResponse {
     // MARK: - Public Properties
     //*************************************************
     
+    var isSuccess: Bool {
+        switch self {
+        case .success:
+            return true
+        case .error:
+            return false
+        }
+    }
+    
     var localizedError: String {
         switch self {
+        case .success:
+            return ""
         case .error(let type):
             return type.rawValue.localized
-        default:
-            return ""
         }
     }
 
@@ -75,7 +84,7 @@ enum NetworkRequest {
     
     typealias NetworkContract = (method: HTTPMethod, path: String)
     
-    struct API {
+    private struct API {
         static public let key: String = "AIzaSyApXi8qbjwN_Gv3hsVYS1xehrInSxYVTvo"
         
         static public let base: String = "https://maps.googleapis.com/maps/api"
@@ -84,7 +93,7 @@ enum NetworkRequest {
     
     struct CarRepairShop {
         
-        static func listNearby(to location: CLLocation, withNext next: String?) -> NetworkRequest {
+        static func listNearby(to location: CLLocation, withNext next: String? = nil) -> NetworkRequest {
             
             if let pageToken = next {
                 return .mobile((method: .get, path: "/place/nearbysearch/json?/json?pagetoken=\(pageToken)&key=\(API.key)"))

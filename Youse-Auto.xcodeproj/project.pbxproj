@@ -15,6 +15,7 @@
 		618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11A211E376600CD177E /* LaunchScreen.storyboard */; };
 		618ED11D211E37DE00CD177E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11C211E37DE00CD177E /* Main.storyboard */; };
 		618ED11F211E381B00CD177E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618ED11E211E381B00CD177E /* ViewController.swift */; };
+		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
 		61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC0211E58DE009BB88A /* NetworkService.swift */; };
 		61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */; };
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
@@ -54,6 +55,7 @@
 		618ED11A211E376600CD177E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618ED11C211E37DE00CD177E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		618ED11E211E381B00CD177E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		61BD1BC0211E58DE009BB88A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		61BD1BC5211E5CDB009BB88A /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				61BD1BC5211E5CDB009BB88A /* String+Localized.swift */,
+				6197DB9C211EB92400237222 /* UIColor+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				618ED11F211E381B00CD177E /* ViewController.swift in Sources */,
 				61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */,
+				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
 				618ED119211E36AF00CD177E /* Constants.swift in Sources */,
 			);

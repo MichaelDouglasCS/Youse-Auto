@@ -9,26 +9,14 @@
 import UIKit
 
 //*************************************************
-// MARK: - String iHungry
+// MARK: - String Youse Auto
 //*************************************************
 
 extension String {
     
-    struct iHungry {
-        
-        //*************************
-        // Alerts
-        //*************************
-    
+    struct YouseAuto {
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
     }
-}
-
-//*************************************************
-// MARK: - String Localized
-//*************************************************
-
-extension String {
     
     //*************************************************
     // MARK: - Public Properties

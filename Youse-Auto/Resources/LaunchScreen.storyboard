@@ -19,8 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="du6-z5-JOr">
-                                <rect key="frame" x="50" y="324.66666666666669" width="275" height="173"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome-background" translatesAutoresizingMaskIntoConstraints="NO" id="Oqe-3P-Zyy" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="du6-z5-JOr">
+                                <rect key="frame" x="50" y="154" width="275" height="168"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-car-logo" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-RG-pLg">
                                         <rect key="frame" x="71" y="0.0" width="133" height="100"/>
@@ -31,7 +34,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youse Auto" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                        <rect key="frame" x="43.000000000000014" y="130" width="189.33333333333337" height="43"/>
+                                        <rect key="frame" x="43.000000000000014" y="125" width="189.33333333333337" height="43"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -39,11 +42,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.29803921568627451" green="0.058823529411764705" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Oqe-3P-Zyy" secondAttribute="bottom" id="9pL-kg-CLx"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="du6-z5-JOr" secondAttribute="trailing" constant="50" id="A33-nv-NyC"/>
-                            <constraint firstItem="du6-z5-JOr" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="FSb-WQ-b5d"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Oqe-3P-Zyy" secondAttribute="trailing" id="Wgj-oJ-1dz"/>
                             <constraint firstItem="du6-z5-JOr" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="50" id="bNp-gh-qK5"/>
+                            <constraint firstItem="du6-z5-JOr" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="110" id="bk2-ve-6fj"/>
+                            <constraint firstItem="Oqe-3P-Zyy" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="iMx-R5-Hki"/>
+                            <constraint firstItem="Oqe-3P-Zyy" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="stQ-3p-uzh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
@@ -55,5 +61,6 @@
     </scenes>
     <resources>
         <image name="icon-car-logo" width="1344" height="1008"/>
+        <image name="welcome-background" width="1125" height="2436"/>
     </resources>
 </document>

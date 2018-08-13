@@ -75,10 +75,10 @@ enum NetworkResponse {
 }
 
 //*************************************************
-// MARK: - NetworkRequest
+// MARK: - NetworkService
 //*************************************************
 
-enum NetworkRequest {
+enum NetworkService {
     
     case mobile(NetworkContract)
     
@@ -91,9 +91,10 @@ enum NetworkRequest {
         static public var mobile: String = API.base
     }
     
-    struct CarRepairShop {
+    struct CarRepair {
         
-        static func listNearby(to location: CLLocation, withNext next: String? = nil) -> NetworkRequest {
+        static func listNearby(to location: CLLocation,
+                               nextPage next: String? = nil) -> NetworkService {
             
             if let pageToken = next {
                 return .mobile((method: .get, path: "/place/nearbysearch/json?/json?pagetoken=\(pageToken)&key=\(API.key)"))
@@ -120,7 +121,7 @@ enum NetworkRequest {
     var path: String {
         switch self {
         case .mobile(let contract):
-            return NetworkRequest.API.mobile + contract.path
+            return NetworkService.API.mobile + contract.path
         }
     }
     
@@ -128,6 +129,12 @@ enum NetworkRequest {
     // MARK: - Public Methods
     //*************************************************
     
+    /// This method is used to execute requests
+    ///
+    /// - Parameters:
+    ///   - aPath: Custom Path for your Request.
+    ///   - params: Params of your Request
+    ///   - completion: This method produces (JSON, NetworkResponse) -> Void
     func execute(path: String? = nil,
                  params: [String: Any]? = nil,
                  completion: @escaping (JSON, NetworkResponse) -> Void) {

@@ -17,29 +17,56 @@ class CarRepairsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    var viewModel: CarRepairsViewModel!
+    
+    //*************************************************
     // MARK: - Lifecycle
     //*************************************************
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Inject Self VM
+        self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
+        
+        // Load Data
+        self.viewModel.loadCarRepairs { (isSuccess, error) in
+            
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+}
 
+//*************************************************
+// MARK: - UITableViewDataSource
+//*************************************************
+
+extension CarRepairsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.viewModel.numberOfSections()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return self.viewModel.cellForRow(at: indexPath, from: tableView)
+    }
+}
+
+//*************************************************
+// MARK: - UITableViewDelegate
+//*************************************************
+
+extension CarRepairsViewController: UITableViewDelegate {
+    
 }

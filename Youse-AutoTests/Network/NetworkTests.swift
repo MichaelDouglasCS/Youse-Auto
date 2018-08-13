@@ -33,7 +33,7 @@ class NetworkTests: XCTestCase {
         let expectation = self.expectation(description: #function)
         let location = CLLocation(latitude: 37.3330499, longitude: -122.0110933)
         
-        NetworkRequest.CarRepairShop.listNearby(to: location).execute { (_, response) in
+        NetworkService.CarRepair.listNearby(to: location).execute { (_, response) in
             XCTAssertTrue(response.isSuccess, "Response should be success")
             expectation.fulfill()
         }
@@ -45,7 +45,7 @@ class NetworkTests: XCTestCase {
         let expectation = self.expectation(description: #function)
         let location = CLLocation(latitude: 37.3330499, longitude: -122.0110933)
         
-        NetworkRequest.CarRepairShop.listNearby(to: location).execute { (json, _) in
+        NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             XCTAssertFalse(json.isEmpty, "JSON should be not empty")
             expectation.fulfill()
         }
@@ -57,12 +57,12 @@ class NetworkTests: XCTestCase {
         let expectation = self.expectation(description: #function)
         let location = CLLocation(latitude: 37.3330499, longitude: -122.0110933)
         
-        NetworkRequest.CarRepairShop.listNearby(to: location).execute { (json, _) in
-            let pageNextToken = json["next_page_token"].string
-            XCTAssertNotNil(pageNextToken, "Page Next Token should be not nil")
+        NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
+            let nextPage = json["next_page_token"].string
+            XCTAssertNotNil(nextPage, "Next Page Token should be not nil")
             
-            NetworkRequest.CarRepairShop.listNearby(to: location,
-                                                    withNext: pageNextToken).execute { (json, _) in
+            NetworkService.CarRepair.listNearby(to: location,
+                                                    nextPage: nextPage).execute { (json, _) in
                 XCTAssertFalse(json.isEmpty, "JSON should be not empty")
                 expectation.fulfill()
             }

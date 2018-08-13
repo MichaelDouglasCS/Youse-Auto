@@ -15,6 +15,10 @@ class CarRepairsViewModel: NSObject {
     // MARK: - Public Properties
     //*************************************************
     
+    public var navigationTitle: String {
+        return Constants.carRepairs
+    }
+    
     //*************************************************
     // MARK: - Private Properties
     //*************************************************

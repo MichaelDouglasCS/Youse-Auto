@@ -10,4 +10,9 @@ import Foundation
 
 enum Constants {
     
+    //*************************************************
+    // MARK: - Car Repairs
+    //*************************************************
+    
+    static var carRepairs: String { return "CAR_REPAIRS".localized }
 }

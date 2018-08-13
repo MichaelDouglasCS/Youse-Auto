@@ -35,8 +35,14 @@ class CarRepairsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Status Bar Style
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
+        
+        // Navigation
+        self.navigationItem.title = self.viewModel.navigationTitle
         
         // Setup Refresh Control
         self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)

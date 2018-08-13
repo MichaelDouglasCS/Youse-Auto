@@ -10,6 +10,7 @@
 		3CD6793AB7C9C6E7CF276A12 /* Pods_Youse_Auto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7640DFC29928464D19C741C /* Pods_Youse_Auto.framework */; };
 		57E7443A63668A22E7AFEB05 /* Pods_Youse_AutoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3BBF96427D0A5EA265D9B3 /* Pods_Youse_AutoTests.framework */; };
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
+		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
 		617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617E4FA82120C49300C6057F /* CarRepairs.storyboard */; };
 		617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */; };
 		617E4FAF2120C5B700C6057F /* CarRepairsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FAE2120C5B700C6057F /* CarRepairsViewModel.swift */; };
@@ -26,7 +27,6 @@
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
 		61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC9211E8A37009BB88A /* NetworkTests.swift */; };
 		61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0B9D211E33B400D28BDA /* AppDelegate.swift */; };
-		61DC0BA5211E33B600D28BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DC0BA4211E33B600D28BDA /* Assets.xcassets */; };
 		61DC0BBE211E33B600D28BDA /* Youse_AutoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */; };
 		78E89692591F7E11B154F07E /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A4470C89C6AFCA2F90D069 /* Pods_Youse_AutoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +54,7 @@
 		42F3EE92F5A6DBB8D7EB4533 /* Pods-Youse-AutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.release.xcconfig"; sourceTree = "<group>"; };
 		4CD7E28A071A3478212FC18C /* Pods-Youse-Auto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.release.xcconfig"; sourceTree = "<group>"; };
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E4FA82120C49300C6057F /* CarRepairs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarRepairs.storyboard; sourceTree = "<group>"; };
 		617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsViewController.swift; sourceTree = "<group>"; };
 		617E4FAE2120C5B700C6057F /* CarRepairsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsViewModel.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		61BD1BC9211E8A37009BB88A /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		61DC0B9A211E33B400D28BDA /* Youse-Auto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youse-Auto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0B9D211E33B400D28BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61DC0BA4211E33B600D28BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61DC0BA9211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DC0BAE211E33B600D28BDA /* Youse-AutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0BB4211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		618ED109211E34CF00CD177E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				61DC0BA4211E33B600D28BDA /* Assets.xcassets */,
+				617ABB2A21220364001B6D73 /* Assets.xcassets */,
 				618ED11A211E376600CD177E /* LaunchScreen.storyboard */,
 				618ED10B211E350700CD177E /* Language */,
 				618ED10C211E351000CD177E /* Supporting Files */,
@@ -434,7 +434,7 @@
 				618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */,
 				617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */,
 				618ED113211E362400CD177E /* Localizable.strings in Resources */,
-				61DC0BA5211E33B600D28BDA /* Assets.xcassets in Resources */,
+				617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

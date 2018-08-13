@@ -23,6 +23,12 @@ class CarRepairsViewController: UIViewController {
     var viewModel: CarRepairsViewModel!
     
     //*************************************************
+    // MARK: - Private Properties
+    //*************************************************
+    
+    private let refreshControl = UIRefreshControl()
+    
+    //*************************************************
     // MARK: - Lifecycle
     //*************************************************
 
@@ -32,15 +38,38 @@ class CarRepairsViewController: UIViewController {
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         
+        // Setup Refresh Control
+        self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        self.tableView.refreshControl = self.refreshControl
+        
         // Load Data
-        self.viewModel.loadCarRepairs { (isSuccess, error) in
-            self.tableView.reloadSections([0], with: .automatic)
-        }
+        self.loadData { }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    //*************************************************
+    // MARK: - Private Methods
+    //*************************************************
+    
+    private func loadData(completion: @escaping () -> Void) {
+        self.viewModel.loadCarRepairs { (isSuccess, error) in
+            self.tableView.reloadSections([0], with: .automatic)
+            completion()
+        }
+    }
+    
+    @objc private func refreshData() {
+        self.loadData {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 

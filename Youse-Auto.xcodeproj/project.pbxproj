@@ -212,6 +212,7 @@
 			children = (
 				61BD1BC4211E5CBB009BB88A /* Extensions */,
 				618ED117211E36A200CD177E /* Utils */,
+				61B88310212145EC00B6A5B7 /* Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -222,6 +223,13 @@
 				618ED118211E36AF00CD177E /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		61B88310212145EC00B6A5B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		61BD1BC4211E5CBB009BB88A /* Extensions */ = {

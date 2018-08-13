@@ -29,7 +29,9 @@ class CarRepairsProvider: NSObject {
             
             switch response {
             case .success:
-                completion("", nil)
+                let nextPage = json["next_page_token"].string
+                
+                completion(nextPage, nil)
             case .error(let error):
                 completion(nil, error.rawValue.localized)
             }

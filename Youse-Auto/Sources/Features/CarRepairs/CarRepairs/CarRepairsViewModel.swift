@@ -21,6 +21,7 @@ class CarRepairsViewModel: NSObject {
     
     private var provider: CarRepairsProvider
     private var nextPage: String?
+    private var carRepairs: [CarRepair] = []
     
     //*************************************************
     // MARK: - Inits
@@ -36,13 +37,14 @@ class CarRepairsViewModel: NSObject {
     
     /// This method is used to load a list of Car Repairs
     ///
-    /// - Parameter completion: This method produces (isSuccess: Bool, error: String) -> Void
-    func loadCarRepairs(completion: @escaping (_ isSuccess: Bool, _ error: String) -> Void) {
-        let location = CLLocation(latitude: 37.3330499, longitude: -122.0110933)
+    /// - Parameter completion: This method produces (isSuccess: Bool, localizedError: String?) -> Void
+    func loadCarRepairs(completion: @escaping (_ isSuccess: Bool, _ error: String?) -> Void) {
+        let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
         
-        self.provider.loadCarRepairs(by: location, nextPage: self.nextPage) { (nextPage, error) in
+        self.provider.loadCarRepairs(by: location) { (carRepairs, nextPage, localizedError) in
+            self.carRepairs = carRepairs
             self.nextPage = nextPage
-            completion(self.nextPage != nil, error ?? "")
+            completion(localizedError == nil, localizedError)
         }
     }
     
@@ -51,10 +53,12 @@ class CarRepairsViewModel: NSObject {
     }
     
     func numberOfRows() -> Int {
-        return 1
+        return self.carRepairs.count
     }
     
     func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "CarRepairCell")
+        cell.textLabel?.text = self.carRepairs[indexPath.row].name
+        return cell
     }
 }

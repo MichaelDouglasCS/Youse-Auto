@@ -20,6 +20,7 @@
 		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
 		61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830A21211DB300B6A5B7 /* CarRepair.swift */; };
 		61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830C21212BCE00B6A5B7 /* Photo.swift */; };
+		61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830E2121377D00B6A5B7 /* Double+Utils.swift */; };
 		61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC0211E58DE009BB88A /* NetworkService.swift */; };
 		61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */; };
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
@@ -64,6 +65,7 @@
 		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		61B8830A21211DB300B6A5B7 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
 		61B8830C21212BCE00B6A5B7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		61B8830E2121377D00B6A5B7 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
 		61BD1BC0211E58DE009BB88A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		61BD1BC5211E5CDB009BB88A /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		61BD1BC4211E5CBB009BB88A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				61B8830E2121377D00B6A5B7 /* Double+Utils.swift */,
 				61BD1BC5211E5CDB009BB88A /* String+Localized.swift */,
 				6197DB9C211EB92400237222 /* UIColor+Style.swift */,
 			);
@@ -525,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */,

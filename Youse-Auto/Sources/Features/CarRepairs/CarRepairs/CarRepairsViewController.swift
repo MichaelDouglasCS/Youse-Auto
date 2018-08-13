@@ -34,7 +34,7 @@ class CarRepairsViewController: UIViewController {
         
         // Load Data
         self.viewModel.loadCarRepairs { (isSuccess, error) in
-            
+            self.tableView.reloadSections([0], with: .automatic)
         }
     }
 

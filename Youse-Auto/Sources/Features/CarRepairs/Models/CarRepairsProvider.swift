@@ -12,6 +12,12 @@ import CoreLocation
 class CarRepairsProvider: NSObject {
     
     //*************************************************
+    // MARK: - Definitions
+    //*************************************************
+    
+    typealias CarRepairsResponse = (_ carRepairs: [CarRepair], _ nextPage: String?, _ localizedError: String?) -> Void
+    
+    //*************************************************
     // MARK: - Public Methods
     //*************************************************
     
@@ -23,17 +29,25 @@ class CarRepairsProvider: NSObject {
     ///   - completion: This method produces (nextPage: String?, localizedError: String?) -> Void
     func loadCarRepairs(by location: CLLocation,
                         nextPage next: String? = nil,
-                        completion: @escaping (_ nextPage: String?, _ localizedError: String?) -> Void) {
+                        completion: @escaping CarRepairsResponse) {
         
         NetworkService.CarRepair.listNearby(to: location, nextPage: next).execute { (json, response) in
             
             switch response {
             case .success:
+                var carRepairs: [CarRepair] = []
                 let nextPage = json["next_page_token"].string
                 
-                completion(nextPage, nil)
+                json["results"].array?.forEach({ (carRepairJSON) in
+                    
+                    if let carRepair = CarRepair(json: carRepairJSON) {
+                        carRepairs.append(carRepair)
+                    }
+                })
+                
+                completion(carRepairs, nextPage, nil)
             case .error(let error):
-                completion(nil, error.rawValue.localized)
+                completion([], nil, error.rawValue.localized)
             }
         }
     }

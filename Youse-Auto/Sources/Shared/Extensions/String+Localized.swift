@@ -25,4 +25,8 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: self)
     }
+    
+    func nsRange(from range: Range<Index>) -> NSRange {
+        return NSRange(range, in: self)
+    }
 }

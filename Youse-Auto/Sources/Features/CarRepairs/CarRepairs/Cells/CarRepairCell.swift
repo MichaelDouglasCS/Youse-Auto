@@ -14,46 +14,25 @@ class CarRepairCell: UITableViewCell {
     // MARK: - Outlets
     //*************************************************
     
-    @IBOutlet weak var customImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var availabilityLabel: UILabel!
-    
-    //*************************************************
-    // MARK: - Public Properties
-    //*************************************************
-    
-    var viewModel: CarRepairCellViewModel!
+    @IBOutlet weak private var customImageView: UIImageView!
+    @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak private var ratingLabel: UILabel!
+    @IBOutlet weak private var addressLabel: UILabel!
+    @IBOutlet weak private var availabilityLabel: UILabel!
 
-    //*************************************************
-    // MARK: - Lifecycle
-    //*************************************************
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     //*************************************************
     // MARK: - Public Methods
     //*************************************************
     
     func setup(with viewModel: CarRepairCellViewModel) {
-        self.viewModel = viewModel
         
-        if let imageURL = self.viewModel.imageURL {
+        if let imageURL = viewModel.imageURL {
             self.customImageView.load(from: imageURL)
         }
         
-        self.nameLabel.text = self.viewModel.name
-        self.ratingLabel.text = self.viewModel.rating
-        self.addressLabel.text = self.viewModel.address
+        self.nameLabel.text = viewModel.name
+        self.ratingLabel.text = viewModel.rating
+        self.addressLabel.attributedText = viewModel.address
+        self.availabilityLabel.attributedText = viewModel.availability
     }
 }

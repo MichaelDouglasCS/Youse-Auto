@@ -14,7 +14,7 @@ class CarRepairsViewController: UIViewController {
     // MARK: - Outlets
     //*************************************************
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     
     //*************************************************
     // MARK: - Public Properties
@@ -104,4 +104,7 @@ extension CarRepairsViewController: UITableViewDataSource {
 
 extension CarRepairsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.viewModel.heightForRow(at: indexPath)
+    }
 }

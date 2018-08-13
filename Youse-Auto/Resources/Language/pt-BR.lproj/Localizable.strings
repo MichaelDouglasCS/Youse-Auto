@@ -11,6 +11,9 @@
 //*************************
 
 "CAR_REPAIRS" = "Oficinas Mecânicas";
+"ADDRESS" = "Endereço";
+"OPENED" = "Aberto";
+"CLOSED" = "Fechado";
 
 //*************************
 // Error

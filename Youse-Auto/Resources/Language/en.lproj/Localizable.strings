@@ -11,6 +11,9 @@
 //*************************
 
 "CAR_REPAIRS" = "Car Repairs";
+"ADDRESS" = "Address";
+"OPENED" = "Opened";
+"CLOSED" = "Closed";
 
 //*************************
 // Error

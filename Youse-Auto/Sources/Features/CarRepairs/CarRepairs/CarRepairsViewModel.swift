@@ -25,7 +25,7 @@ class CarRepairsViewModel: NSObject {
     
     private var provider: CarRepairsProvider
     private var nextPage: String?
-    private var carRepairs: [CarRepair] = []
+    private var cellViewModels: [CarRepairCellViewModel] = []
     
     //*************************************************
     // MARK: - Inits
@@ -46,8 +46,12 @@ class CarRepairsViewModel: NSObject {
         let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
         
         self.provider.loadCarRepairs(by: location) { (carRepairs, nextPage, localizedError) in
-            self.carRepairs = carRepairs
             self.nextPage = nextPage
+            
+            carRepairs.forEach({ (carRepair) in
+                self.cellViewModels.append(CarRepairCellViewModel(carRepair: carRepair))
+            })
+            
             completion(localizedError == nil, localizedError)
         }
     }
@@ -57,12 +61,18 @@ class CarRepairsViewModel: NSObject {
     }
     
     func numberOfRows() -> Int {
-        return self.carRepairs.count
+        return self.cellViewModels.count
     }
     
     func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "CarRepairCell")
-        cell.textLabel?.text = self.carRepairs[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self), for: indexPath) as? CarRepairCell else { return UITableViewCell() }
+        
+        cell.setup(with: self.cellViewModels[indexPath.row])
+        
         return cell
+    }
+    
+    func heightForRow(at indexPath: IndexPath) -> CGFloat {
+        return self.cellViewModels[indexPath.row].height
     }
 }

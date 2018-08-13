@@ -27,8 +27,8 @@ class Photo: NSObject {
     init?(json: JSON) {
         guard let id = json["photo_reference"].string, !id.isEmpty else { return nil }
         
-        self.id = id
-        self.width = json["width"].int
+        self.id     = id
+        self.width  = json["width"].int
         self.height = json["height"].int
         
         let path = NetworkService.CarRepair.loadImage(fromReferenceID: id,

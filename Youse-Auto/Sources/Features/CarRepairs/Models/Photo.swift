@@ -16,8 +16,9 @@ class Photo: NSObject {
     //*************************************************
     
     var id: String?
-    var height: Int?
     var width: Int?
+    var height: Int?
+    var url: URL?
     
     //*************************************************
     // MARK: - Inits
@@ -27,7 +28,12 @@ class Photo: NSObject {
         guard let id = json["photo_reference"].string, !id.isEmpty else { return nil }
         
         self.id = id
-        self.height = json["height"].int
         self.width = json["width"].int
+        self.height = json["height"].int
+        
+        let path = NetworkService.CarRepair.loadImage(fromReferenceID: id,
+                                                      width: self.width ?? 400,
+                                                      height: self.height).path
+        self.url = URL(string: path)
     }
 }

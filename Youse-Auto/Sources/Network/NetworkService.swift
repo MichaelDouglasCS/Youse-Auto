@@ -105,6 +105,20 @@ enum NetworkService {
 
             return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
         }
+        
+        static func loadImage(fromReferenceID referenceID: String,
+                              width: Int,
+                              height: Int?) -> NetworkService {
+            var path = "/place/photo?maxwidth=\(width)&"
+            
+            if let height = height {
+                path.append("maxheight=\(height)&")
+            }
+            
+            path.append("photoreference=\(referenceID)&key=\(API.key)")
+            
+            return .mobile((method: .get, path: path))
+        }
     }
     
     //*************************************************

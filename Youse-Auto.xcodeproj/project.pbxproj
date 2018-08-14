@@ -13,11 +13,8 @@
 		610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */; };
 		610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB82122B95000491CF7 /* CosmosSize.swift */; };
 		610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB92122B95000491CF7 /* CosmosLayers.swift */; };
-		610B8DCA2122B95000491CF7 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */; };
-		610B8DCC2122B95000491CF7 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBC2122B95000491CF7 /* CosmosTouch.swift */; };
 		610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBD2122B95000491CF7 /* CosmosRating.swift */; };
 		610B8DCE2122B95000491CF7 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBE2122B95000491CF7 /* CosmosSettings.swift */; };
-		610B8DCF2122B95000491CF7 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */; };
 		610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC12122B95000491CF7 /* RightToLeft.swift */; };
 		610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC22122B95000491CF7 /* CosmosView.swift */; };
 		610B8DD321233E8600491CF7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */; };
@@ -76,11 +73,8 @@
 		610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDefaultSettings.swift; sourceTree = "<group>"; };
 		610B8DB82122B95000491CF7 /* CosmosSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSize.swift; sourceTree = "<group>"; };
 		610B8DB92122B95000491CF7 /* CosmosLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLayers.swift; sourceTree = "<group>"; };
-		610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLocalizedRating.swift; sourceTree = "<group>"; };
-		610B8DBC2122B95000491CF7 /* CosmosTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouch.swift; sourceTree = "<group>"; };
 		610B8DBD2122B95000491CF7 /* CosmosRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosRating.swift; sourceTree = "<group>"; };
 		610B8DBE2122B95000491CF7 /* CosmosSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSettings.swift; sourceTree = "<group>"; };
-		610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		610B8DC12122B95000491CF7 /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeft.swift; sourceTree = "<group>"; };
 		610B8DC22122B95000491CF7 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
 		610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -174,28 +168,17 @@
 		610B8DB22122B95000491CF7 /* Cosmos */ = {
 			isa = PBXGroup;
 			children = (
-				610B8DB32122B95000491CF7 /* StarFillMode.swift */,
-				610B8DB42122B95000491CF7 /* StarLayer.swift */,
 				610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */,
-				610B8DB82122B95000491CF7 /* CosmosSize.swift */,
 				610B8DB92122B95000491CF7 /* CosmosLayers.swift */,
-				610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */,
-				610B8DBC2122B95000491CF7 /* CosmosTouch.swift */,
 				610B8DBD2122B95000491CF7 /* CosmosRating.swift */,
 				610B8DBE2122B95000491CF7 /* CosmosSettings.swift */,
-				610B8DBF2122B95000491CF7 /* Helpers */,
+				610B8DB82122B95000491CF7 /* CosmosSize.swift */,
 				610B8DC22122B95000491CF7 /* CosmosView.swift */,
+				610B8DC12122B95000491CF7 /* RightToLeft.swift */,
+				610B8DB32122B95000491CF7 /* StarFillMode.swift */,
+				610B8DB42122B95000491CF7 /* StarLayer.swift */,
 			);
 			path = Cosmos;
-			sourceTree = "<group>";
-		};
-		610B8DBF2122B95000491CF7 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */,
-				610B8DC12122B95000491CF7 /* RightToLeft.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		6155CD6A21222A8E003306FA /* Cells */ = {
@@ -624,14 +607,12 @@
 				610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */,
 				610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */,
 				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
-				610B8DCA2122B95000491CF7 /* CosmosLocalizedRating.swift in Sources */,
 				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,
 				610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */,
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */,
 				61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */,
-				610B8DCF2122B95000491CF7 /* CosmosTouchTarget.swift in Sources */,
 				617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */,
 				610B8DC42122B95000491CF7 /* StarLayer.swift in Sources */,
 				6155CD6921220E9D003306FA /* CustomView.swift in Sources */,
@@ -641,7 +622,6 @@
 				61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */,
 				610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */,
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
-				610B8DCC2122B95000491CF7 /* CosmosTouch.swift in Sources */,
 				610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,

@@ -109,7 +109,7 @@ enum NetworkService {
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
 
-            return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair"))
+            return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
         }
         
         static func loadImage(fromReferenceID referenceID: String,

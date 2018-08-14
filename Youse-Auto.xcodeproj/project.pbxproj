@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CD6793AB7C9C6E7CF276A12 /* Pods_Youse_Auto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7640DFC29928464D19C741C /* Pods_Youse_Auto.framework */; };
-		57E7443A63668A22E7AFEB05 /* Pods_Youse_AutoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3BBF96427D0A5EA265D9B3 /* Pods_Youse_AutoTests.framework */; };
+		1247E0EBE0DC4AF02005FF16 /* Pods_Youse_AutoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CFC6F014EE2B1CA78EEBB2A /* Pods_Youse_AutoTests.framework */; };
+		610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB32122B95000491CF7 /* StarFillMode.swift */; };
+		610B8DC42122B95000491CF7 /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB42122B95000491CF7 /* StarLayer.swift */; };
+		610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */; };
+		610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB82122B95000491CF7 /* CosmosSize.swift */; };
+		610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DB92122B95000491CF7 /* CosmosLayers.swift */; };
+		610B8DCA2122B95000491CF7 /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */; };
+		610B8DCC2122B95000491CF7 /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBC2122B95000491CF7 /* CosmosTouch.swift */; };
+		610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBD2122B95000491CF7 /* CosmosRating.swift */; };
+		610B8DCE2122B95000491CF7 /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DBE2122B95000491CF7 /* CosmosSettings.swift */; };
+		610B8DCF2122B95000491CF7 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */; };
+		610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC12122B95000491CF7 /* RightToLeft.swift */; };
+		610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC22122B95000491CF7 /* CosmosView.swift */; };
 		6155CD6921220E9D003306FA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6821220E9D003306FA /* CustomView.swift */; };
 		6155CD6C21222AC3003306FA /* CarRepairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6B21222AC3003306FA /* CarRepairCell.swift */; };
 		6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */; };
@@ -34,7 +45,8 @@
 		61DC0BBE211E33B600D28BDA /* Youse_AutoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */; };
 		61F07477212255980010D900 /* UIImage+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F07476212255980010D900 /* UIImage+Style.swift */; };
 		61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F074782122923C0010D900 /* UIViewController+Loading.swift */; };
-		78E89692591F7E11B154F07E /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A4470C89C6AFCA2F90D069 /* Pods_Youse_AutoUITests.framework */; };
+		7B06B228789D1BF97E56C4F5 /* Pods_Youse_Auto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E626A9ED2A66EA4DA561F67E /* Pods_Youse_Auto.framework */; };
+		9C374188FFCC8F9CEC12F421 /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4185E181C2F82EAFE369B9C9 /* Pods_Youse_AutoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +67,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2147981F7720647C873BDC72 /* Pods-Youse-Auto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.debug.xcconfig"; sourceTree = "<group>"; };
-		2179B4A1CB3B0DCCB2E7DE0B /* Pods-Youse-AutoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		42F3EE92F5A6DBB8D7EB4533 /* Pods-Youse-AutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.release.xcconfig"; sourceTree = "<group>"; };
-		4CD7E28A071A3478212FC18C /* Pods-Youse-Auto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.release.xcconfig"; sourceTree = "<group>"; };
+		1CFC6F014EE2B1CA78EEBB2A /* Pods_Youse_AutoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4185E181C2F82EAFE369B9C9 /* Pods_Youse_AutoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F41252657E787441F4B260F /* Pods-Youse-AutoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54F6E9B5657521B4F749F5BE /* Pods-Youse-Auto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.release.xcconfig"; sourceTree = "<group>"; };
+		610B8DB32122B95000491CF7 /* StarFillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarFillMode.swift; sourceTree = "<group>"; };
+		610B8DB42122B95000491CF7 /* StarLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarLayer.swift; sourceTree = "<group>"; };
+		610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		610B8DB82122B95000491CF7 /* CosmosSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSize.swift; sourceTree = "<group>"; };
+		610B8DB92122B95000491CF7 /* CosmosLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLayers.swift; sourceTree = "<group>"; };
+		610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		610B8DBC2122B95000491CF7 /* CosmosTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouch.swift; sourceTree = "<group>"; };
+		610B8DBD2122B95000491CF7 /* CosmosRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosRating.swift; sourceTree = "<group>"; };
+		610B8DBE2122B95000491CF7 /* CosmosSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosSettings.swift; sourceTree = "<group>"; };
+		610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		610B8DC12122B95000491CF7 /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeft.swift; sourceTree = "<group>"; };
+		610B8DC22122B95000491CF7 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
 		6155CD6821220E9D003306FA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		6155CD6B21222AC3003306FA /* CarRepairCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCell.swift; sourceTree = "<group>"; };
 		6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCellViewModel.swift; sourceTree = "<group>"; };
@@ -91,11 +115,11 @@
 		61DC0BBF211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F07476212255980010D900 /* UIImage+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Style.swift"; sourceTree = "<group>"; };
 		61F074782122923C0010D900 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
-		A004950F5C3D175A92626C0F /* Pods-Youse-AutoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A7640DFC29928464D19C741C /* Pods_Youse_Auto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_Auto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB3BBF96427D0A5EA265D9B3 /* Pods_Youse_AutoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0A4470C89C6AFCA2F90D069 /* Pods_Youse_AutoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAD03398922C8D07E2A222B3 /* Pods-Youse-AutoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1338903BA9D8F006A13D89A /* Pods-Youse-AutoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C53E37D7B8871D69D6EA228D /* Pods-Youse-AutoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D93F95E2250E89790CDD822D /* Pods-Youse-AutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.release.xcconfig"; sourceTree = "<group>"; };
+		E626A9ED2A66EA4DA561F67E /* Pods_Youse_Auto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_Auto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FCFBC5B72B867E4831F4AD /* Pods-Youse-Auto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CD6793AB7C9C6E7CF276A12 /* Pods_Youse_Auto.framework in Frameworks */,
+				7B06B228789D1BF97E56C4F5 /* Pods_Youse_Auto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E7443A63668A22E7AFEB05 /* Pods_Youse_AutoTests.framework in Frameworks */,
+				1247E0EBE0DC4AF02005FF16 /* Pods_Youse_AutoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,13 +143,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78E89692591F7E11B154F07E /* Pods_Youse_AutoUITests.framework in Frameworks */,
+				9C374188FFCC8F9CEC12F421 /* Pods_Youse_AutoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011092BAE0F4A567A6989781 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCFBC5B72B867E4831F4AD /* Pods-Youse-Auto.debug.xcconfig */,
+				54F6E9B5657521B4F749F5BE /* Pods-Youse-Auto.release.xcconfig */,
+				4F41252657E787441F4B260F /* Pods-Youse-AutoTests.debug.xcconfig */,
+				D93F95E2250E89790CDD822D /* Pods-Youse-AutoTests.release.xcconfig */,
+				A1338903BA9D8F006A13D89A /* Pods-Youse-AutoUITests.debug.xcconfig */,
+				C53E37D7B8871D69D6EA228D /* Pods-Youse-AutoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		610B8DB12122B93300491CF7 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				6155CD6821220E9D003306FA /* CustomView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		610B8DB22122B95000491CF7 /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				610B8DB32122B95000491CF7 /* StarFillMode.swift */,
+				610B8DB42122B95000491CF7 /* StarLayer.swift */,
+				610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */,
+				610B8DB82122B95000491CF7 /* CosmosSize.swift */,
+				610B8DB92122B95000491CF7 /* CosmosLayers.swift */,
+				610B8DBA2122B95000491CF7 /* CosmosLocalizedRating.swift */,
+				610B8DBC2122B95000491CF7 /* CosmosTouch.swift */,
+				610B8DBD2122B95000491CF7 /* CosmosRating.swift */,
+				610B8DBE2122B95000491CF7 /* CosmosSettings.swift */,
+				610B8DBF2122B95000491CF7 /* Helpers */,
+				610B8DC22122B95000491CF7 /* CosmosView.swift */,
+			);
+			path = Cosmos;
+			sourceTree = "<group>";
+		};
+		610B8DBF2122B95000491CF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */,
+				610B8DC12122B95000491CF7 /* RightToLeft.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6155CD6A21222A8E003306FA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +322,8 @@
 		61B88310212145EC00B6A5B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6155CD6821220E9D003306FA /* CustomView.swift */,
+				610B8DB22122B95000491CF7 /* Cosmos */,
+				610B8DB12122B93300491CF7 /* Custom */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,8 +356,8 @@
 				61DC0BB1211E33B600D28BDA /* Youse-AutoTests */,
 				61DC0BBC211E33B600D28BDA /* Youse-AutoUITests */,
 				61DC0B9B211E33B400D28BDA /* Products */,
-				AF8BED280A27DFFDDE9DAD93 /* Pods */,
-				DD22DA3853AD7A7D6988FAE8 /* Frameworks */,
+				011092BAE0F4A567A6989781 /* Pods */,
+				EA7D27385E0B5336C692F851 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,25 +398,12 @@
 			path = "Youse-AutoUITests";
 			sourceTree = "<group>";
 		};
-		AF8BED280A27DFFDDE9DAD93 /* Pods */ = {
+		EA7D27385E0B5336C692F851 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2147981F7720647C873BDC72 /* Pods-Youse-Auto.debug.xcconfig */,
-				4CD7E28A071A3478212FC18C /* Pods-Youse-Auto.release.xcconfig */,
-				A004950F5C3D175A92626C0F /* Pods-Youse-AutoTests.debug.xcconfig */,
-				42F3EE92F5A6DBB8D7EB4533 /* Pods-Youse-AutoTests.release.xcconfig */,
-				2179B4A1CB3B0DCCB2E7DE0B /* Pods-Youse-AutoUITests.debug.xcconfig */,
-				FAD03398922C8D07E2A222B3 /* Pods-Youse-AutoUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DD22DA3853AD7A7D6988FAE8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A7640DFC29928464D19C741C /* Pods_Youse_Auto.framework */,
-				EB3BBF96427D0A5EA265D9B3 /* Pods_Youse_AutoTests.framework */,
-				F0A4470C89C6AFCA2F90D069 /* Pods_Youse_AutoUITests.framework */,
+				E626A9ED2A66EA4DA561F67E /* Pods_Youse_Auto.framework */,
+				1CFC6F014EE2B1CA78EEBB2A /* Pods_Youse_AutoTests.framework */,
+				4185E181C2F82EAFE369B9C9 /* Pods_Youse_AutoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,11 +415,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC2211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-Auto" */;
 			buildPhases = (
-				D1DCEC591059C4536BA6370B /* [CP] Check Pods Manifest.lock */,
+				D94274FC3F27C3144B6D3322 /* [CP] Check Pods Manifest.lock */,
 				61DC0B96211E33B400D28BDA /* Sources */,
 				61DC0B97211E33B400D28BDA /* Frameworks */,
 				61DC0B98211E33B400D28BDA /* Resources */,
-				9339B37E38ED9752773435BA /* [CP] Embed Pods Frameworks */,
+				68E734200BFDC14A42422691 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,7 +434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC5211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-AutoTests" */;
 			buildPhases = (
-				122B0B4801581425E69DCA7E /* [CP] Check Pods Manifest.lock */,
+				09D6B962C65149B4741C40A6 /* [CP] Check Pods Manifest.lock */,
 				61DC0BAA211E33B600D28BDA /* Sources */,
 				61DC0BAB211E33B600D28BDA /* Frameworks */,
 				61DC0BAC211E33B600D28BDA /* Resources */,
@@ -393,7 +453,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC8211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-AutoUITests" */;
 			buildPhases = (
-				F07E0F74F29630C8AD520E86 /* [CP] Check Pods Manifest.lock */,
+				76F52CAE96D5306A5EABDCB2 /* [CP] Check Pods Manifest.lock */,
 				61DC0BB5211E33B600D28BDA /* Sources */,
 				61DC0BB6211E33B600D28BDA /* Frameworks */,
 				61DC0BB7211E33B600D28BDA /* Resources */,
@@ -481,7 +541,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		122B0B4801581425E69DCA7E /* [CP] Check Pods Manifest.lock */ = {
+		09D6B962C65149B4741C40A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,7 +559,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9339B37E38ED9752773435BA /* [CP] Embed Pods Frameworks */ = {
+		68E734200BFDC14A42422691 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,25 +581,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D1DCEC591059C4536BA6370B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Youse-Auto-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F07E0F74F29630C8AD520E86 /* [CP] Check Pods Manifest.lock */ = {
+		76F52CAE96D5306A5EABDCB2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -557,6 +599,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D94274FC3F27C3144B6D3322 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Youse-Auto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -565,19 +625,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */,
+				610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */,
 				6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */,
+				610B8DCE2122B95000491CF7 /* CosmosSettings.swift in Sources */,
+				610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */,
+				610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */,
 				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
+				610B8DCA2122B95000491CF7 /* CosmosLocalizedRating.swift in Sources */,
+				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,
+				610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */,
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */,
 				61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */,
+				610B8DCF2122B95000491CF7 /* CosmosTouchTarget.swift in Sources */,
 				617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */,
+				610B8DC42122B95000491CF7 /* StarLayer.swift in Sources */,
 				6155CD6921220E9D003306FA /* CustomView.swift in Sources */,
 				61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */,
 				617E4FAF2120C5B700C6057F /* CarRepairsViewModel.swift in Sources */,
 				6155CD6C21222AC3003306FA /* CarRepairCell.swift in Sources */,
 				61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */,
+				610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */,
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
+				610B8DCC2122B95000491CF7 /* CosmosTouch.swift in Sources */,
+				610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
 				61F07477212255980010D900 /* UIImage+Style.swift in Sources */,
@@ -747,7 +819,7 @@
 		};
 		61DC0BC3211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2147981F7720647C873BDC72 /* Pods-Youse-Auto.debug.xcconfig */;
+			baseConfigurationReference = F8FCFBC5B72B867E4831F4AD /* Pods-Youse-Auto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -766,7 +838,7 @@
 		};
 		61DC0BC4211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CD7E28A071A3478212FC18C /* Pods-Youse-Auto.release.xcconfig */;
+			baseConfigurationReference = 54F6E9B5657521B4F749F5BE /* Pods-Youse-Auto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -785,7 +857,7 @@
 		};
 		61DC0BC6211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A004950F5C3D175A92626C0F /* Pods-Youse-AutoTests.debug.xcconfig */;
+			baseConfigurationReference = 4F41252657E787441F4B260F /* Pods-Youse-AutoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -807,7 +879,7 @@
 		};
 		61DC0BC7211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42F3EE92F5A6DBB8D7EB4533 /* Pods-Youse-AutoTests.release.xcconfig */;
+			baseConfigurationReference = D93F95E2250E89790CDD822D /* Pods-Youse-AutoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -829,7 +901,7 @@
 		};
 		61DC0BC9211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2179B4A1CB3B0DCCB2E7DE0B /* Pods-Youse-AutoUITests.debug.xcconfig */;
+			baseConfigurationReference = A1338903BA9D8F006A13D89A /* Pods-Youse-AutoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -850,7 +922,7 @@
 		};
 		61DC0BCA211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAD03398922C8D07E2A222B3 /* Pods-Youse-AutoUITests.release.xcconfig */;
+			baseConfigurationReference = C53E37D7B8871D69D6EA228D /* Pods-Youse-AutoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

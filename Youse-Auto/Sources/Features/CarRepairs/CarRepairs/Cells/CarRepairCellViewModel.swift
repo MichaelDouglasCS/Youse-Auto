@@ -24,8 +24,8 @@ class CarRepairCellViewModel: NSObject {
         return self.carRepair.name
     }
     
-    var rating: String? {
-        return self.carRepair.rating?.toString(withDecimalPlaces: 1)
+    var rating: Double? {
+        return self.carRepair.rating
     }
     
     var address: NSAttributedString? {

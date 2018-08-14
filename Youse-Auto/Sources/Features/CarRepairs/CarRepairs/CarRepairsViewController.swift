@@ -75,6 +75,7 @@ class CarRepairsViewController: UIViewController {
             if let error = error {
                 self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
             }
+
             self.tableView.reloadSections([0], with: .automatic)
             completion()
         }
@@ -86,6 +87,7 @@ class CarRepairsViewController: UIViewController {
             if let error = error {
                 self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
             }
+            
             self.tableView.reloadData()
             completion()
         }

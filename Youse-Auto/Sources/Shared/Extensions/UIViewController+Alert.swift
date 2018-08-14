@@ -33,7 +33,10 @@ extension UIViewController {
                                           handler: completion)
         
         alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func showActionAlert(title: String, message: String, actions: [UIAlertAction]) {
@@ -43,6 +46,8 @@ extension UIViewController {
             alert.addAction(action)
         }
         
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

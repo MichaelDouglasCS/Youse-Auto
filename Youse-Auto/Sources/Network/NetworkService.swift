@@ -57,7 +57,7 @@ enum NetworkResponse {
     // MARK: - Inits
     //*************************************************
     
-    init(_ response: HTTPURLResponse?) {
+    init(_ response: HTTPURLResponse?, json: JSON) {
         
         if let httpResponse = response {
             switch httpResponse.statusCode {
@@ -69,6 +69,12 @@ enum NetworkResponse {
         } else if NetworkReachabilityManager()?.isReachable == false {
             self = .error(.noConnection)
         } else {
+            self = .error(.serverError)
+        }
+        
+        // The API uses "status" as response code
+        if let status = json["status"].string,
+            !status.contains("OK") {
             self = .error(.serverError)
         }
     }
@@ -103,7 +109,7 @@ enum NetworkService {
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
 
-            return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
+            return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair"))
         }
         
         static func loadImage(fromReferenceID referenceID: String,
@@ -166,7 +172,7 @@ enum NetworkService {
                 default: break
                 }
                 
-                completion(json, NetworkResponse(dataResponse.response))
+                completion(json, NetworkResponse(dataResponse.response, json: json))
             }
             
             let headers = self.getHeader()

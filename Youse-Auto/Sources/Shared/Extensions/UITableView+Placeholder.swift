@@ -30,4 +30,21 @@ extension UITableView {
             self.backgroundView = placeholder
         }
     }
+    
+    func placeholder(isShow: Bool, animate: Bool = false) {
+        
+        if isShow {
+            
+            if animate {
+                self.backgroundView?.alpha = isShow ? 0.0 : 1.0
+                UIView.animate(withDuration: 0.3) {
+                    self.backgroundView?.alpha = isShow ? 1.0 : 0.0
+                }
+            } else {
+                self.backgroundView?.alpha = isShow ? 1.0 : 0.0
+            }
+        } else {
+            self.backgroundView?.alpha = isShow ? 1.0 : 0.0
+        }
+    }
 }

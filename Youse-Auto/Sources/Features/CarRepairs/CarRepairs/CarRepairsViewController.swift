@@ -45,8 +45,8 @@ class CarRepairsViewController: UIViewController {
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         self.tableView.setupPlaceholder(image: UIImage.YouseAuto.carRepairOil,
-                                        title: String.YouseAuto.sorry,
                                         message: String.YouseAuto.noResultsFound)
+        self.tableView.placeholder(isShow: false)
         
         // Refresh Control
         self.refreshControl.tintColor = .white
@@ -79,6 +79,7 @@ class CarRepairsViewController: UIViewController {
                 self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
             }
 
+            self.tableView.placeholder(isShow: error != nil, animate: true)
             self.tableView.reloadSections([0], with: .automatic)
             completion()
         }
@@ -91,6 +92,7 @@ class CarRepairsViewController: UIViewController {
                 self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
             }
             
+            self.tableView.placeholder(isShow: error != nil, animate: true)
             self.tableView.reloadData()
             completion()
         }

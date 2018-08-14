@@ -20,12 +20,12 @@
 //*************************
 
 "OK" = "OK";
-"SORRY" = "Desculpe :(";
-"NO_RESULTS_FOUND" = "Infelizmente não encontramos nenhum resultado.";
+"SORRY" = "Oops!";
+"NO_RESULTS_FOUND" = "Desculpe, não foi possível encontrar nenhum resultado.";
 
 //*************************
 // Error
 //*************************
 
-"SERVER_ERROR" = "Serviço Indisponível. Por favor, tente novamente mais tarde.";
+"SERVER_ERROR" = "Serviço indisponível. Por favor, tente novamente mais tarde.";
 "NO_CONNECTION_ERROR" = "Sem conexão disponível. Por favor, verifique sua conectividade e tente novamente.";

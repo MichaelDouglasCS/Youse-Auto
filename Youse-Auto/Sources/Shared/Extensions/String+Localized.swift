@@ -11,6 +11,22 @@ import UIKit
 extension String {
     
     struct YouseAuto {
+        
+        //*************************************************
+        // MARK: - Car Repairs
+        //*************************************************
+        
+        static var carRepairs: String { return "CAR_REPAIRS".localized }
+        static var address: String { return "ADDRESS".localized }
+        static var opened: String { return "OPENED".localized }
+        static var closed: String { return "CLOSED".localized }
+        
+        //*************************************************
+        // MARK: - Alerts
+        //*************************************************
+        
+        static var ok: String { return "OK".localized }
+        static var sorry: String { return "SORRY".localized }
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
     }
     

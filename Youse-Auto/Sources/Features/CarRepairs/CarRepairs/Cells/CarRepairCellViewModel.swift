@@ -29,11 +29,11 @@ class CarRepairCellViewModel: NSObject {
     }
     
     var address: NSAttributedString? {
-        guard let  addressString = self.carRepair.address else { return nil }
-        let mutable = NSMutableAttributedString(string: "\(Constants.address): \(addressString)",
+        guard let  address = self.carRepair.address else { return nil }
+        let mutable = NSMutableAttributedString(string: "\(String.YouseAuto.address): \(address)",
                                                 attributes: [.foregroundColor: UIColor.gray])
         
-        if let range = mutable.string.range(of: Constants.address) {
+        if let range = mutable.string.range(of: String.YouseAuto.address) {
             mutable.addAttribute(.font,
                                  value: UIFont.boldSystemFont(ofSize: 12),
                                  range: mutable.string.nsRange(from: range))
@@ -44,7 +44,7 @@ class CarRepairCellViewModel: NSObject {
     
     var availability: NSAttributedString? {
         guard let isOpenNow = self.carRepair.isOpenNow else { return nil }
-        let title: String = isOpenNow ? Constants.opened : Constants.closed
+        let title: String = isOpenNow ? String.YouseAuto.opened : String.YouseAuto.closed
         let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
         let font = UIFont.boldSystemFont(ofSize: 12)
         

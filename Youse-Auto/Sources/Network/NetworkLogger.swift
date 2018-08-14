@@ -81,7 +81,7 @@ class NetworkLogger: NSObject {
     //*************************************************
     
     private class func logSeparator() {
-        print("-------------//-------------")
+        print("-----------------//-----------------")
     }
     
     private class func logHeaders(_ headers: [String: AnyObject]) {

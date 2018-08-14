@@ -21,7 +21,7 @@ class CarRepairsViewModel: NSObject {
     //*************************************************
     
     var navigationTitle: String {
-        return Constants.carRepairs
+        return String.YouseAuto.carRepairs
     }
     
     var hasNextPage: Bool {
@@ -75,27 +75,27 @@ class CarRepairsViewModel: NSObject {
     /// - Parameters:
     ///   - type: A property to set what kind of request will be performed
     ///   - completion: This parameter produces (isSuccess: Bool, localizedError: String?) -> Void
-    func loadData(type: LoadDataType,completion: @escaping (_ isSuccess: Bool, _ error: String?) -> Void) {
+    func loadData(type: LoadDataType, completion: @escaping (_ error: String?) -> Void) {
         let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
         let nextPage = type == .refresh ? nil : self.nextPage
         
         self.provider.loadCarRepairs(by: location, nextPage: nextPage) { (carRepairs, nextPage, localizedError) in
             var cellViewModels: [CarRepairCellViewModel] = []
             
-            carRepairs.forEach({ (carRepair) in
-                cellViewModels.append(CarRepairCellViewModel(carRepair: carRepair))
-            })
-            
-            self.nextPage = nextPage
+            carRepairs.forEach { cellViewModels.append(CarRepairCellViewModel(carRepair: $0)) }
             
             switch type {
             case .refresh:
-                self.cellViewModels = cellViewModels
+                if !cellViewModels.isEmpty {
+                    self.cellViewModels = cellViewModels
+                }
             case .bringMore:
                 self.cellViewModels.append(contentsOf: cellViewModels)
             }
             
-            completion(localizedError == nil, localizedError)
+            self.nextPage = nextPage
+
+            completion(localizedError)
         }
     }
 }

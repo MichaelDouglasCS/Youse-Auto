@@ -15,7 +15,7 @@ extension UIImageView {
     // MARK: - Public Methods
     //*************************************************
     
-    public func load(from url: URL,
+    func load(from url: URL,
                      withPlaceholder placeholder: UIImage? = nil,
                      completion: ((_ image: UIImage?) -> Void)? = nil ) {
         self.af_setImage(withURL: url,
@@ -27,7 +27,7 @@ extension UIImageView {
                             } else if let data = dataResponse.data, let theImage = UIImage(data: data) {
                                 self.image = theImage
                             } else {
-                                self.image = nil
+                                self.image = placeholder
                             }
                             
                             completion?(self.image)

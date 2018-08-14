@@ -31,7 +31,8 @@ class CarRepairsProvider: NSObject {
                         nextPage next: String? = nil,
                         completion: @escaping CarRepairsResponse) {
         
-        NetworkService.CarRepair.listNearby(to: location, nextPage: next).execute { (json, response) in
+        NetworkService.CarRepair.listNearby(to: location,
+                                            nextPage: next).execute { (json, response) in
             
             switch response {
             case .success:
@@ -39,12 +40,10 @@ class CarRepairsProvider: NSObject {
                 let nextPage = json["next_page_token"].string
                 
                 json["results"].array?.forEach({ (carRepairJSON) in
-
                     if let carRepair = CarRepair(json: carRepairJSON) {
                         carRepairs.append(carRepair)
                     }
                 })
-                
                 completion(carRepairs, nextPage, nil)
             case .error(let error):
                 completion([], nil, error.rawValue.localized)

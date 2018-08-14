@@ -11,6 +11,11 @@ import UIKit
 extension UIImage {
     
     struct YouseAuto {
+        
+        //*************************************************
+        // MARK: - Car Repairs
+        //*************************************************
+        
         static var carRepairPlaceholder: UIImage? { return UIImage(named: "car-repair-placeholder") }
     }
 }

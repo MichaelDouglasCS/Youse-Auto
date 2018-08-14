@@ -20,6 +20,7 @@
 		610B8DCF2122B95000491CF7 /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */; };
 		610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC12122B95000491CF7 /* RightToLeft.swift */; };
 		610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DC22122B95000491CF7 /* CosmosView.swift */; };
+		610B8DD321233E8600491CF7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */; };
 		6155CD6921220E9D003306FA /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6821220E9D003306FA /* CustomView.swift */; };
 		6155CD6C21222AC3003306FA /* CarRepairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6B21222AC3003306FA /* CarRepairCell.swift */; };
 		6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */; };
@@ -31,7 +32,6 @@
 		617E4FAF2120C5B700C6057F /* CarRepairsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FAE2120C5B700C6057F /* CarRepairsViewModel.swift */; };
 		617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FB02120C77C00C6057F /* CarRepairsProvider.swift */; };
 		618ED113211E362400CD177E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 618ED115211E362400CD177E /* Localizable.strings */; };
-		618ED119211E36AF00CD177E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618ED118211E36AF00CD177E /* Constants.swift */; };
 		618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11A211E376600CD177E /* LaunchScreen.storyboard */; };
 		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
 		61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830A21211DB300B6A5B7 /* CarRepair.swift */; };
@@ -83,6 +83,7 @@
 		610B8DC02122B95000491CF7 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosTouchTarget.swift; sourceTree = "<group>"; };
 		610B8DC12122B95000491CF7 /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeft.swift; sourceTree = "<group>"; };
 		610B8DC22122B95000491CF7 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
+		610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		6155CD6821220E9D003306FA /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		6155CD6B21222AC3003306FA /* CarRepairCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCell.swift; sourceTree = "<group>"; };
 		6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCellViewModel.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		617E4FB02120C77C00C6057F /* CarRepairsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsProvider.swift; sourceTree = "<group>"; };
 		618ED114211E362400CD177E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		618ED116211E364000CD177E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		618ED118211E36AF00CD177E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		618ED11A211E376600CD177E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		61B8830A21211DB300B6A5B7 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
@@ -305,18 +305,9 @@
 			isa = PBXGroup;
 			children = (
 				61BD1BC4211E5CBB009BB88A /* Extensions */,
-				618ED117211E36A200CD177E /* Utils */,
 				61B88310212145EC00B6A5B7 /* Views */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		618ED117211E36A200CD177E /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				618ED118211E36AF00CD177E /* Constants.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		61B88310212145EC00B6A5B7 /* Views */ = {
@@ -336,6 +327,7 @@
 				6197DB9C211EB92400237222 /* UIColor+Style.swift */,
 				61F07476212255980010D900 /* UIImage+Style.swift */,
 				6155CD6F212230E0003306FA /* UIImageView+Service.swift */,
+				610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */,
 				61F074782122923C0010D900 /* UIViewController+Loading.swift */,
 			);
 			path = Extensions;
@@ -626,6 +618,7 @@
 			files = (
 				61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */,
 				610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */,
+				610B8DD321233E8600491CF7 /* UIViewController+Alert.swift in Sources */,
 				6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */,
 				610B8DCE2122B95000491CF7 /* CosmosSettings.swift in Sources */,
 				610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */,
@@ -653,7 +646,6 @@
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
 				61F07477212255980010D900 /* UIImage+Style.swift in Sources */,
-				618ED119211E36AF00CD177E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

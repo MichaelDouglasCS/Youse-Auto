@@ -39,8 +39,16 @@ class CarRepairsViewController: UIViewController {
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         
+        // Navigation
+        self.navigationItem.title = self.viewModel.navigationTitle
+        
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        
+        // Refresh Control
+        self.refreshControl.tintColor = .white
+        self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        self.tableView.refreshControl = self.refreshControl
         
         // Loading Pagination
         self.loadingPagination.color = UIColor.YouseAuto.blue
@@ -50,21 +58,6 @@ class CarRepairsViewController: UIViewController {
         self.loadData {
             self.stopLoading()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Status Bar Style
-        UIApplication.shared.statusBarStyle = .lightContent
-        
-        // Navigation
-        self.navigationItem.title = self.viewModel.navigationTitle
-        
-        // Refresh Control
-        self.refreshControl.tintColor = .white
-        self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
-        self.tableView.refreshControl = self.refreshControl
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -77,14 +70,22 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     private func loadData(completion: @escaping () -> Void) {
-        self.viewModel.loadData(type: .refresh) { (isSuccess, error) in
+        self.viewModel.loadData(type: .refresh) { (error) in
+            
+            if let error = error {
+                self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
+            }
             self.tableView.reloadSections([0], with: .automatic)
             completion()
         }
     }
     
     private func bringMoreData(completion: @escaping () -> Void) {
-        self.viewModel.loadData(type: .bringMore) { (isSuccess, error) in
+        self.viewModel.loadData(type: .bringMore) { (error) in
+            
+            if let error = error {
+                self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
+            }
             self.tableView.reloadData()
             completion()
         }

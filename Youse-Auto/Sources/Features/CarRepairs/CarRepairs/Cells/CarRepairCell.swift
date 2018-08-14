@@ -13,14 +13,14 @@ class CarRepairCell: UITableViewCell {
     //*************************************************
     // MARK: - Outlets
     //*************************************************
-    
-    @IBOutlet weak private var customImageView: UIImageView!
-    @IBOutlet weak private var nameLabel: UILabel!
-    @IBOutlet weak private var ratingView: UIStackView!
-    @IBOutlet weak private var ratingLabel: UILabel!
-    @IBOutlet weak private var ratingStarsView: CosmosView!
-    @IBOutlet weak private var addressLabel: UILabel!
-    @IBOutlet weak private var availabilityLabel: UILabel!
+
+    @IBOutlet private weak var customImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var ratingView: UIStackView!
+    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var ratingStarsView: CosmosView!
+    @IBOutlet private weak var addressLabel: UILabel!
+    @IBOutlet private weak var availabilityLabel: UILabel!
 
     //*************************************************
     // MARK: - Public Methods
@@ -36,9 +36,9 @@ class CarRepairCell: UITableViewCell {
         
         if let imageURL = viewModel.imageURL {
             self.customImageView.load(from: imageURL,
-                                      withPlaceholder: UIImage.YouseAuto.carRepairPlaceholder)
+                                      withPlaceholder: UIImage.YouseAuto.carRepairCover)
         } else {
-            self.customImageView.image = UIImage.YouseAuto.carRepairPlaceholder
+            self.customImageView.image = UIImage.YouseAuto.carRepairCover
         }
     }
 }

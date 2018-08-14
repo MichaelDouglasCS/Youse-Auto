@@ -14,7 +14,7 @@ class CarRepairsViewController: UIViewController {
     // MARK: - Outlets
     //*************************************************
     
-    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     //*************************************************
     // MARK: - Public Properties
@@ -44,6 +44,9 @@ class CarRepairsViewController: UIViewController {
         
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        self.tableView.setupPlaceholder(image: UIImage.YouseAuto.carRepairOil,
+                                        title: String.YouseAuto.sorry,
+                                        message: String.YouseAuto.noResultsFound)
         
         // Refresh Control
         self.refreshControl.tintColor = .white

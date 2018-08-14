@@ -16,6 +16,7 @@ extension UIImage {
         // MARK: - Car Repairs
         //*************************************************
         
-        static var carRepairPlaceholder: UIImage? { return UIImage(named: "car-repair-placeholder") }
+        static var carRepairCover: UIImage? { return UIImage(named: "car-repair-cover") }
+        static var carRepairOil: UIImage? { return UIImage(named: "car-repair-oil") }
     }
 }

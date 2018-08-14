@@ -21,6 +21,7 @@
 
 "OK" = "OK";
 "SORRY" = "Desculpe :(";
+"NO_RESULTS_FOUND" = "Infelizmente não encontramos nenhum resultado.";
 
 //*************************
 // Error

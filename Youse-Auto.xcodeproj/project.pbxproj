@@ -157,15 +157,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		610B8DB12122B93300491CF7 /* Custom */ = {
+		610B8DB12122B93300491CF7 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 				6155CD6821220E9D003306FA /* CustomView.swift */,
 			);
-			path = Custom;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
-		610B8DB22122B95000491CF7 /* Cosmos */ = {
+		610B8DB22122B95000491CF7 /* CosmosView */ = {
 			isa = PBXGroup;
 			children = (
 				610B8DB72122B95000491CF7 /* CosmosDefaultSettings.swift */,
@@ -178,7 +178,14 @@
 				610B8DB32122B95000491CF7 /* StarFillMode.swift */,
 				610B8DB42122B95000491CF7 /* StarLayer.swift */,
 			);
-			path = Cosmos;
+			path = CosmosView;
+			sourceTree = "<group>";
+		};
+		610B8DD42123572A00491CF7 /* TableViewPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewPlaceholder;
 			sourceTree = "<group>";
 		};
 		6155CD6A21222A8E003306FA /* Cells */ = {
@@ -296,8 +303,9 @@
 		61B88310212145EC00B6A5B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				610B8DB22122B95000491CF7 /* Cosmos */,
-				610B8DB12122B93300491CF7 /* Custom */,
+				610B8DD42123572A00491CF7 /* TableViewPlaceholder */,
+				610B8DB22122B95000491CF7 /* CosmosView */,
+				610B8DB12122B93300491CF7 /* CustomView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

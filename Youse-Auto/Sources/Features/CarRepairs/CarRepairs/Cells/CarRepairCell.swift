@@ -16,7 +16,7 @@ class CarRepairCell: UITableViewCell {
     
     @IBOutlet weak private var customImageView: UIImageView!
     @IBOutlet weak private var nameLabel: UILabel!
-    @IBOutlet weak var ratingView: UIStackView!
+    @IBOutlet weak private var ratingView: UIStackView!
     @IBOutlet weak private var ratingLabel: UILabel!
     @IBOutlet weak private var ratingStarsView: CosmosView!
     @IBOutlet weak private var addressLabel: UILabel!
@@ -27,17 +27,18 @@ class CarRepairCell: UITableViewCell {
     //*************************************************
     
     func setup(with viewModel: CarRepairCellViewModel) {
-        self.customImageView.image = UIImage.YouseAuto.carRepairPlaceholder
         self.nameLabel.text = viewModel.name
+        self.ratingView.isHidden = viewModel.rating == nil
         self.ratingLabel.text = viewModel.rating?.toString(withDecimalPlaces: 1)
         self.ratingStarsView.rating = viewModel.rating ?? 0.0
-        self.ratingView.isHidden = viewModel.rating == nil
         self.addressLabel.attributedText = viewModel.address
         self.availabilityLabel.attributedText = viewModel.availability
         
         if let imageURL = viewModel.imageURL {
             self.customImageView.load(from: imageURL,
                                       withPlaceholder: UIImage.YouseAuto.carRepairPlaceholder)
+        } else {
+            self.customImageView.image = UIImage.YouseAuto.carRepairPlaceholder
         }
     }
 }

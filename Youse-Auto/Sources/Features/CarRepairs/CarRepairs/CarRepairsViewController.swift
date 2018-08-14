@@ -138,6 +138,14 @@ extension CarRepairsViewController: UITableViewDelegate {
         return self.viewModel.heightForRow(at: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return self.viewModel.hasNextPage ? self.loadingPagination : nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return self.viewModel.hasNextPage ? 44.0 : 0.0
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1
         
@@ -147,13 +155,5 @@ extension CarRepairsViewController: UITableViewDelegate {
                 self.loadingPagination.stopAnimating()
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return self.viewModel.hasNextPage ? self.loadingPagination : nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return self.viewModel.hasNextPage ? 44.0 : 0.0
     }
 }

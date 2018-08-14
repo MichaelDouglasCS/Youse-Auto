@@ -39,8 +39,11 @@ class CarRepairsViewController: UIViewController {
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         
-        // TableView
+        // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+
+        // Loading Pagination
+        self.loadingPagination.color = UIColor.YouseAuto.blue
         
         // Load Data
         self.showLoading()
@@ -70,10 +73,6 @@ class CarRepairsViewController: UIViewController {
     }
     
     //*************************************************
-    // MARK: - Public Methods
-    //*************************************************
-    
-    //*************************************************
     // MARK: - Private Methods
     //*************************************************
     
@@ -86,26 +85,7 @@ class CarRepairsViewController: UIViewController {
     
     private func bringMoreData(completion: @escaping () -> Void) {
         self.viewModel.loadData(type: .bringMore) { (isSuccess, error) in
-            let tableViewRows = self.tableView.numberOfRows(inSection: 0)
-            let viewModelRows = self.viewModel.numberOfRows()
-            
-            if viewModelRows > tableViewRows {
-                // Insert New
-                var indexPaths: [IndexPath] = []
-                var lastIndex = tableViewRows - 1
-                
-                for _ in 0..<tableViewRows.distance(to: viewModelRows) {
-                    indexPaths.append(IndexPath(row: lastIndex, section: 0))
-                    lastIndex += 1
-                }
-                
-                self.tableView.performBatchUpdates({
-                    self.tableView.insertRows(at: indexPaths, with: .none)
-                }, completion: { (_) in
-                    completion()
-                    return
-                })
-            }
+            self.tableView.reloadData()
             completion()
         }
     }

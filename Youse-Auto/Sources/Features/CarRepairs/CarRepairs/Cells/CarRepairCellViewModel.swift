@@ -31,7 +31,7 @@ class CarRepairCellViewModel: NSObject {
     var address: NSAttributedString? {
         guard let  addressString = self.carRepair.address else { return nil }
         let mutable = NSMutableAttributedString(string: "\(Constants.address): \(addressString)",
-                                                attributes: [.foregroundColor: UIColor.darkGray])
+                                                attributes: [.foregroundColor: UIColor.gray])
         
         if let range = mutable.string.range(of: Constants.address) {
             mutable.addAttribute(.font,

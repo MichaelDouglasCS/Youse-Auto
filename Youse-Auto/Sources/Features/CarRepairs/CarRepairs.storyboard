@@ -36,7 +36,7 @@
         <!--Car Repairs View Controller-->
         <scene sceneID="2Ka-Ro-Nrf">
             <objects>
-                <viewController id="BYh-Uw-Vpu" customClass="CarRepairsViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYh-Uw-Vpu" customClass="CarRepairsViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ne0-SV-pTw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="BYh-Uw-Vpu" id="IP9-d4-n0x"/>
                                     <outlet property="delegate" destination="BYh-Uw-Vpu" id="6FT-hV-geN"/>
-                                    <outlet property="prefetchDataSource" destination="BYh-Uw-Vpu" id="hYs-j0-qC2"/>
                                 </connections>
                             </tableView>
                         </subviews>

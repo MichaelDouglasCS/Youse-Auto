@@ -41,7 +41,7 @@ class CarRepairsViewController: UIViewController {
         
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-
+        
         // Loading Pagination
         self.loadingPagination.color = UIColor.YouseAuto.blue
         
@@ -103,6 +103,10 @@ class CarRepairsViewController: UIViewController {
 
 extension CarRepairsViewController: UITableViewDataSource {
     
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.viewModel.numberOfSections()
     }
@@ -122,20 +126,16 @@ extension CarRepairsViewController: UITableViewDataSource {
 
 extension CarRepairsViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel.heightForRow(at: indexPath)
     }
     
-    //*************************************************
-    // MARK: - Footer View
-    //*************************************************
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return self.viewModel.hasNextPage ? self.loadingPagination : nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return self.viewModel.hasNextPage ? 44.0 : 0.0
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.viewModel.heightForRow(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -147,5 +147,13 @@ extension CarRepairsViewController: UITableViewDelegate {
                 self.loadingPagination.stopAnimating()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return self.viewModel.hasNextPage ? self.loadingPagination : nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return self.viewModel.hasNextPage ? 44.0 : 0.0
     }
 }

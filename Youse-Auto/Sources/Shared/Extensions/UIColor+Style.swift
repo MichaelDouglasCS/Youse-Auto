@@ -12,6 +12,7 @@ extension UIColor {
     
     struct YouseAuto {
         static var purple: UIColor { return UIColor(hexadecimal: 0x4C0F8D) }
+        static var blue: UIColor { return UIColor(hexadecimal: 0x005493) }
         static var warmYellow: UIColor { return UIColor(hexadecimal: 0xFF9C00) }
         static var green: UIColor { return UIColor(hexadecimal: 0x008F00) }
         static var red: UIColor { return UIColor(hexadecimal: 0xFF2600) }

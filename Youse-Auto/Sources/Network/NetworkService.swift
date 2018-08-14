@@ -97,7 +97,7 @@ enum NetworkService {
                                nextPage next: String? = nil) -> NetworkService {
             
             if let pageToken = next {
-                return .mobile((method: .get, path: "/place/nearbysearch/json?/json?pagetoken=\(pageToken)&key=\(API.key)"))
+                return .mobile((method: .get, path: "/place/nearbysearch/json?pagetoken=\(pageToken)&key=\(API.key)"))
             }
             
             let latitude = location.coordinate.latitude
@@ -146,9 +146,9 @@ enum NetworkService {
     /// This method is used to execute requests
     ///
     /// - Parameters:
-    ///   - aPath: Custom Path for your Request.
-    ///   - params: Params of your Request
-    ///   - completion: This method produces (JSON, NetworkResponse) -> Void
+    ///   - aPath: Custom Path for your Request, nil by default.
+    ///   - params: Params of your Request, nil by default
+    ///   - completion: A closure that produces (JSON, NetworkResponse) -> Void
     func execute(path: String? = nil,
                  params: [String: Any]? = nil,
                  completion: @escaping (JSON, NetworkResponse) -> Void) {

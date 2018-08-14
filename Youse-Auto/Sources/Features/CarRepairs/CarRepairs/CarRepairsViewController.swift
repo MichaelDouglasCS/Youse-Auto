@@ -27,6 +27,7 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     private let refreshControl = UIRefreshControl()
+    private let loadingPagination = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     //*************************************************
     // MARK: - Lifecycle
@@ -38,8 +39,14 @@ class CarRepairsViewController: UIViewController {
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         
+        // TableView
+        self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        
         // Load Data
-        self.loadData { }
+        self.showLoading()
+        self.loadData {
+            self.stopLoading()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +58,7 @@ class CarRepairsViewController: UIViewController {
         // Navigation
         self.navigationItem.title = self.viewModel.navigationTitle
         
-        // Setup Refresh Control
+        // Refresh Control
         self.refreshControl.tintColor = .white
         self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
         self.tableView.refreshControl = self.refreshControl
@@ -71,15 +78,39 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     private func loadData(completion: @escaping () -> Void) {
-        
-        self.viewModel.loadCarRepairs { (isSuccess, error) in
+        self.viewModel.loadData(type: .refresh) { (isSuccess, error) in
             self.tableView.reloadSections([0], with: .automatic)
             completion()
         }
     }
     
+    private func bringMoreData(completion: @escaping () -> Void) {
+        self.viewModel.loadData(type: .bringMore) { (isSuccess, error) in
+            let tableViewRows = self.tableView.numberOfRows(inSection: 0)
+            let viewModelRows = self.viewModel.numberOfRows()
+            
+            if viewModelRows > tableViewRows {
+                // Insert New
+                var indexPaths: [IndexPath] = []
+                var lastIndex = tableViewRows - 1
+                
+                for _ in 0..<tableViewRows.distance(to: viewModelRows) {
+                    indexPaths.append(IndexPath(row: lastIndex, section: 0))
+                    lastIndex += 1
+                }
+                
+                self.tableView.performBatchUpdates({
+                    self.tableView.insertRows(at: indexPaths, with: .none)
+                }, completion: { (_) in
+                    completion()
+                    return
+                })
+            }
+            completion()
+        }
+    }
+    
     @objc private func refreshData() {
-        
         self.loadData {
             self.refreshControl.endRefreshing()
         }
@@ -113,5 +144,28 @@ extension CarRepairsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel.heightForRow(at: indexPath)
+    }
+    
+    //*************************************************
+    // MARK: - Footer View
+    //*************************************************
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return self.viewModel.hasNextPage ? self.loadingPagination : nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return self.viewModel.hasNextPage ? 44.0 : 0.0
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1
+        
+        if lastRowIndex == indexPath.row && self.viewModel.hasNextPage {
+            self.loadingPagination.startAnimating()
+            self.bringMoreData {
+                self.loadingPagination.stopAnimating()
+            }
+        }
     }
 }

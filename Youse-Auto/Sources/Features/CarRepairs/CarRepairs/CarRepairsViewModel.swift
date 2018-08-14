@@ -11,12 +11,21 @@ import CoreLocation
 
 class CarRepairsViewModel: NSObject {
     
+    enum LoadDataType {
+        case refresh
+        case bringMore
+    }
+    
     //*************************************************
     // MARK: - Public Properties
     //*************************************************
     
-    public var navigationTitle: String {
+    var navigationTitle: String {
         return Constants.carRepairs
+    }
+    
+    var hasNextPage: Bool {
+        return self.nextPage != nil && !self.cellViewModels.isEmpty
     }
     
     //*************************************************
@@ -41,11 +50,14 @@ class CarRepairsViewModel: NSObject {
     
     /// This method is used to load a list of Car Repairs
     ///
-    /// - Parameter completion: This method produces (isSuccess: Bool, localizedError: String?) -> Void
-    func loadCarRepairs(completion: @escaping (_ isSuccess: Bool, _ error: String?) -> Void) {
+    /// - Parameters:
+    ///   - type: A property to set what kind of request will be performed
+    ///   - completion: This parameter produces (isSuccess: Bool, localizedError: String?) -> Void
+    func loadData(type: LoadDataType,completion: @escaping (_ isSuccess: Bool, _ error: String?) -> Void) {
         let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
+        let nextPage = type == .refresh ? nil : self.nextPage
         
-        self.provider.loadCarRepairs(by: location) { (carRepairs, nextPage, localizedError) in
+        self.provider.loadCarRepairs(by: location, nextPage: nextPage) { (carRepairs, nextPage, localizedError) in
             var cellViewModels: [CarRepairCellViewModel] = []
             
             carRepairs.forEach({ (carRepair) in
@@ -53,7 +65,13 @@ class CarRepairsViewModel: NSObject {
             })
             
             self.nextPage = nextPage
-            self.cellViewModels = cellViewModels
+            
+            switch type {
+            case .refresh:
+                self.cellViewModels = cellViewModels
+            case .bringMore:
+                self.cellViewModels.append(contentsOf: cellViewModels)
+            }
             
             completion(localizedError == nil, localizedError)
         }
@@ -68,10 +86,8 @@ class CarRepairsViewModel: NSObject {
     }
     
     func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self), for: indexPath) as? CarRepairCell else { return UITableViewCell() }
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self)) as? CarRepairCell else { return UITableViewCell() }
         cell.setup(with: self.cellViewModels[indexPath.row])
-        
         return cell
     }
     

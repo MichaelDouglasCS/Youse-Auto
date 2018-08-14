@@ -25,8 +25,8 @@ class CarRepairsProvider: NSObject {
     ///
     /// - Parameters:
     ///   - location: Custom Path for your Request.
-    ///   - nextPage: Params of your Request
-    ///   - completion: This method produces (nextPage: String?, localizedError: String?) -> Void
+    ///   - nextPage: Params of your Request, nil by default
+    ///   - completion: A closure that produces (nextPage: String?, localizedError: String?) -> Void
     func loadCarRepairs(by location: CLLocation,
                         nextPage next: String? = nil,
                         completion: @escaping CarRepairsResponse) {
@@ -39,7 +39,7 @@ class CarRepairsProvider: NSObject {
                 let nextPage = json["next_page_token"].string
                 
                 json["results"].array?.forEach({ (carRepairJSON) in
-                    
+
                     if let carRepair = CarRepair(json: carRepairJSON) {
                         carRepairs.append(carRepair)
                     }

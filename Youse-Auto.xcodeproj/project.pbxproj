@@ -32,6 +32,7 @@
 		61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC9211E8A37009BB88A /* NetworkTests.swift */; };
 		61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0B9D211E33B400D28BDA /* AppDelegate.swift */; };
 		61DC0BBE211E33B600D28BDA /* Youse_AutoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */; };
+		61F07477212255980010D900 /* UIImage+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F07476212255980010D900 /* UIImage+Style.swift */; };
 		78E89692591F7E11B154F07E /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A4470C89C6AFCA2F90D069 /* Pods_Youse_AutoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		61DC0BB9211E33B600D28BDA /* Youse-AutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youse_AutoUITests.swift; sourceTree = "<group>"; };
 		61DC0BBF211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61F07476212255980010D900 /* UIImage+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Style.swift"; sourceTree = "<group>"; };
 		A004950F5C3D175A92626C0F /* Pods-Youse-AutoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7640DFC29928464D19C741C /* Pods_Youse_Auto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_Auto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB3BBF96427D0A5EA265D9B3 /* Pods_Youse_AutoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +259,7 @@
 				61B8830E2121377D00B6A5B7 /* Double+Utils.swift */,
 				61BD1BC5211E5CDB009BB88A /* String+Localized.swift */,
 				6197DB9C211EB92400237222 /* UIColor+Style.swift */,
+				61F07476212255980010D900 /* UIImage+Style.swift */,
 				6155CD6F212230E0003306FA /* UIImageView+Service.swift */,
 			);
 			path = Extensions;
@@ -501,11 +504,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +576,7 @@
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
+				61F07477212255980010D900 /* UIImage+Style.swift in Sources */,
 				618ED119211E36AF00CD177E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,14 +25,15 @@ class CarRepairCell: UITableViewCell {
     //*************************************************
     
     func setup(with viewModel: CarRepairCellViewModel) {
-        
-        if let imageURL = viewModel.imageURL {
-            self.customImageView.load(from: imageURL)
-        }
-        
+        self.customImageView.image = UIImage.YouseAuto.carRepairPlaceholder
         self.nameLabel.text = viewModel.name
         self.ratingLabel.text = viewModel.rating
         self.addressLabel.attributedText = viewModel.address
         self.availabilityLabel.attributedText = viewModel.availability
+        
+        if let imageURL = viewModel.imageURL {
+            self.customImageView.load(from: imageURL,
+                                      withPlaceholder: UIImage.YouseAuto.carRepairPlaceholder)
+        }
     }
 }

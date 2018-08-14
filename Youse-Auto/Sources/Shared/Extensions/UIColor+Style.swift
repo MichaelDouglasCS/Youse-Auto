@@ -8,10 +8,6 @@
 
 import UIKit
 
-//*************************************************
-// MARK: - UIColor Youse Auto
-//*************************************************
-
 extension UIColor {
     
     struct YouseAuto {

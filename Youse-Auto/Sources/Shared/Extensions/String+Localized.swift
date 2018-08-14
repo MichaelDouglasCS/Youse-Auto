@@ -8,10 +8,6 @@
 
 import UIKit
 
-//*************************************************
-// MARK: - String Youse Auto
-//*************************************************
-
 extension String {
     
     struct YouseAuto {

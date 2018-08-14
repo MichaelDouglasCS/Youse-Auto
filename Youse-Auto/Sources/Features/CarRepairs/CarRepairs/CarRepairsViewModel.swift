@@ -46,11 +46,14 @@ class CarRepairsViewModel: NSObject {
         let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
         
         self.provider.loadCarRepairs(by: location) { (carRepairs, nextPage, localizedError) in
-            self.nextPage = nextPage
+            var cellViewModels: [CarRepairCellViewModel] = []
             
             carRepairs.forEach({ (carRepair) in
-                self.cellViewModels.append(CarRepairCellViewModel(carRepair: carRepair))
+                cellViewModels.append(CarRepairCellViewModel(carRepair: carRepair))
             })
+            
+            self.nextPage = nextPage
+            self.cellViewModels = cellViewModels
             
             completion(localizedError == nil, localizedError)
         }

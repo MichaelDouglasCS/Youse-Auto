@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 extension UIImageView {
     
@@ -14,19 +15,22 @@ extension UIImageView {
     // MARK: - Public Methods
     //*************************************************
     
-    func load(from url: URL, withPlaceholder placeholder: UIImage? = nil) {
-        
-        DispatchQueue.global().async { [weak self] in
-            
-            if let data = try? Data(contentsOf: url) {
-                
-                if let image = UIImage(data: data) {
-                    
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
+    public func load(from url: URL,
+                     withPlaceholder placeholder: UIImage? = nil,
+                     completion: ((_ image: UIImage?) -> Void)? = nil ) {
+        self.af_setImage(withURL: url,
+                         placeholderImage: placeholder,
+                         imageTransition: .crossDissolve(0.25)) { (dataResponse) in
+                            
+                            if let theImage = dataResponse.result.value {
+                                self.image = theImage
+                            } else if let data = dataResponse.data, let theImage = UIImage(data: data) {
+                                self.image = theImage
+                            } else {
+                                self.image = nil
+                            }
+                            
+                            completion?(self.image)
         }
     }
 }

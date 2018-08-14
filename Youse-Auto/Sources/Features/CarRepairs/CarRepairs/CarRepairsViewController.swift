@@ -34,22 +34,27 @@ class CarRepairsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Status Bar Style
-        UIApplication.shared.statusBarStyle = .lightContent
         
         // Inject Self VM
         self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
+        
+        // Load Data
+        self.loadData { }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Status Bar Style
+        UIApplication.shared.statusBarStyle = .lightContent
         
         // Navigation
         self.navigationItem.title = self.viewModel.navigationTitle
         
         // Setup Refresh Control
+        self.refreshControl.tintColor = .white
         self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
         self.tableView.refreshControl = self.refreshControl
-        
-        // Load Data
-        self.loadData { }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,6 +71,7 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     private func loadData(completion: @escaping () -> Void) {
+        
         self.viewModel.loadCarRepairs { (isSuccess, error) in
             self.tableView.reloadSections([0], with: .automatic)
             completion()
@@ -73,6 +79,7 @@ class CarRepairsViewController: UIViewController {
     }
     
     @objc private func refreshData() {
+        
         self.loadData {
             self.refreshControl.endRefreshing()
         }

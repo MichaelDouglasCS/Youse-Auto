@@ -14,8 +14,8 @@
         <scene sceneID="qLR-Jt-jKk">
             <objects>
                 <navigationController id="dHv-tf-boC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YUL-nJ-L0T">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="YUL-nJ-L0T">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.29803921568627451" green="0.058823529411764705" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -38,11 +38,11 @@
             <objects>
                 <viewController id="BYh-Uw-Vpu" customClass="CarRepairsViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ne0-SV-pTw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-d1-tXx">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarRepairCell" rowHeight="250" id="uau-cW-BZL" customClass="CarRepairCell" customModule="Youse_Auto" customModuleProvider="target">
@@ -53,41 +53,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-bp-Zle" userLabel="ShadowView" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="10" width="335" height="230"/>
+                                                    <rect key="frame" x="15" y="10" width="345" height="230"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-nn-33Q" userLabel="Container View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="230"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="230"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-car-repair" translatesAutoresizingMaskIntoConstraints="NO" id="31T-aV-CA6" userLabel="Image">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="136"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="31T-aV-CA6" userLabel="Image">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="cD1-80-2qT"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="Pug-hj-iX6"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sLx-yD-1hB">
-                                                                    <rect key="frame" x="10" y="146" width="315" height="74"/>
+                                                                    <rect key="frame" x="10" y="140" width="325" height="80"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-rd-e2i" userLabel="Name">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="315" height="18"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-rd-e2i" userLabel="Name">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="19.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-Rl-7Qd" userLabel="Rating">
-                                                                            <rect key="frame" x="0.0" y="23" width="315" height="14.333333333333336"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-Rl-7Qd" userLabel="Rating">
+                                                                            <rect key="frame" x="0.0" y="24.333333333333343" width="325" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                             <color key="textColor" red="1" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw3-E8-pK9" userLabel="Address">
-                                                                            <rect key="frame" x="0.0" y="42.333333333333343" width="315" height="13.333333333333336"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw3-E8-pK9" userLabel="Address">
+                                                                            <rect key="frame" x="0.0" y="46.333333333333343" width="325" height="14.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-RL-2rw" userLabel="Availability">
-                                                                            <rect key="frame" x="0.0" y="60.666666666666664" width="315" height="13.333333333333336"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-RL-2rw" userLabel="Availability">
+                                                                            <rect key="frame" x="0.0" y="65.666666666666657" width="325" height="14.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                                             <color key="textColor" red="0.0" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -127,8 +127,8 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2ip-bp-Zle" firstAttribute="leading" secondItem="l8z-If-mdy" secondAttribute="leading" constant="20" id="3GK-If-pxJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="2ip-bp-Zle" secondAttribute="trailing" constant="20" id="EKd-vT-8nV"/>
+                                                <constraint firstItem="2ip-bp-Zle" firstAttribute="leading" secondItem="l8z-If-mdy" secondAttribute="leading" constant="15" id="3GK-If-pxJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="2ip-bp-Zle" secondAttribute="trailing" constant="15" id="EKd-vT-8nV"/>
                                                 <constraint firstItem="2ip-bp-Zle" firstAttribute="top" secondItem="l8z-If-mdy" secondAttribute="top" constant="10" id="OCl-KK-jFp"/>
                                                 <constraint firstAttribute="bottom" secondItem="2ip-bp-Zle" secondAttribute="bottom" constant="10" id="PuF-iV-obP"/>
                                             </constraints>
@@ -157,7 +157,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tbZ-4Q-9ag"/>
                     </view>
-                    <navigationItem key="navigationItem" id="S45-ca-mu4"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="S45-ca-mu4"/>
                     <connections>
                         <outlet property="tableView" destination="k9j-d1-tXx" id="okA-uL-Boc"/>
                     </connections>
@@ -167,7 +167,4 @@
             <point key="canvasLocation" x="197.59999999999999" y="178.81773399014779"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="image-car-repair" width="7864" height="4580"/>
-    </resources>
 </document>

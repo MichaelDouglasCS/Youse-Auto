@@ -29,7 +29,17 @@ class CarRepairDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Navigation Controller
+        self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Navigation Controller
+        self.navigationController?.hidesBarsOnSwipe = false
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,11 +59,13 @@ extension CarRepairDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Teste")
+        cell.backgroundColor = .black
+        return cell
     }
 }
 
@@ -62,5 +74,5 @@ extension CarRepairDetailsViewController: UITableViewDataSource {
 //*************************************************
 
 extension CarRepairDetailsViewController: UITableViewDelegate {
-    
+
 }

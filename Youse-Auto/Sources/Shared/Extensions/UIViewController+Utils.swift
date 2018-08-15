@@ -8,10 +8,6 @@
 
 import UIKit
 
-//*************************************************
-// MARK: - UIViewController
-//*************************************************
-
 extension UIViewController {
     
     //*************************************************
@@ -33,20 +29,5 @@ extension UIViewController {
         }
         
         return self
-    }
-}
-
-//*************************************************
-// MARK: - UIApplication
-//*************************************************
-
-extension UIApplication {
-    
-    //*************************************************
-    // MARK: - Public Methods
-    //*************************************************
-    
-    func topMostViewController() -> UIViewController? {
-        return self.keyWindow?.rootViewController?.topMostViewController()
     }
 }

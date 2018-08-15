@@ -194,14 +194,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tbZ-4Q-9ag"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="S45-ca-mu4"/>
+                    <navigationItem key="navigationItem" id="S45-ca-mu4"/>
                     <connections>
                         <outlet property="tableView" destination="k9j-d1-tXx" id="okA-uL-Boc"/>
+                        <segue destination="bOx-7a-86C" kind="show" identifier="CarRepairDetailsSegue" id="ekW-dh-YFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2A-Ib-Hso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="178.81773399014779"/>
         </scene>
+        <!--CarRepairDetails-->
+        <scene sceneID="FTG-UP-vpu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CarRepairDetails" id="bOx-7a-86C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0Q-YS-B5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="179"/>
+        </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

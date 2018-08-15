@@ -27,15 +27,6 @@ Shows: ★★★★☆ (123)
     }
   }
   
-  /// Currently shown text. Set it to nil to display just the stars without text.
-  @IBInspectable open var text: String? {
-    didSet {
-      if oldValue != text {
-        update()
-      }
-    }
-  }
-  
   /// Star rating settings.
   open var settings: CosmosSettings = .default {
     didSet {

@@ -63,8 +63,10 @@ class CarRepairsViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let carRepairDetails = segue.destination as? CarRepairDetailsViewController,
+            let index = sender as? Int {
+            carRepairDetails.viewModel = CarRepairDetailsViewModel()
+        }
     }
     
     //*************************************************
@@ -162,6 +164,10 @@ extension CarRepairsViewController: UITableViewDelegate {
                 self.loadingPagination.stopAnimating()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "CarRepairDetailsSegue", sender: indexPath.row)
     }
 }
 

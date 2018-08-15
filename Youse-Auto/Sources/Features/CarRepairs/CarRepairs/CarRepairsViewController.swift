@@ -44,8 +44,7 @@ class CarRepairsViewController: UIViewController {
         
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        self.tableView.setupPlaceholder(image: UIImage.YouseAuto.carRepairOil,
-                                        message: String.YouseAuto.noResultsFound)
+        self.tableView.placeholderDelegate = self
         self.tableView.placeholder(isShow: false)
         
         // Refresh Control
@@ -76,7 +75,7 @@ class CarRepairsViewController: UIViewController {
         self.viewModel.loadData(type: .refresh) { (error) in
             
             if let error = error {
-                self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
+                self.showInfoAlert(title: String.YouseAuto.oops, message: error)
             }
 
             self.tableView.placeholder(isShow: error != nil, animate: true)
@@ -89,7 +88,7 @@ class CarRepairsViewController: UIViewController {
         self.viewModel.loadData(type: .bringMore) { (error) in
             
             if let error = error {
-                self.showInfoAlert(title: String.YouseAuto.sorry, message: error)
+                self.showInfoAlert(title: String.YouseAuto.oops, message: error)
             }
             
             self.tableView.placeholder(isShow: error != nil, animate: true)
@@ -163,5 +162,22 @@ extension CarRepairsViewController: UITableViewDelegate {
                 self.loadingPagination.stopAnimating()
             }
         }
+    }
+}
+
+//*************************************************
+// MARK: -
+//*************************************************
+
+extension CarRepairsViewController: UITableViewPlaceholderDelegate {
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel {
+        return PlaceholderViewModel(image: UIImage.YouseAuto.carRepairOil,
+                                    title: String.YouseAuto.sorry,
+                                    message: String.YouseAuto.noResultsFound)
     }
 }

@@ -20,8 +20,9 @@
 //*************************
 
 "OK" = "OK";
-"SORRY" = "Oops!";
-"NO_RESULTS_FOUND" = "Sorry, we couldn't find any results.";
+"SORRY" = "Sorry :(";
+"OOPS" = "Oops!";
+"NO_RESULTS_FOUND" = "We couldn't find any results. Let's try pull to refresh.";
 
 //*************************
 // Error

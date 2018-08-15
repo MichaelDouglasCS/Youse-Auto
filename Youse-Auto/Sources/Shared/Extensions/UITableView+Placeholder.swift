@@ -8,28 +8,38 @@
 
 import UIKit
 
+//*************************************************
+// MARK: - UITableViewPlaceholderDelegate
+//*************************************************
+
+protocol UITableViewPlaceholderDelegate: class {
+    func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel
+}
+
+//*************************************************
+// MARK: - UITableView
+//*************************************************
+
 extension UITableView {
+    
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    weak var placeholderDelegate: UITableViewPlaceholderDelegate? {
+        get {
+            return self.placeholderDelegate
+        }
+        set(newValue) {
+            if let viewModel = newValue?.placeholderViewModel(in: self) {
+                self.setupPlaceholder(with: viewModel)
+            }
+        }
+    }
     
     //*************************************************
     // MARK: - Public Methods
     //*************************************************
-    
-    func setupPlaceholder(image: UIImage?, title: String? = nil, message: String) {
-        
-        if let topMostViewController = UIApplication.shared.topMostViewController() {
-            let frame = topMostViewController.view.frame
-            let placeholder = PlaceholderView(frame: CGRect(x: frame.origin.x,
-                                                            y: frame.origin.y,
-                                                            width: frame.width,
-                                                            height: frame.height))
-            let viewModel = PlaceholderViewModel(image: image,
-                                                 title: title,
-                                                 message: message)
-            
-            placeholder.setupUI(with: viewModel)
-            self.backgroundView = placeholder
-        }
-    }
     
     func placeholder(isShow: Bool, animate: Bool = false) {
         
@@ -45,6 +55,24 @@ extension UITableView {
             }
         } else {
             self.backgroundView?.alpha = isShow ? 1.0 : 0.0
+        }
+    }
+    
+    //*************************************************
+    // MARK: - Private Methods
+    //*************************************************
+    
+    private func setupPlaceholder(with viewModel: PlaceholderViewModel) {
+        
+        if let topMostViewController = UIApplication.shared.topMostViewController() {
+            let frame = topMostViewController.view.frame
+            let placeholder = PlaceholderView(frame: CGRect(x: frame.origin.x,
+                                                            y: frame.origin.y,
+                                                            width: frame.width,
+                                                            height: frame.height))
+            
+            placeholder.setupUI(with: viewModel)
+            self.backgroundView = placeholder
         }
     }
 }

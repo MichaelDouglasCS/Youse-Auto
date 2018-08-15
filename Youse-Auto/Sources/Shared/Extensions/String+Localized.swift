@@ -27,6 +27,7 @@ extension String {
         
         static var ok: String { return "OK".localized }
         static var sorry: String { return "SORRY".localized }
+        static var oops: String { return "OOPS".localized }
         static var noResultsFound: String { return "NO_RESULTS_FOUND".localized }
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
     }

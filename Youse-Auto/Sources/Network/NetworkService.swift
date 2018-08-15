@@ -103,18 +103,20 @@ enum NetworkService {
                                nextPage next: String? = nil) -> NetworkService {
             
             if let pageToken = next {
-                return .mobile((method: .get, path: "/place/nearbysearch/json?pagetoken=\(pageToken)&key=\(API.key)"))
+                return .mobile((method: .get,
+                                path: "/place/nearbysearch/json?pagetoken=\(pageToken)&key=\(API.key)"))
             }
             
             let latitude = location.coordinate.latitude
             let longitude = location.coordinate.longitude
 
-            return .mobile((method: .get, path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
+            return .mobile((method: .get,
+                            path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
         }
         
-        static func loadImage(fromReferenceID referenceID: String,
-                              width: Int,
-                              height: Int?) -> NetworkService {
+        static func image(fromReferenceID referenceID: String,
+                          width: Int,
+                          height: Int?) -> NetworkService {
             var path = "/place/photo?maxwidth=\(width)&"
             
             if let height = height {
@@ -123,7 +125,13 @@ enum NetworkService {
             
             path.append("photoreference=\(referenceID)&key=\(API.key)")
             
-            return .mobile((method: .get, path: path))
+            return .mobile((method: .get,
+                            path: path))
+        }
+        
+        static func details(fromPlaceID placeID: String) -> NetworkService {
+            return .mobile((method: .get,
+                            path: "/place/details/json?placeid=\(placeID)&key=\(API.key)"))
         }
     }
     

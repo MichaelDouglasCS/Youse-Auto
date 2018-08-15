@@ -18,7 +18,7 @@ extension String {
         
         static var carRepairs: String { return "CAR_REPAIRS".localized }
         static var address: String { return "ADDRESS".localized }
-        static var opened: String { return "OPENED".localized }
+        static var open: String { return "OPEN".localized }
         static var closed: String { return "CLOSED".localized }
         
         //*************************************************

@@ -6,16 +6,15 @@
 //  Copyright © 2018 Michael Douglas. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
 
-class Photo: NSObject {
+struct Photo {
     
     //*************************************************
     // MARK: - Public Properties
     //*************************************************
     
-    var id: String?
+    var id: String
     var width: Int?
     var height: Int?
     var url: URL?

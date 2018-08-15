@@ -15,7 +15,7 @@ class CarRepairsProvider: NSObject {
     // MARK: - Definitions
     //*************************************************
     
-    typealias CarRepairs = (_ carRepairs: [CarRepair], _ nextPage: String?, _ error: String?) -> Void
+    typealias CarRepairsResponse = (_ carRepairs: [CarRepair], _ nextPage: String?, _ error: String?) -> Void
     
     //*************************************************
     // MARK: - Public Methods
@@ -29,7 +29,7 @@ class CarRepairsProvider: NSObject {
     ///   - completion: A closure that produces (carRepairs: [CarRepair], nextPage: String?, error: String?) -> Void
     func carRepairs(by location: CLLocation,
                     nextPage next: String? = nil,
-                    completion: @escaping CarRepairs) {
+                    completion: @escaping CarRepairsResponse) {
         
         NetworkService.CarRepair.listNearby(to: location,
                                             nextPage: next).execute { (json, response) in

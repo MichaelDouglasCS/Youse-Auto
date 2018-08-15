@@ -6,10 +6,9 @@
 //  Copyright © 2018 Michael Douglas. All rights reserved.
 //
 
-import Foundation
 import SwiftyJSON
 
-class CarRepair: NSObject {
+struct CarRepair {
     
     //*************************************************
     // MARK: - Public Properties
@@ -21,7 +20,7 @@ class CarRepair: NSObject {
     var rating: Double?
     var address: String?
     var isOpenNow: Bool?
-    var imageReference: Photo?
+    var image: Photo?
     
     //*************************************************
     // MARK: - Inits
@@ -39,7 +38,7 @@ class CarRepair: NSObject {
         self.isOpenNow = json["opening_hours"]["open_now"].bool
         
         if let photoJSON = json["photos"].array?.first {
-            self.imageReference = Photo(json: photoJSON)
+            self.image = Photo(json: photoJSON)
         }
     }
 }

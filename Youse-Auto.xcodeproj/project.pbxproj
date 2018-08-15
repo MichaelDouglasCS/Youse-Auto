@@ -33,6 +33,10 @@
 		6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6F212230E0003306FA /* UIImageView+Service.swift */; };
 		6157B0F521248D790082A78C /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F421248D790082A78C /* UINavigationController+Style.swift */; };
 		6157B0F72124938A0082A78C /* CarRepairDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */; };
+		6157B0F921249F270082A78C /* CarRepairDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F821249F270082A78C /* CarRepairDetails.swift */; };
+		6157B0FB2124AC3C0082A78C /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FA2124AC3C0082A78C /* Period.swift */; };
+		6157B0FD2124B04F0082A78C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FC2124B04F0082A78C /* Location.swift */; };
+		6157B0FF2124B2C30082A78C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FE2124B2C30082A78C /* Review.swift */; };
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
 		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
 		617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617E4FA82120C49300C6057F /* CarRepairs.storyboard */; };
@@ -104,6 +108,10 @@
 		6155CD6F212230E0003306FA /* UIImageView+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Service.swift"; sourceTree = "<group>"; };
 		6157B0F421248D790082A78C /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
 		6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsProvider.swift; sourceTree = "<group>"; };
+		6157B0F821249F270082A78C /* CarRepairDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetails.swift; sourceTree = "<group>"; };
+		6157B0FA2124AC3C0082A78C /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		6157B0FC2124B04F0082A78C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6157B0FE2124B2C30082A78C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E4FA82120C49300C6057F /* CarRepairs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarRepairs.storyboard; sourceTree = "<group>"; };
@@ -183,6 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */,
+				6157B0F821249F270082A78C /* CarRepairDetails.swift */,
+				6157B0FA2124AC3C0082A78C /* Period.swift */,
+				6157B0FE2124B2C30082A78C /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 			children = (
 				617E4FB02120C77C00C6057F /* CarRepairsProvider.swift */,
 				61B8830A21211DB300B6A5B7 /* CarRepair.swift */,
+				6157B0FC2124B04F0082A78C /* Location.swift */,
 				61B8830C21212BCE00B6A5B7 /* Photo.swift */,
 			);
 			path = Models;
@@ -670,17 +682,20 @@
 				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,
 				610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */,
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
+				6157B0F921249F270082A78C /* CarRepairDetails.swift in Sources */,
 				6112AAFE21248726000AE094 /* UIApplication+Utils.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				61079BEC2123C7CD00BEC583 /* CarRepairDetailsViewController.swift in Sources */,
 				617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */,
 				61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */,
 				617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */,
+				6157B0FD2124B04F0082A78C /* Location.swift in Sources */,
 				610B8DC42122B95000491CF7 /* StarLayer.swift in Sources */,
 				6155CD6921220E9D003306FA /* CustomView.swift in Sources */,
 				6157B0F521248D790082A78C /* UINavigationController+Style.swift in Sources */,
 				61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */,
 				617E4FAF2120C5B700C6057F /* CarRepairsViewModel.swift in Sources */,
+				6157B0FF2124B2C30082A78C /* Review.swift in Sources */,
 				6155CD6C21222AC3003306FA /* CarRepairCell.swift in Sources */,
 				61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */,
 				610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */,
@@ -689,6 +704,7 @@
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
 				610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
+				6157B0FB2124AC3C0082A78C /* Period.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
 				6104007F212381C300BCE794 /* PlaceholderViewModel.swift in Sources */,
 				6104007D2123813900BCE794 /* UITableView+Placeholder.swift in Sources */,

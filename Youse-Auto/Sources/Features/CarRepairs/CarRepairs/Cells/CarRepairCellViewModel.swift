@@ -21,7 +21,7 @@ class CarRepairCellViewModel: NSObject {
     }
     
     var imageURL: URL? {
-        return self.carRepair.imageReference?.url
+        return self.carRepair.image?.url
     }
     
     var name: String {
@@ -48,7 +48,7 @@ class CarRepairCellViewModel: NSObject {
     
     var availability: NSAttributedString? {
         guard let isOpenNow = self.carRepair.isOpenNow else { return nil }
-        let title: String = isOpenNow ? String.YouseAuto.opened : String.YouseAuto.closed
+        let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed
         let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
         let font = UIFont.boldSystemFont(ofSize: 12)
         

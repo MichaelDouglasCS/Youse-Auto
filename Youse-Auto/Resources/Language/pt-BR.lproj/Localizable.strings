@@ -12,7 +12,7 @@
 
 "CAR_REPAIRS" = "Oficinas Mecânicas";
 "ADDRESS" = "Endereço";
-"OPENED" = "Aberto";
+"OPEN" = "Aberto";
 "CLOSED" = "Fechado";
 
 //*************************

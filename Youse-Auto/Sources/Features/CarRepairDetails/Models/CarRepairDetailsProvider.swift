@@ -14,7 +14,7 @@ class CarRepairDetailsProvider: NSObject {
     // MARK: - Definitions
     //*************************************************
     
-    typealias CarRepairDetails = (_ carRepairDetails: String?, _ error: String?) -> Void
+    typealias CarRepairDetailsResponse = (_ carRepairDetails: CarRepairDetails?, _ error: String?) -> Void
     
     //*************************************************
     // MARK: - Public Methods
@@ -24,16 +24,15 @@ class CarRepairDetailsProvider: NSObject {
     ///
     /// - Parameters:
     ///   - placeID: Used to identify Car Repair Details to be loaded.
-    ///   - completion: A closure that produces (carRepairDetails: String?, error: String?) -> Void
+    ///   - completion: A closure that produces (carRepairDetails: CarRepairDetails?, error: String?) -> Void
     func carRepairDetails(byPlaceID placeID: String,
-                          completion: @escaping CarRepairDetails) {
+                          completion: @escaping CarRepairDetailsResponse) {
         
         NetworkService.CarRepair.details(fromPlaceID: placeID).execute { (json, response) in
-            
             switch response {
             case .success:
-                print(json.description)
-                completion("", nil)
+                let carRepairDetails = CarRepairDetails(json: json["result"])
+                completion(carRepairDetails, nil)
             case .error(let error):
                 completion(nil, error.rawValue.localized)
             }

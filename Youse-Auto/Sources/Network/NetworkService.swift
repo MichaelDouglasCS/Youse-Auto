@@ -6,7 +6,6 @@
 //  Copyright © 2018 Michael Douglas. All rights reserved.
 //
 
-import Foundation
 import CoreLocation
 import Alamofire
 import SwiftyJSON

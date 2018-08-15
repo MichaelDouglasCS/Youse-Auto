@@ -26,7 +26,7 @@ class CarRepairCell: UITableViewCell {
     // MARK: - Public Methods
     //*************************************************
     
-    func setup(with viewModel: CarRepairCellViewModel) {
+    func setupUI(with viewModel: CarRepairCellViewModel) {
         self.nameLabel.text = viewModel.name
         self.ratingView.isHidden = viewModel.rating == nil
         self.ratingLabel.text = viewModel.rating?.toString(withDecimalPlaces: 1)

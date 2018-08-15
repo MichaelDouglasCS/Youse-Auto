@@ -48,8 +48,6 @@ class CarRepairsViewModel: NSObject {
     // MARK: - Public Methods
     //*************************************************
     
-    // TableView
-    
     func numberOfSections() -> Int {
         return 1
     }
@@ -60,15 +58,13 @@ class CarRepairsViewModel: NSObject {
     
     func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self)) as? CarRepairCell else { return UITableViewCell() }
-        cell.setup(with: self.cellViewModels[indexPath.row])
+        cell.setupUI(with: self.cellViewModels[indexPath.row])
         return cell
     }
     
     func heightForRow(at indexPath: IndexPath) -> CGFloat {
         return self.cellViewModels[indexPath.row].height
     }
-    
-    // Requests
     
     /// This method is used to load a list of Car Repairs
     ///
@@ -92,9 +88,7 @@ class CarRepairsViewModel: NSObject {
             case .bringMore:
                 self.cellViewModels.append(contentsOf: cellViewModels)
             }
-            
             self.nextPage = nextPage
-
             completion(localizedError)
         }
     }

@@ -166,7 +166,7 @@ extension CarRepairsViewController: UITableViewDelegate {
 }
 
 //*************************************************
-// MARK: -
+// MARK: - UITableViewPlaceholderDelegate
 //*************************************************
 
 extension CarRepairsViewController: UITableViewPlaceholderDelegate {

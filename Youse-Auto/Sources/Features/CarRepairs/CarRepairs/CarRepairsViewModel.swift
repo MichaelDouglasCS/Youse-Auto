@@ -66,16 +66,21 @@ class CarRepairsViewModel: NSObject {
         return self.cellViewModels[indexPath.row].height
     }
     
+    func placeID(at index: Int) -> String {
+        return self.cellViewModels[index].placeID
+    }
+    
     /// This method is used to load a list of Car Repairs
     ///
     /// - Parameters:
     ///   - type: A property to set what kind of request will be performed
-    ///   - completion: This parameter produces (isSuccess: Bool, localizedError: String?) -> Void
+    ///   - completion: This parameter produces (error: String?) -> Void
     func loadData(type: LoadDataType, completion: @escaping (_ error: String?) -> Void) {
         let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
         let nextPage = type == .refresh ? nil : self.nextPage
         
-        self.provider.loadCarRepairs(by: location, nextPage: nextPage) { (carRepairs, nextPage, localizedError) in
+        self.provider.carRepairs(by: location,
+                                 nextPage: nextPage) { (carRepairs, nextPage, error) in
             var cellViewModels: [CarRepairCellViewModel] = []
             
             carRepairs.forEach { cellViewModels.append(CarRepairCellViewModel(carRepair: $0)) }
@@ -89,7 +94,7 @@ class CarRepairsViewModel: NSObject {
                 self.cellViewModels.append(contentsOf: cellViewModels)
             }
             self.nextPage = nextPage
-            completion(localizedError)
+            completion(error)
         }
     }
 }

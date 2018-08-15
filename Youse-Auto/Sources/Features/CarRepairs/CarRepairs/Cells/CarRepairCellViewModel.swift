@@ -16,11 +16,15 @@ class CarRepairCellViewModel: NSObject {
     
     let height: CGFloat = 250.0
     
+    var placeID: String {
+        return self.carRepair.placeID
+    }
+    
     var imageURL: URL? {
         return self.carRepair.imageReference?.url
     }
     
-    var name: String? {
+    var name: String {
         return self.carRepair.name
     }
     

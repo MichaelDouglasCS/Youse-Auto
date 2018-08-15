@@ -16,8 +16,8 @@ class CarRepair: NSObject {
     //*************************************************
     
     var id: String?
-    var placeID: String?
-    var name: String?
+    var placeID: String
+    var name: String
     var rating: Double?
     var address: String?
     var isOpenNow: Bool?

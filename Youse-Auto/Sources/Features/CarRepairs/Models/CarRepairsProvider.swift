@@ -15,7 +15,7 @@ class CarRepairsProvider: NSObject {
     // MARK: - Definitions
     //*************************************************
     
-    typealias CarRepairsResponse = (_ carRepairs: [CarRepair], _ nextPage: String?, _ localizedError: String?) -> Void
+    typealias CarRepairs = (_ carRepairs: [CarRepair], _ nextPage: String?, _ error: String?) -> Void
     
     //*************************************************
     // MARK: - Public Methods
@@ -26,14 +26,14 @@ class CarRepairsProvider: NSObject {
     /// - Parameters:
     ///   - location: Custom Path for your Request.
     ///   - nextPage: Params of your Request, nil by default
-    ///   - completion: A closure that produces (nextPage: String?, localizedError: String?) -> Void
-    func loadCarRepairs(by location: CLLocation,
-                        nextPage next: String? = nil,
-                        completion: @escaping CarRepairsResponse) {
+    ///   - completion: A closure that produces (carRepairs: [CarRepair], nextPage: String?, error: String?) -> Void
+    func carRepairs(by location: CLLocation,
+                    nextPage next: String? = nil,
+                    completion: @escaping CarRepairs) {
         
         NetworkService.CarRepair.listNearby(to: location,
                                             nextPage: next).execute { (json, response) in
-            
+                                                
             switch response {
             case .success:
                 var carRepairs: [CarRepair] = []

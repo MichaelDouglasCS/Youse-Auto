@@ -32,6 +32,7 @@
 		6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */; };
 		6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155CD6F212230E0003306FA /* UIImageView+Service.swift */; };
 		6157B0F521248D790082A78C /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F421248D790082A78C /* UINavigationController+Style.swift */; };
+		6157B0F72124938A0082A78C /* CarRepairDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */; };
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
 		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
 		617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617E4FA82120C49300C6057F /* CarRepairs.storyboard */; };
@@ -102,6 +103,7 @@
 		6155CD6D21222AF7003306FA /* CarRepairCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCellViewModel.swift; sourceTree = "<group>"; };
 		6155CD6F212230E0003306FA /* UIImageView+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Service.swift"; sourceTree = "<group>"; };
 		6157B0F421248D790082A78C /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
+		6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsProvider.swift; sourceTree = "<group>"; };
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E4FA82120C49300C6057F /* CarRepairs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarRepairs.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		61079BE72123C2F800BEC583 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */,
 				610B8DD02122B95000491CF7 /* RightToLeft.swift in Sources */,
 				61079BEE2123C7DB00BEC583 /* CarRepairDetailsViewModel.swift in Sources */,
+				6157B0F72124938A0082A78C /* CarRepairDetailsProvider.swift in Sources */,
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
 				610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,

@@ -65,7 +65,10 @@ class CarRepairsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let carRepairDetails = segue.destination as? CarRepairDetailsViewController,
             let index = sender as? Int {
-            carRepairDetails.viewModel = CarRepairDetailsViewModel()
+            let placeID = self.viewModel.placeID(at: index)
+            let provider = CarRepairDetailsProvider()
+            carRepairDetails.viewModel = CarRepairDetailsViewModel(provider: provider,
+                                                                   placeID: placeID)
         }
     }
     
@@ -88,11 +91,10 @@ class CarRepairsViewController: UIViewController {
     
     private func bringMoreData(completion: @escaping () -> Void) {
         self.viewModel.loadData(type: .bringMore) { (error) in
-            
+
             if let error = error {
                 self.showInfoAlert(title: String.YouseAuto.oops, message: error)
             }
-            
             self.tableView.placeholder(isShow: error != nil, animate: true)
             self.tableView.reloadData()
             completion()

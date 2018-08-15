@@ -32,7 +32,11 @@ class CarRepairDetailsViewController: UIViewController {
         // Navigation Controller
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
-        // Do any additional setup after loading the view.
+        
+        // Load Data
+        self.viewModel.loadData { (error) in
+            print(error ?? "")
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

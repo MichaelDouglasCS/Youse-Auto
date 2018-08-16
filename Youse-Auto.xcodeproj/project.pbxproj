@@ -34,7 +34,6 @@
 		6157B0F521248D790082A78C /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F421248D790082A78C /* UINavigationController+Style.swift */; };
 		6157B0F72124938A0082A78C /* CarRepairDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */; };
 		6157B0F921249F270082A78C /* CarRepairDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0F821249F270082A78C /* CarRepairDetails.swift */; };
-		6157B0FB2124AC3C0082A78C /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FA2124AC3C0082A78C /* Period.swift */; };
 		6157B0FD2124B04F0082A78C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FC2124B04F0082A78C /* Location.swift */; };
 		6157B0FF2124B2C30082A78C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B0FE2124B2C30082A78C /* Review.swift */; };
 		6157B1022124C1890082A78C /* CarRepairDetailsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B1012124C1890082A78C /* CarRepairDetailsCellProtocol.swift */; };
@@ -57,6 +56,8 @@
 		618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11A211E376600CD177E /* LaunchScreen.storyboard */; };
 		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
 		61A83EFB2125E3710096EA6C /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFA2125E3710096EA6C /* PhoneService.swift */; };
+		61A83EFE2125ED0D0096EA6C /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFD2125ED0D0096EA6C /* ContactInfoCell.swift */; };
+		61A83F002125ED190096EA6C /* ContactInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFF2125ED190096EA6C /* ContactInfoCellViewModel.swift */; };
 		61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830A21211DB300B6A5B7 /* CarRepair.swift */; };
 		61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830C21212BCE00B6A5B7 /* Photo.swift */; };
 		61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830E2121377D00B6A5B7 /* Double+Utils.swift */; };
@@ -120,7 +121,6 @@
 		6157B0F421248D790082A78C /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
 		6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsProvider.swift; sourceTree = "<group>"; };
 		6157B0F821249F270082A78C /* CarRepairDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetails.swift; sourceTree = "<group>"; };
-		6157B0FA2124AC3C0082A78C /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		6157B0FC2124B04F0082A78C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6157B0FE2124B2C30082A78C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		6157B1012124C1890082A78C /* CarRepairDetailsCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsCellProtocol.swift; sourceTree = "<group>"; };
@@ -144,6 +144,8 @@
 		618ED11A211E376600CD177E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		61A83EFA2125E3710096EA6C /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
+		61A83EFD2125ED0D0096EA6C /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
+		61A83EFF2125ED190096EA6C /* ContactInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCellViewModel.swift; sourceTree = "<group>"; };
 		61B8830A21211DB300B6A5B7 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
 		61B8830C21212BCE00B6A5B7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		61B8830E2121377D00B6A5B7 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
@@ -214,7 +216,6 @@
 			children = (
 				6157B0F62124938A0082A78C /* CarRepairDetailsProvider.swift */,
 				6157B0F821249F270082A78C /* CarRepairDetails.swift */,
-				6157B0FA2124AC3C0082A78C /* Period.swift */,
 				6157B0FE2124B2C30082A78C /* Review.swift */,
 			);
 			path = Models;
@@ -278,7 +279,8 @@
 			children = (
 				6157B1012124C1890082A78C /* CarRepairDetailsCellProtocol.swift */,
 				6157B1032124EC960082A78C /* GalleryCell */,
-				6157B10D21253F2D0082A78C /* CarRepairDetailsCell */,
+				6157B10D21253F2D0082A78C /* DetailsCell */,
+				61A83EFC2125ECD60096EA6C /* ContactInfoCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -302,13 +304,13 @@
 			path = GalleryCollectionCell;
 			sourceTree = "<group>";
 		};
-		6157B10D21253F2D0082A78C /* CarRepairDetailsCell */ = {
+		6157B10D21253F2D0082A78C /* DetailsCell */ = {
 			isa = PBXGroup;
 			children = (
 				6157B10E21253FC50082A78C /* DetailsCell.swift */,
 				6157B11021253FE80082A78C /* DetailsCellViewModel.swift */,
 			);
-			path = CarRepairDetailsCell;
+			path = DetailsCell;
 			sourceTree = "<group>";
 		};
 		6157B114212546820082A78C /* CustomButton */ = {
@@ -435,6 +437,15 @@
 				61B88310212145EC00B6A5B7 /* Views */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		61A83EFC2125ECD60096EA6C /* ContactInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				61A83EFD2125ED0D0096EA6C /* ContactInfoCell.swift */,
+				61A83EFF2125ED190096EA6C /* ContactInfoCellViewModel.swift */,
+			);
+			path = ContactInfoCell;
 			sourceTree = "<group>";
 		};
 		61B88310212145EC00B6A5B7 /* Views */ = {
@@ -791,15 +802,16 @@
 				6157B1022124C1890082A78C /* CarRepairDetailsCellProtocol.swift in Sources */,
 				61079BEE2123C7DB00BEC583 /* CarRepairDetailsViewModel.swift in Sources */,
 				6157B0F72124938A0082A78C /* CarRepairDetailsProvider.swift in Sources */,
+				61A83EFE2125ED0D0096EA6C /* ContactInfoCell.swift in Sources */,
 				6155CD70212230E0003306FA /* UIImageView+Service.swift in Sources */,
 				610B8DCD2122B95000491CF7 /* CosmosRating.swift in Sources */,
 				6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */,
-				6157B0FB2124AC3C0082A78C /* Period.swift in Sources */,
 				6157B1052124ED0D0082A78C /* GalleryCell.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
 				615FEF042125D83600465FB3 /* DirectionsService.swift in Sources */,
 				6104007F212381C300BCE794 /* PlaceholderViewModel.swift in Sources */,
 				6104007D2123813900BCE794 /* UITableView+Placeholder.swift in Sources */,
+				61A83F002125ED190096EA6C /* ContactInfoCellViewModel.swift in Sources */,
 				61040077212364E800BCE794 /* PlaceholderView.swift in Sources */,
 				61F07477212255980010D900 /* UIImage+Style.swift in Sources */,
 			);

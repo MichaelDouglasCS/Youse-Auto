@@ -47,13 +47,7 @@ struct CarRepairCellViewModel {
     }
     
     var availability: NSAttributedString? {
-        guard let isOpenNow = self.carRepair.isOpenNow else { return nil }
-        let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed
-        let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
-        let font = UIFont.boldSystemFont(ofSize: 12)
-        
-        return NSMutableAttributedString(string: title,
-                                         attributes: [.foregroundColor: color, .font: font])
+        return self.carRepair.isOpenFormatted
     }
     
     //*************************************************

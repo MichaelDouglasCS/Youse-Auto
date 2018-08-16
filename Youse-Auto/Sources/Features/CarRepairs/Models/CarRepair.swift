@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-struct CarRepair {
+class CarRepair {
     
     //*************************************************
     // MARK: - Public Properties
@@ -20,6 +20,7 @@ struct CarRepair {
     var rating: Double?
     var address: String?
     var isOpenNow: Bool?
+    var isOpenFormatted: NSAttributedString?
     var image: Photo?
     
     //*************************************************
@@ -36,6 +37,14 @@ struct CarRepair {
         self.rating = json["rating"].double
         self.address = json["vicinity"].string
         self.isOpenNow = json["opening_hours"]["open_now"].bool
+        
+        if let isOpenNow = self.isOpenNow {
+            let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed
+            let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
+            let font = UIFont.boldSystemFont(ofSize: 13)
+            
+            self.isOpenFormatted = NSMutableAttributedString(string: title, attributes: [.foregroundColor: color, .font: font])
+        }
         
         if let photoJSON = json["photos"].array?.first {
             self.image = Photo(json: photoJSON)

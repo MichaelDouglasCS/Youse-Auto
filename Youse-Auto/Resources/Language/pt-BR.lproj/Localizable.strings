@@ -14,8 +14,10 @@
 "ADDRESS" = "Endereço";
 "OPEN" = "Aberto";
 "CLOSED" = "Fechado";
-"DIRECTIONS_SOURCE" = "Qual aplicação gostaria de usar para localização?";
+"DIRECTIONS_SOURCE" = "Qual aplicação gostaria de usar ?";
 "CANCEL" = "Cancelar";
+"CALL" = "Ligar";
+"DIRECTIONS" = "Como chegar";
 
 //*************************
 // Car Repair Details

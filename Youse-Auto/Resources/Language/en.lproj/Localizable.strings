@@ -23,8 +23,10 @@
 "REVIEWS" = "Reviews";
 "INFORMATIONS" = "Informations";
 "OF" = "of";
-"DIRECTIONS_SOURCE" = "Which application would you like to use for directions?";
+"DIRECTIONS_SOURCE" = "Which application would you like to use ?";
 "CANCEL" = "Cancel";
+"CALL" = "Call";
+"DIRECTIONS" = "Directions";
 
 //*************************
 // Alert

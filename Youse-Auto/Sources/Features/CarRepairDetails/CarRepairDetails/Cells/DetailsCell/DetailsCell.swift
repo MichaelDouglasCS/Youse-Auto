@@ -48,13 +48,19 @@ class DetailsCell: UITableViewCell {
     func setupUI(with viewModel: DetailsCellViewModel) {
         self.viewModel = viewModel
         self.nameLabel.text = self.viewModel.name
+        self.availabilityLabel.attributedText = self.viewModel.availability
+        
         self.ratingView.isHidden = self.viewModel.rating == nil
         self.ratingLabel.text = self.viewModel.rating?.toString(withDecimalPlaces: 1)
         self.ratingStars.rating = self.viewModel.rating ?? 0.0
+        
         self.distanceView.isHidden = self.viewModel.distance == nil
         self.distanceLabel.text = self.viewModel.distance
-        self.availabilityLabel.attributedText = self.viewModel.availability
+        
+        self.callButton.setTitle(String.YouseAuto.call, for: .normal)
         self.callButton.isHidden = !self.viewModel.hasPhone
+        
+        self.directionsButton.setTitle(String.YouseAuto.directions, for: .normal)
         self.directionsButton.isHidden = !self.viewModel.hasDirections
     }
     

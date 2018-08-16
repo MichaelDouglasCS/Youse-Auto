@@ -8,22 +8,15 @@
 
 import SwiftyJSON
 
-struct CarRepairDetails {
+class CarRepairDetails: CarRepair {
     
     //*************************************************
     // MARK: - Public Properties
     //*************************************************
     
-    var id: String?
-    var placeID: String
-    var name: String
-    var rating: Double?
     var location: Location?
-    var formattedAddress: String?
-    var address: String?
-    var formattedPhone: String?
-    var isOpenNow: Bool?
-    var periods: [Period]?
+    var addressFormatted: String?
+    var phoneFormatted: String?
     var openingHours: [String]?
     var images: [Photo]?
     var reviews: [Review]?
@@ -32,23 +25,12 @@ struct CarRepairDetails {
     // MARK: - Inits
     //*************************************************
     
-    init?(json: JSON) {
-        guard let placeID = json["place_id"].string, !placeID.isEmpty else { return nil }
-        guard let name = json["name"].string, !name.isEmpty else { return nil }
+    override init?(json: JSON) {
+        super.init(json: json)
         
-        self.id = json["id"].string
-        self.placeID = placeID
-        self.name = name
-        self.rating = json["rating"].double
         self.location = Location(json: json["geometry"])
-        self.formattedAddress = json["formatted_address"].string
-        self.address = json["vicinity"].string
-        self.formattedPhone = json["formatted_phone_number"].string
-        self.isOpenNow = json["opening_hours"]["open_now"].bool
-        
-        if let periods = json["opening_hours"]["periods"].array {
-            self.periods = periods.compactMap { Period(json: $0) }
-        }
+        self.addressFormatted = json["formatted_address"].string
+        self.phoneFormatted = json["formatted_phone_number"].string
         
         if let openingHours = json["opening_hours"]["weekday_text"].array {
             self.openingHours = openingHours.compactMap { $0.stringValue }

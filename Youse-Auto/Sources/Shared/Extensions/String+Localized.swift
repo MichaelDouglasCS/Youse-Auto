@@ -37,6 +37,8 @@ extension String {
         
         static var ok: String { return "OK".localized }
         static var cancel: String { return "CANCEL".localized }
+        static var call: String { return "CALL".localized }
+        static var directions: String { return "DIRECTIONS".localized }
         static var sorry: String { return "SORRY".localized }
         static var oops: String { return "OOPS".localized }
         static var noResultsFound: String { return "NO_RESULTS_FOUND".localized }

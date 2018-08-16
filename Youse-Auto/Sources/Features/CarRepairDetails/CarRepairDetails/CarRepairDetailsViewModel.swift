@@ -25,9 +25,9 @@ class CarRepairDetailsViewModel: NSObject {
             case .basicInfo:
                 return CGFloat.leastNormalMagnitude
             case .contactInfo:
-                return 14.0
+                return 30.0
             case .reviews:
-                return 14.0
+                return 17.0
             }
         }
         
@@ -101,6 +101,13 @@ class CarRepairDetailsViewModel: NSObject {
                 cell.setupUI(with: viewModel)
                 return cell
             }
+        case is ContactInfoCellViewModel:
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ContactInfoCell.self)) as? ContactInfoCell,
+                let viewModel = cellViewModel as? ContactInfoCellViewModel {
+                cell.setupUI(with: viewModel)
+                return cell
+            }
         default:
             return UITableViewCell()
         }
@@ -159,8 +166,37 @@ class CarRepairDetailsViewModel: NSObject {
             
             // Details
             basicInfo.append(DetailsCellViewModel(details: details))
-            
             self.cellViewModels.append(basicInfo)
+            
+            //*************************************************
+            // MARK: - Contact Info ViewModels
+            //*************************************************
+            var contactInfo: [CarRepairDetailsCellProtocol] = []
+            
+            // Address
+            if let icon = UIImage.YouseAuto.localization,
+                let address = details.addressFormatted {
+                contactInfo.append(ContactInfoCellViewModel(icon: icon, title: address))
+            }
+            
+            // Opening Hour
+            if let icon = UIImage.YouseAuto.clock,
+                let isOpenFormatted = details.isOpenFormatted {
+                let openingHours = details.openingHours?.joined(separator: "\n\n")
+                contactInfo.append(ContactInfoCellViewModel(icon: icon,
+                                                            title: "",
+                                                            attributedTitle: isOpenFormatted,
+                                                            content: openingHours))
+            }
+            
+            // Phone
+            if let icon = UIImage.YouseAuto.phone,
+                let phoneFormatted = details.phoneFormatted {
+                contactInfo.append(ContactInfoCellViewModel(icon: icon,
+                                                            title: phoneFormatted))
+            }
+            
+            self.cellViewModels.append(contactInfo)
         }
     }
 }

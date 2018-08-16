@@ -37,22 +37,16 @@ struct DetailsCellViewModel: CarRepairDetailsCellProtocol {
     }
     
     var availability: NSAttributedString? {
-        guard let isOpenNow = self.carRepairDetails.isOpenNow else { return nil }
-        let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed
-        let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
-        let font = UIFont.boldSystemFont(ofSize: 13)
-        
-        return NSMutableAttributedString(string: title,
-                                         attributes: [.foregroundColor: color, .font: font])
+        return self.carRepairDetails.isOpenFormatted
     }
     
     var hasPhone: Bool {
-        let number = self.carRepairDetails.formattedPhone?.digits ?? ""
+        let number = self.carRepairDetails.phoneFormatted?.digits ?? ""
         return PhoneService.canCall(toNumber: number)
     }
     
     var phoneNumber: String {
-        return self.carRepairDetails.formattedPhone?.digits ?? ""
+        return self.carRepairDetails.phoneFormatted?.digits ?? ""
     }
     
     var hasDirections: Bool {

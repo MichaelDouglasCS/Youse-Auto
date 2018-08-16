@@ -126,7 +126,7 @@ class CarRepairDetailsViewModel: NSObject {
     //*************************************************
     
     private func handleCellViewModels(with carRepairDetails: CarRepairDetails?) {
-
+        
         if let details = carRepairDetails {
             
             self.cellViewModels = []
@@ -135,15 +135,11 @@ class CarRepairDetailsViewModel: NSObject {
             // MARK: - Basic Info ViewModels
             //*************************************************
             
-            var basicInfoViewModels: [CarRepairDetailsCellProtocol] = []
+            var basicInfo: [CarRepairDetailsCellProtocol] = []
+            basicInfo.append(GalleryCellViewModel(images: details.images ?? [Photo()]))
             
-            if let images = details.images {
-                basicInfoViewModels.append(GalleryCellViewModel(images: images))
-            } else {
-                basicInfoViewModels.append(GalleryCellViewModel(images: [Photo()]))
-            }
             
-            self.cellViewModels.append(basicInfoViewModels)
+            self.cellViewModels.append(basicInfo)
         }
     }
 }

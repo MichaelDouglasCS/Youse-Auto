@@ -63,11 +63,11 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-pY-LIU" userLabel="Pages View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
-                                                    <rect key="frame" x="321.66666666666669" y="167.33333333333334" width="43.333333333333314" height="22.666666666666657"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-pY-LIU" userLabel="Page View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
+                                                    <rect key="frame" x="327.66666666666669" y="167.33333333333334" width="37.333333333333314" height="22.666666666666657"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEI-Oq-1lt">
-                                                            <rect key="frame" x="5" y="5.0000000000000009" width="33.333333333333336" height="13.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEI-Oq-1lt">
+                                                            <rect key="frame" x="4.9999999999999982" y="5.0000000000000009" width="27.333333333333329" height="13.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>

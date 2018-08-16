@@ -57,9 +57,12 @@ class CarRepairsViewModel: NSObject {
     }
     
     func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self)) as? CarRepairCell else { return UITableViewCell() }
-        cell.setupUI(with: self.cellViewModels[indexPath.row])
-        return cell
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CarRepairCell.self), for: indexPath) as? CarRepairCell {
+            cell.setupUI(with: self.cellViewModels[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func heightForRow(at indexPath: IndexPath) -> CGFloat {

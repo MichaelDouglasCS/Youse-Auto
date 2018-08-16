@@ -22,6 +22,12 @@ extension String {
         static var closed: String { return "CLOSED".localized }
         
         //*************************************************
+        // MARK: - Car Repair Details
+        //*************************************************
+        
+        static var details: String { return "DETAILS".localized }
+        
+        //*************************************************
         // MARK: - Alerts
         //*************************************************
         

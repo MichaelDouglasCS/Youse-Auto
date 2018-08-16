@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarRepairCellViewModel: NSObject {
+struct CarRepairCellViewModel {
     
     //*************************************************
     // MARK: - Public Properties

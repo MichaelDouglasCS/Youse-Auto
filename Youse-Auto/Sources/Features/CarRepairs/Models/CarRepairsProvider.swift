@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class CarRepairsProvider: NSObject {
+struct CarRepairsProvider {
     
     //*************************************************
     // MARK: - Definitions

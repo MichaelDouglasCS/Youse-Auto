@@ -15,17 +15,12 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     @IBOutlet private weak var tableView: UITableView!
-    
-    //*************************************************
-    // MARK: - Public Properties
-    //*************************************************
-    
-    var viewModel: CarRepairsViewModel!
-    
+
     //*************************************************
     // MARK: - Private Properties
     //*************************************************
     
+    private var viewModel: CarRepairsViewModel!
     private let refreshControl = UIRefreshControl()
     private let loadingPagination = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
@@ -36,11 +31,15 @@ class CarRepairsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Inject Self VM
-        self.viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
+        // Inject VM
+        self.setupUI(with: CarRepairsViewModel(provider: CarRepairsProvider()))
         
         // Navigation
         self.navigationItem.title = self.viewModel.navigationTitle
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                                style: .done,
+                                                                target: nil,
+                                                                action: nil)
         
         // Table View
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
@@ -65,11 +64,19 @@ class CarRepairsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let carRepairDetails = segue.destination as? CarRepairDetailsViewController,
             let index = sender as? Int {
-            let placeID = self.viewModel.placeID(at: index)
             let provider = CarRepairDetailsProvider()
-            carRepairDetails.viewModel = CarRepairDetailsViewModel(provider: provider,
-                                                                   placeID: placeID)
+            let placeID = self.viewModel.placeID(at: index)
+            let viewModel = CarRepairDetailsViewModel(provider: provider, placeID: placeID)
+            carRepairDetails.setupUI(with: viewModel)
         }
+    }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    func setupUI(with viewModel: CarRepairsViewModel) {
+        self.viewModel = viewModel
     }
     
     //*************************************************

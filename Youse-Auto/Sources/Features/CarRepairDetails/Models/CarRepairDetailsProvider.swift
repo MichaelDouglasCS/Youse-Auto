@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CarRepairDetailsProvider: NSObject {
+struct CarRepairDetailsProvider {
     
     //*************************************************
     // MARK: - Definitions
@@ -31,8 +31,7 @@ class CarRepairDetailsProvider: NSObject {
         NetworkService.CarRepair.details(fromPlaceID: placeID).execute { (json, response) in
             switch response {
             case .success:
-                let carRepairDetails = CarRepairDetails(json: json["result"])
-                completion(carRepairDetails, nil)
+                completion(CarRepairDetails(json: json["result"]), nil)
             case .error(let error):
                 completion(nil, error.rawValue.localized)
             }

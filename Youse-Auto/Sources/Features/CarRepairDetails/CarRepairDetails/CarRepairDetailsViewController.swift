@@ -17,10 +17,10 @@ class CarRepairDetailsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     //*************************************************
-    // MARK: - Public Properties
+    // MARK: - Private Properties
     //*************************************************
     
-    var viewModel: CarRepairDetailsViewModel!
+    private var viewModel: CarRepairDetailsViewModel!
     
     //*************************************************
     // MARK: - Lifecycle
@@ -29,13 +29,14 @@ class CarRepairDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Navigation Controller
+        // Navigation
+        self.navigationItem.title = self.viewModel.navigationTitle
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
         
         // Load Data
         self.viewModel.loadData { (error) in
-            print(error ?? "")
+            self.tableView.reloadData()
         }
     }
     
@@ -46,9 +47,14 @@ class CarRepairDetailsViewController: UIViewController {
         self.navigationController?.hidesBarsOnSwipe = false
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    func setupUI(with viewModel: CarRepairDetailsViewModel) {
+        self.viewModel = viewModel
     }
 }
 
@@ -59,17 +65,15 @@ class CarRepairDetailsViewController: UIViewController {
 extension CarRepairDetailsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.viewModel.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return self.viewModel.numberOfRows(inSection: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Teste")
-        cell.backgroundColor = .black
-        return cell
+        return self.viewModel.cellForRow(at: indexPath, from: tableView)
     }
 }
 
@@ -79,4 +83,7 @@ extension CarRepairDetailsViewController: UITableViewDataSource {
 
 extension CarRepairDetailsViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.viewModel.heightForRow(at: indexPath)
+    }
 }

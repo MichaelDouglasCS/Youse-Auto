@@ -22,13 +22,58 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JM1-nJ-9vs">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GalleryCell" rowHeight="180" id="JM1-nJ-9vs" customClass="GalleryCell" customModule="Youse_Auto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JM1-nJ-9vs" id="AZ9-oK-Ebe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zcZ-Vp-RT7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gvl-RJ-nti">
+                                                        <size key="itemSize" width="375" height="180"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionCell" id="r6d-OW-WoV" customClass="GalleryCollectionCell" customModule="Youse_Auto" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otO-9U-IM0" userLabel="Image">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="otO-9U-IM0" secondAttribute="trailing" id="VT6-SB-lPc"/>
+                                                                <constraint firstItem="otO-9U-IM0" firstAttribute="top" secondItem="r6d-OW-WoV" secondAttribute="top" id="WWI-V3-CsD"/>
+                                                                <constraint firstItem="otO-9U-IM0" firstAttribute="leading" secondItem="r6d-OW-WoV" secondAttribute="leading" id="my0-mD-CPj"/>
+                                                                <constraint firstAttribute="bottom" secondItem="otO-9U-IM0" secondAttribute="bottom" id="nJI-lg-v9k"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="otO-9U-IM0" id="4Td-jb-bcb"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zcZ-Vp-RT7" secondAttribute="bottom" id="At4-EV-TVC"/>
+                                                <constraint firstAttribute="trailing" secondItem="zcZ-Vp-RT7" secondAttribute="trailing" id="FU2-gI-Q0L"/>
+                                                <constraint firstItem="zcZ-Vp-RT7" firstAttribute="leading" secondItem="AZ9-oK-Ebe" secondAttribute="leading" id="ZXH-HU-vDh"/>
+                                                <constraint firstItem="zcZ-Vp-RT7" firstAttribute="top" secondItem="AZ9-oK-Ebe" secondAttribute="top" id="xF2-QJ-58j"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="zcZ-Vp-RT7" id="YXs-Pj-8uW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

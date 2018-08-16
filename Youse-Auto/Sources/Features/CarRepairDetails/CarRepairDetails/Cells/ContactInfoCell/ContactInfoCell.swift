@@ -10,9 +10,13 @@ import UIKit
 
 class ContactInfoCell: UITableViewCell {
     
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    //*************************************************
+    // MARK: - Outlets
+    //*************************************************
+    
+    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var contentLabel: UILabel!
 
     //*************************************************
     // MARK: - Public Methods

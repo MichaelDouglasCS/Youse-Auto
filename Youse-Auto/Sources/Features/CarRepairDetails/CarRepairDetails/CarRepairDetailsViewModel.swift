@@ -27,7 +27,7 @@ class CarRepairDetailsViewModel: NSObject {
             case .contactInfo:
                 return 30.0
             case .reviews:
-                return 17.0
+                return 30.0
             }
         }
         
@@ -108,6 +108,13 @@ class CarRepairDetailsViewModel: NSObject {
                 cell.setupUI(with: viewModel)
                 return cell
             }
+        case is ReviewCellViewModel:
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReviewCell.self)) as? ReviewCell,
+                let viewModel = cellViewModel as? ReviewCellViewModel {
+                cell.setupUI(with: viewModel)
+                return cell
+            }
         default:
             return UITableViewCell()
         }
@@ -166,6 +173,8 @@ class CarRepairDetailsViewModel: NSObject {
             
             // Details
             basicInfo.append(DetailsCellViewModel(details: details))
+            
+            // Append Basic Info
             self.cellViewModels.append(basicInfo)
             
             //*************************************************
@@ -196,7 +205,20 @@ class CarRepairDetailsViewModel: NSObject {
                                                             title: phoneFormatted))
             }
             
+            // Append Contact Info
             self.cellViewModels.append(contactInfo)
+            
+            //*************************************************
+            // MARK: - Reviews ViewModels
+            //*************************************************
+            var reviews: [CarRepairDetailsCellProtocol] = []
+            
+            details.reviews?.forEach({ (review) in
+                reviews.append(ReviewCellViewModel(review: review))
+            })
+            
+            // Append Reviews
+            self.cellViewModels.append(reviews)
         }
     }
 }

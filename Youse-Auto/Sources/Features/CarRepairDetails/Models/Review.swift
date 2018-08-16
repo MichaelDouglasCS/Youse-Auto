@@ -18,7 +18,7 @@ struct Review {
     var authorPhotoURL: URL?
     var rating: Double?
     var text: String
-    var time: TimeInterval?
+    var timeDescription: String?
     
     //*************************************************
     // MARK: - Inits
@@ -32,6 +32,6 @@ struct Review {
         self.authorPhotoURL = json["profile_photo_url"].url
         self.rating = json["rating"].double
         self.text = text
-        self.time = json["time"].double
+        self.timeDescription = json["relative_time_description"].string
     }
 }

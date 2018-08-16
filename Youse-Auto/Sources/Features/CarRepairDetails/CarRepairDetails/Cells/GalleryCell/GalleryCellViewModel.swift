@@ -19,7 +19,7 @@ struct GalleryCellViewModel: CarRepairDetailsCellProtocol {
     }
     
     var height: CGFloat {
-        return 200.0
+        return 250.0
     }
     
     //*************************************************

@@ -36,6 +36,8 @@ class CarRepairDetailsViewController: UIViewController {
         self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
         
         // Table View
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.placeholderDelegate = self
         self.tableView.placeholder(isShow: false)
         
@@ -105,7 +107,7 @@ extension CarRepairDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return self.viewModel.cellForRow(at: indexPath, from: tableView)
+        return self.viewModel.cellForRow(at: indexPath, from: tableView, target: self)
     }
 }
 
@@ -139,4 +141,19 @@ extension CarRepairDetailsViewController: UITableViewPlaceholderDelegate {
                                     title: String.YouseAuto.sorry,
                                     message: String.YouseAuto.noDetailsLoad)
     }
+}
+
+//*************************************************
+// MARK: - DetailsCellDelegate
+//*************************************************
+
+extension CarRepairDetailsViewController: DetailsCellDelegate {
+    
+    func didTouchCall(toNumber number: String) {
+        self.viewModel.call(toNumber: number)
+    }
+    
+    func didTouchGetDirections(fromAddress address: String) {
+        self.viewModel.directions(fromAddress: address, at: self)
+    }    
 }

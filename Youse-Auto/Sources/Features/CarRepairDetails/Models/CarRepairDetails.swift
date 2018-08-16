@@ -19,9 +19,9 @@ struct CarRepairDetails {
     var name: String
     var rating: Double?
     var location: Location?
+    var formattedAddress: String?
     var address: String?
     var formattedPhone: String?
-    var internationalPhone: String?
     var isOpenNow: Bool?
     var periods: [Period]?
     var openingHours: [String]?
@@ -41,9 +41,9 @@ struct CarRepairDetails {
         self.name = name
         self.rating = json["rating"].double
         self.location = Location(json: json["geometry"])
-        self.address = json["formatted_address"].string
+        self.formattedAddress = json["formatted_address"].string
+        self.address = json["vicinity"].string
         self.formattedPhone = json["formatted_phone_number"].string
-        self.internationalPhone = json["international_phone_number"].string
         self.isOpenNow = json["opening_hours"]["open_now"].bool
         
         if let periods = json["opening_hours"]["periods"].array {

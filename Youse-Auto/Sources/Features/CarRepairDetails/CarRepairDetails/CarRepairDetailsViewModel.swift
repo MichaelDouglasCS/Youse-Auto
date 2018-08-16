@@ -80,7 +80,9 @@ class CarRepairDetailsViewModel: NSObject {
         return self.cellViewModels[section].count
     }
     
-    func cellForRow(at indexPath: IndexPath, from tableView: UITableView) -> UITableViewCell {
+    func cellForRow(at indexPath: IndexPath,
+                    from tableView: UITableView,
+                    target: UIViewController) -> UITableViewCell {
         let cellViewModel = self.cellViewModels[indexPath.section][indexPath.row]
         
         switch cellViewModel {
@@ -88,6 +90,14 @@ class CarRepairDetailsViewModel: NSObject {
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GalleryCell.self)) as? GalleryCell,
                 let viewModel = cellViewModel as? GalleryCellViewModel {
+                cell.setupUI(with: viewModel)
+                return cell
+            }
+        case is DetailsCellViewModel:
+            
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DetailsCell.self)) as? DetailsCell,
+                let viewModel = cellViewModel as? DetailsCellViewModel {
+                cell.delegate = target as? DetailsCellDelegate
                 cell.setupUI(with: viewModel)
                 return cell
             }
@@ -121,6 +131,14 @@ class CarRepairDetailsViewModel: NSObject {
         }
     }
     
+    func call(toNumber number: String) {
+        PhoneService.performCall(toNumber: number)
+    }
+    
+    func directions(fromAddress address: String, at target: UIViewController) {
+        DirectionsService.presentOptions(fromAddress: address, at: target)
+    }
+    
     //*************************************************
     // MARK: - Private Methods
     //*************************************************
@@ -134,10 +152,13 @@ class CarRepairDetailsViewModel: NSObject {
             //*************************************************
             // MARK: - Basic Info ViewModels
             //*************************************************
-            
             var basicInfo: [CarRepairDetailsCellProtocol] = []
+            
+            // Gallery
             basicInfo.append(GalleryCellViewModel(images: details.images ?? [Photo()]))
             
+            // Details
+            basicInfo.append(DetailsCellViewModel(details: details))
             
             self.cellViewModels.append(basicInfo)
         }

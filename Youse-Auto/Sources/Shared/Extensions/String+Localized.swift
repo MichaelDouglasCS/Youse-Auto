@@ -29,17 +29,20 @@ extension String {
         static var details: String { return "DETAILS".localized }
         static var reviews: String { return "REVIEWS".localized }
         static var informations: String { return "INFORMATIONS".localized }
+        static var directionsSource: String { return "DIRECTIONS_SOURCE".localized }
         
         //*************************************************
         // MARK: - Alerts
         //*************************************************
         
         static var ok: String { return "OK".localized }
+        static var cancel: String { return "CANCEL".localized }
         static var sorry: String { return "SORRY".localized }
         static var oops: String { return "OOPS".localized }
         static var noResultsFound: String { return "NO_RESULTS_FOUND".localized }
         static var noDetailsLoad: String { return "NO_DETAILS_LOAD".localized }
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
+        static var noDirections: String { return "NO_DIRECTIONS".localized }
     }
     
     //*************************************************
@@ -49,6 +52,14 @@ extension String {
     var localized: String {
         return NSLocalizedString(self, comment: self)
     }
+    
+    var digits: String {
+        return self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+    }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
     
     func nsRange(from range: Range<Index>) -> NSRange {
         return NSRange(range, in: self)

@@ -42,7 +42,12 @@
 		6157B1072124ED1B0082A78C /* GalleryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B1062124ED1B0082A78C /* GalleryCellViewModel.swift */; };
 		6157B10A2124F8B30082A78C /* GalleryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B1092124F8B30082A78C /* GalleryCollectionCell.swift */; };
 		6157B10C2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B10B2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift */; };
+		6157B10F21253FC50082A78C /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B10E21253FC50082A78C /* DetailsCell.swift */; };
+		6157B11121253FE80082A78C /* DetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B11021253FE80082A78C /* DetailsCellViewModel.swift */; };
+		6157B1132125467A0082A78C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B1122125467A0082A78C /* CustomButton.swift */; };
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
+		615FEEFF212552ED00465FB3 /* DateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEEFE212552ED00465FB3 /* DateKit.swift */; };
+		615FEF042125D83600465FB3 /* DirectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEF032125D83600465FB3 /* DirectionsService.swift */; };
 		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
 		617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617E4FA82120C49300C6057F /* CarRepairs.storyboard */; };
 		617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */; };
@@ -51,6 +56,7 @@
 		618ED113211E362400CD177E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 618ED115211E362400CD177E /* Localizable.strings */; };
 		618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11A211E376600CD177E /* LaunchScreen.storyboard */; };
 		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
+		61A83EFB2125E3710096EA6C /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFA2125E3710096EA6C /* PhoneService.swift */; };
 		61B8830B21211DB300B6A5B7 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830A21211DB300B6A5B7 /* CarRepair.swift */; };
 		61B8830D21212BCE00B6A5B7 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830C21212BCE00B6A5B7 /* Photo.swift */; };
 		61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8830E2121377D00B6A5B7 /* Double+Utils.swift */; };
@@ -122,7 +128,12 @@
 		6157B1062124ED1B0082A78C /* GalleryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellViewModel.swift; sourceTree = "<group>"; };
 		6157B1092124F8B30082A78C /* GalleryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionCell.swift; sourceTree = "<group>"; };
 		6157B10B2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		6157B10E21253FC50082A78C /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		6157B11021253FE80082A78C /* DetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCellViewModel.swift; sourceTree = "<group>"; };
+		6157B1122125467A0082A78C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		615FEEFE212552ED00465FB3 /* DateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateKit.swift; sourceTree = "<group>"; };
+		615FEF032125D83600465FB3 /* DirectionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsService.swift; sourceTree = "<group>"; };
 		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E4FA82120C49300C6057F /* CarRepairs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarRepairs.storyboard; sourceTree = "<group>"; };
 		617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +143,7 @@
 		618ED116211E364000CD177E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		618ED11A211E376600CD177E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
+		61A83EFA2125E3710096EA6C /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
 		61B8830A21211DB300B6A5B7 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
 		61B8830C21212BCE00B6A5B7 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		61B8830E2121377D00B6A5B7 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
@@ -266,6 +278,7 @@
 			children = (
 				6157B1012124C1890082A78C /* CarRepairDetailsCellProtocol.swift */,
 				6157B1032124EC960082A78C /* GalleryCell */,
+				6157B10D21253F2D0082A78C /* CarRepairDetailsCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -287,6 +300,33 @@
 				6157B10B2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift */,
 			);
 			path = GalleryCollectionCell;
+			sourceTree = "<group>";
+		};
+		6157B10D21253F2D0082A78C /* CarRepairDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				6157B10E21253FC50082A78C /* DetailsCell.swift */,
+				6157B11021253FE80082A78C /* DetailsCellViewModel.swift */,
+			);
+			path = CarRepairDetailsCell;
+			sourceTree = "<group>";
+		};
+		6157B114212546820082A78C /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				6157B1122125467A0082A78C /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		615FEF002125530C00465FB3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				615FEEFE212552ED00465FB3 /* DateKit.swift */,
+				615FEF032125D83600465FB3 /* DirectionsService.swift */,
+				61A83EFA2125E3710096EA6C /* PhoneService.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6177A283211F85ED00F963C6 /* CarRepairs */ = {
@@ -391,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				61BD1BC4211E5CBB009BB88A /* Extensions */,
+				615FEF002125530C00465FB3 /* Utils */,
 				61B88310212145EC00B6A5B7 /* Views */,
 			);
 			path = Shared;
@@ -399,9 +440,10 @@
 		61B88310212145EC00B6A5B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				610B8DD42123572A00491CF7 /* PlaceholderView */,
 				610B8DB22122B95000491CF7 /* CosmosView */,
+				6157B114212546820082A78C /* CustomButton */,
 				610B8DB12122B93300491CF7 /* CustomView */,
+				610B8DD42123572A00491CF7 /* PlaceholderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -710,6 +752,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */,
+				615FEEFF212552ED00465FB3 /* DateKit.swift in Sources */,
 				610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */,
 				610400812123939100BCE794 /* UIViewController+Utils.swift in Sources */,
 				610B8DD321233E8600491CF7 /* UIViewController+Alert.swift in Sources */,
@@ -721,6 +764,7 @@
 				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
 				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,
 				610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */,
+				6157B10F21253FC50082A78C /* DetailsCell.swift in Sources */,
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
 				6157B0F921249F270082A78C /* CarRepairDetails.swift in Sources */,
 				6157B10C2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift in Sources */,
@@ -728,10 +772,13 @@
 				6157B10A2124F8B30082A78C /* GalleryCollectionCell.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
 				61079BEC2123C7CD00BEC583 /* CarRepairDetailsViewController.swift in Sources */,
+				6157B1132125467A0082A78C /* CustomButton.swift in Sources */,
 				617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */,
+				61A83EFB2125E3710096EA6C /* PhoneService.swift in Sources */,
 				61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */,
 				617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */,
 				6157B0FD2124B04F0082A78C /* Location.swift in Sources */,
+				6157B11121253FE80082A78C /* DetailsCellViewModel.swift in Sources */,
 				610B8DC42122B95000491CF7 /* StarLayer.swift in Sources */,
 				6155CD6921220E9D003306FA /* CustomView.swift in Sources */,
 				6157B0F521248D790082A78C /* UINavigationController+Style.swift in Sources */,
@@ -750,6 +797,7 @@
 				6157B0FB2124AC3C0082A78C /* Period.swift in Sources */,
 				6157B1052124ED0D0082A78C /* GalleryCell.swift in Sources */,
 				61BD1BC1211E58DE009BB88A /* NetworkService.swift in Sources */,
+				615FEF042125D83600465FB3 /* DirectionsService.swift in Sources */,
 				6104007F212381C300BCE794 /* PlaceholderViewModel.swift in Sources */,
 				6104007D2123813900BCE794 /* UITableView+Placeholder.swift in Sources */,
 				61040077212364E800BCE794 /* PlaceholderView.swift in Sources */,

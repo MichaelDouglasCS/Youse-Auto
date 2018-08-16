@@ -14,6 +14,8 @@
 "ADDRESS" = "Endereço";
 "OPEN" = "Aberto";
 "CLOSED" = "Fechado";
+"DIRECTIONS_SOURCE" = "Qual aplicação gostaria de usar para localização?";
+"CANCEL" = "Cancelar";
 
 //*************************
 // Car Repair Details

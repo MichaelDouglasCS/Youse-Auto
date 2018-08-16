@@ -33,7 +33,7 @@ struct CarRepairCellViewModel {
     }
     
     var address: NSAttributedString? {
-        guard let  address = self.carRepair.address else { return nil }
+        guard let address = self.carRepair.address else { return nil }
         let mutable = NSMutableAttributedString(string: "\(String.YouseAuto.address): \(address)",
                                                 attributes: [.foregroundColor: UIColor.gray])
         

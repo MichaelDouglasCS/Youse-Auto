@@ -18,7 +18,7 @@ class CarRepairCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var ratingView: UIStackView!
     @IBOutlet private weak var ratingLabel: UILabel!
-    @IBOutlet private weak var ratingStarsView: CosmosView!
+    @IBOutlet private weak var ratingStars: CosmosView!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var availabilityLabel: UILabel!
 
@@ -30,7 +30,7 @@ class CarRepairCell: UITableViewCell {
         self.nameLabel.text = viewModel.name
         self.ratingView.isHidden = viewModel.rating == nil
         self.ratingLabel.text = viewModel.rating?.toString(withDecimalPlaces: 1)
-        self.ratingStarsView.rating = viewModel.rating ?? 0.0
+        self.ratingStars.rating = viewModel.rating ?? 0.0
         self.addressLabel.attributedText = viewModel.address
         self.availabilityLabel.attributedText = viewModel.availability
         

@@ -20,6 +20,8 @@
 //*************************
 
 "DETAILS" = "Details";
+"REVIEWS" = "Reviews";
+"INFORMATIONS" = "Informations";
 
 //*************************
 // Alert
@@ -29,6 +31,7 @@
 "SORRY" = "Sorry :(";
 "OOPS" = "Oops!";
 "NO_RESULTS_FOUND" = "We couldn't find any results. Let's try pull to refresh.";
+"NO_DETAILS_LOAD" = "We couldn't load details. Let's try pull to refresh.";
 
 //*************************
 // Error

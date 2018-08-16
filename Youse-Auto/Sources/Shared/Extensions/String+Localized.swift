@@ -26,6 +26,8 @@ extension String {
         //*************************************************
         
         static var details: String { return "DETAILS".localized }
+        static var reviews: String { return "REVIEWS".localized }
+        static var informations: String { return "INFORMATIONS".localized }
         
         //*************************************************
         // MARK: - Alerts
@@ -35,6 +37,7 @@ extension String {
         static var sorry: String { return "SORRY".localized }
         static var oops: String { return "OOPS".localized }
         static var noResultsFound: String { return "NO_RESULTS_FOUND".localized }
+        static var noDetailsLoad: String { return "NO_DETAILS_LOAD".localized }
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
     }
     

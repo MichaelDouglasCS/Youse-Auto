@@ -29,6 +29,7 @@ class GalleryCell: UITableViewCell {
     func setupUI(with viewModel: GalleryCellViewModel) {
         self.viewModel = viewModel
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
 }
 
@@ -48,5 +49,12 @@ extension GalleryCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return self.viewModel.cellForItem(at: indexPath, from: collectionView)
+    }
+}
+
+extension GalleryCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return self.viewModel.sizeForItem(at: indexPath, from: collectionView)
     }
 }

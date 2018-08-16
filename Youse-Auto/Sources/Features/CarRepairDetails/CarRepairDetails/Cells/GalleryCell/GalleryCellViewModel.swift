@@ -19,7 +19,7 @@ struct GalleryCellViewModel: CarRepairDetailsCellProtocol {
     }
     
     var height: CGFloat {
-        return 180.0
+        return 200.0
     }
     
     //*************************************************
@@ -46,6 +46,10 @@ struct GalleryCellViewModel: CarRepairDetailsCellProtocol {
     
     func numberOfItems(inSection section: Int) -> Int {
         return self.images.count
+    }
+    
+    func sizeForItem(at indexPath: IndexPath, from collectionView: UICollectionView) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: self.height)
     }
     
     func cellForItem(at indexPath: IndexPath,

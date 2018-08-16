@@ -10,7 +10,7 @@
 // Car Repairs
 //*************************
 
-"CAR_REPAIRS" = "Oficinas Mecânicas";
+"CAR_REPAIRS" = "Oficinas";
 "ADDRESS" = "Endereço";
 "OPEN" = "Aberto";
 "CLOSED" = "Fechado";
@@ -20,6 +20,8 @@
 //*************************
 
 "DETAILS" = "Detalhes";
+"REVIEWS" = "Avaliações";
+"INFORMATIONS" = "Informações";
 
 //*************************
 // Alert
@@ -29,6 +31,7 @@
 "SORRY" = "Desculpe :(";
 "OOPS" = "Oops!";
 "NO_RESULTS_FOUND" = "Não foi possível encontrar nenhum resultado. Tente puxar para atualizar.";
+"NO_DETAILS_LOAD" = "Não foi possível carregar os detalhes. Tente puxar para atualizar.";
 
 //*************************
 // Error

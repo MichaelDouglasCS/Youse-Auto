@@ -120,11 +120,7 @@ class CarRepairsViewController: UIViewController {
 //*************************************************
 
 extension CarRepairsViewController: UITableViewDataSource {
-    
-    //*************************************************
-    // MARK: - Public Methods
-    //*************************************************
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.viewModel.numberOfSections()
     }
@@ -143,10 +139,6 @@ extension CarRepairsViewController: UITableViewDataSource {
 //*************************************************
 
 extension CarRepairsViewController: UITableViewDelegate {
-    
-    //*************************************************
-    // MARK: - Public Methods
-    //*************************************************
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel.heightForRow(at: indexPath)
@@ -185,10 +177,6 @@ extension CarRepairsViewController: UITableViewDelegate {
 //*************************************************
 
 extension CarRepairsViewController: UITableViewPlaceholderDelegate {
-    
-    //*************************************************
-    // MARK: - Public Methods
-    //*************************************************
     
     func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel {
         return PlaceholderViewModel(image: UIImage.YouseAuto.carRepairOil,

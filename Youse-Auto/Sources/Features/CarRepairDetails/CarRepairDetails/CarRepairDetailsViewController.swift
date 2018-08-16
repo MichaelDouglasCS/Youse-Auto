@@ -21,6 +21,7 @@ class CarRepairDetailsViewController: UIViewController {
     //*************************************************
     
     private var viewModel: CarRepairDetailsViewModel!
+    private let refreshControl = UIRefreshControl()
     
     //*************************************************
     // MARK: - Lifecycle
@@ -34,20 +35,27 @@ class CarRepairDetailsViewController: UIViewController {
         self.navigationController?.hidesBarsOnSwipe = true
         self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
         
+        // Table View
+        self.tableView.placeholderDelegate = self
+        self.tableView.placeholder(isShow: false)
+        
+        // Refresh Control
+        self.refreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        self.tableView.refreshControl = self.refreshControl
+        
         // Load Data
-        self.viewModel.loadData { (error) in
-            self.tableView.reloadData()
+        self.showLoading()
+        self.loadData {
+            self.stopLoading()
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Navigation Controller
+        // Navigation
         self.navigationController?.hidesBarsOnSwipe = false
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { }
     
     //*************************************************
     // MARK: - Public Methods
@@ -55,6 +63,30 @@ class CarRepairDetailsViewController: UIViewController {
     
     func setupUI(with viewModel: CarRepairDetailsViewModel) {
         self.viewModel = viewModel
+    }
+    
+    //*************************************************
+    // MARK: - Private Methods
+    //*************************************************
+    
+    private func loadData(completion: @escaping () -> Void) {
+        
+        self.viewModel.loadData { (error) in
+            
+            if let error = error {
+                self.showInfoAlert(title: String.YouseAuto.oops, message: error)
+            }
+            
+            self.tableView.placeholder(isShow: error != nil, animate: true)
+            self.tableView.reloadData()
+            completion()
+        }
+    }
+    
+    @objc private func refreshData() {
+        self.loadData {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
@@ -82,8 +114,29 @@ extension CarRepairDetailsViewController: UITableViewDataSource {
 //*************************************************
 
 extension CarRepairDetailsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.viewModel.heightForHeader(inSection: section)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.viewModel.titleForHeader(inSection: section)
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel.heightForRow(at: indexPath)
+    }
+}
+
+//*************************************************
+// MARK: - UITableViewPlaceholderDelegate
+//*************************************************
+
+extension CarRepairDetailsViewController: UITableViewPlaceholderDelegate {
+    
+    func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel {
+        return PlaceholderViewModel(image: UIImage.YouseAuto.carRepairDetails,
+                                    title: String.YouseAuto.sorry,
+                                    message: String.YouseAuto.noDetailsLoad)
     }
 }

@@ -20,14 +20,25 @@ class CarRepairDetailsViewModel: NSObject {
             return sections.count
         }
         
+        var height: CGFloat {
+            switch self {
+            case .basicInfo:
+                return CGFloat.leastNormalMagnitude
+            case .contactInfo:
+                return 14.0
+            case .reviews:
+                return 14.0
+            }
+        }
+        
         var title: String {
             switch self {
             case .basicInfo:
                 return ""
             case .contactInfo:
-                return ""
+                return String.YouseAuto.informations
             case .reviews:
-                return ""
+                return String.YouseAuto.reviews
             }
         }
     }
@@ -86,6 +97,14 @@ class CarRepairDetailsViewModel: NSObject {
         return UITableViewCell()
     }
     
+    func heightForHeader(inSection section: Int) -> CGFloat {
+        return self.cellViewModels[section].first?.section.height ?? 0.0
+    }
+    
+    func titleForHeader(inSection section: Int) -> String {
+        return self.cellViewModels[section].first?.section.title ?? ""
+    }
+    
     func heightForRow(at indexPath: IndexPath) -> CGFloat {
         return self.cellViewModels[indexPath.section][indexPath.row].height
     }
@@ -109,6 +128,8 @@ class CarRepairDetailsViewModel: NSObject {
     private func handleCellViewModels(with carRepairDetails: CarRepairDetails?) {
 
         if let details = carRepairDetails {
+            
+            self.cellViewModels = []
             
             //*************************************************
             // MARK: - Basic Info ViewModels

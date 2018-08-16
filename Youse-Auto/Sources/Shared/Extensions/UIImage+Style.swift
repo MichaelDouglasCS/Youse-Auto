@@ -18,5 +18,6 @@ extension UIImage {
         
         static var carRepairCover: UIImage? { return UIImage(named: "car-repair-cover") }
         static var carRepairOil: UIImage? { return UIImage(named: "car-repair-oil") }
+        static var carRepairDetails: UIImage? { return UIImage(named: "car-repair-details") }
     }
 }

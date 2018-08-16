@@ -158,67 +158,65 @@ class CarRepairDetailsViewModel: NSObject {
     //*************************************************
     
     private func handleCellViewModels(with carRepairDetails: CarRepairDetails?) {
+        guard let details = carRepairDetails else { return }
         
-        if let details = carRepairDetails {
-            
-            self.cellViewModels = []
-            
-            //*************************************************
-            // MARK: - Basic Info ViewModels
-            //*************************************************
-            var basicInfo: [CarRepairDetailsCellProtocol] = []
-            
-            // Gallery
-            basicInfo.append(GalleryCellViewModel(images: details.images ?? [Photo()]))
-            
-            // Details
-            basicInfo.append(DetailsCellViewModel(details: details))
-            
-            // Append Basic Info
-            self.cellViewModels.append(basicInfo)
-            
-            //*************************************************
-            // MARK: - Contact Info ViewModels
-            //*************************************************
-            var contactInfo: [CarRepairDetailsCellProtocol] = []
-            
-            // Address
-            if let icon = UIImage.YouseAuto.localization,
-                let address = details.addressFormatted {
-                contactInfo.append(ContactInfoCellViewModel(icon: icon, title: address))
-            }
-            
-            // Opening Hour
-            if let icon = UIImage.YouseAuto.clock,
-                let isOpenFormatted = details.isOpenFormatted {
-                let openingHours = details.openingHours?.joined(separator: "\n\n")
-                contactInfo.append(ContactInfoCellViewModel(icon: icon,
-                                                            title: "",
-                                                            attributedTitle: isOpenFormatted,
-                                                            content: openingHours))
-            }
-            
-            // Phone
-            if let icon = UIImage.YouseAuto.phone,
-                let phoneFormatted = details.phoneFormatted {
-                contactInfo.append(ContactInfoCellViewModel(icon: icon,
-                                                            title: phoneFormatted))
-            }
-            
-            // Append Contact Info
-            self.cellViewModels.append(contactInfo)
-            
-            //*************************************************
-            // MARK: - Reviews ViewModels
-            //*************************************************
-            var reviews: [CarRepairDetailsCellProtocol] = []
-            
-            details.reviews?.forEach({ (review) in
-                reviews.append(ReviewCellViewModel(review: review))
-            })
-            
-            // Append Reviews
-            self.cellViewModels.append(reviews)
+        self.cellViewModels = []
+        
+        //*************************************************
+        // MARK: - Basic Info ViewModels
+        //*************************************************
+        var basicInfo: [CarRepairDetailsCellProtocol] = []
+        
+        // Gallery
+        basicInfo.append(GalleryCellViewModel(images: details.images ?? [Photo()]))
+        
+        // Details
+        basicInfo.append(DetailsCellViewModel(details: details))
+        
+        // Append Basic Info
+        self.cellViewModels.append(basicInfo)
+        
+        //*************************************************
+        // MARK: - Contact Info ViewModels
+        //*************************************************
+        var contactInfo: [CarRepairDetailsCellProtocol] = []
+        
+        // Address
+        if let icon = UIImage.YouseAuto.localization,
+            let address = details.addressFormatted {
+            contactInfo.append(ContactInfoCellViewModel(icon: icon, title: address))
         }
+        
+        // Opening Hour
+        if let icon = UIImage.YouseAuto.clock,
+            let isOpenFormatted = details.isOpenFormatted {
+            let openingHours = details.openingHours?.joined(separator: "\n\n")
+            contactInfo.append(ContactInfoCellViewModel(icon: icon,
+                                                        title: "",
+                                                        attributedTitle: isOpenFormatted,
+                                                        content: openingHours))
+        }
+        
+        // Phone
+        if let icon = UIImage.YouseAuto.phone,
+            let phoneFormatted = details.phoneFormatted {
+            contactInfo.append(ContactInfoCellViewModel(icon: icon,
+                                                        title: phoneFormatted))
+        }
+        
+        // Append Contact Info
+        self.cellViewModels.append(contactInfo)
+        
+        //*************************************************
+        // MARK: - Reviews ViewModels
+        //*************************************************
+        var reviews: [CarRepairDetailsCellProtocol] = []
+        
+        details.reviews?.forEach({ (review) in
+            reviews.append(ReviewCellViewModel(review: review))
+        })
+        
+        // Append Reviews
+        self.cellViewModels.append(reviews)
     }
 }

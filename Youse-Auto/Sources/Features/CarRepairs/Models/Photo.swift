@@ -14,7 +14,7 @@ struct Photo {
     // MARK: - Public Properties
     //*************************************************
     
-    var id: String
+    var id: String?
     var width: Int?
     var height: Int?
     var url: URL?
@@ -22,6 +22,8 @@ struct Photo {
     //*************************************************
     // MARK: - Inits
     //*************************************************
+    
+    init() {  }
     
     init?(json: JSON) {
         guard let id = json["photo_reference"].string, !id.isEmpty else { return nil }

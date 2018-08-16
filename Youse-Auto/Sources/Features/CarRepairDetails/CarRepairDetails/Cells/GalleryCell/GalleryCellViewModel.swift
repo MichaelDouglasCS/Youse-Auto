@@ -62,4 +62,9 @@ struct GalleryCellViewModel: CarRepairDetailsCellProtocol {
         }
         return UICollectionViewCell()
     }
+    
+    func pageTitle(forCurrentPage currentPage: Int) -> String {
+        let total = self.images.count
+        return "\(currentPage + 1) \(String.YouseAuto.of) \(total)"
+    }
 }

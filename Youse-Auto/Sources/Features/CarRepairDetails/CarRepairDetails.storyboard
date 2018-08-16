@@ -63,16 +63,42 @@
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-pY-LIU" userLabel="Pages View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
+                                                    <rect key="frame" x="321.66666666666669" y="167.33333333333334" width="43.333333333333314" height="22.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEI-Oq-1lt">
+                                                            <rect key="frame" x="5" y="5.0000000000000009" width="33.333333333333336" height="13.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="UEI-Oq-1lt" secondAttribute="bottom" constant="5" id="ERB-9e-cqC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UEI-Oq-1lt" secondAttribute="trailing" constant="5" id="SLC-TM-Vxn"/>
+                                                        <constraint firstItem="UEI-Oq-1lt" firstAttribute="top" secondItem="mqJ-pY-LIU" secondAttribute="top" constant="5" id="pbc-gE-iFn"/>
+                                                        <constraint firstItem="UEI-Oq-1lt" firstAttribute="leading" secondItem="mqJ-pY-LIU" secondAttribute="leading" constant="5" id="w2H-jg-Is8"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="zcZ-Vp-RT7" secondAttribute="bottom" id="At4-EV-TVC"/>
                                                 <constraint firstAttribute="trailing" secondItem="zcZ-Vp-RT7" secondAttribute="trailing" id="FU2-gI-Q0L"/>
+                                                <constraint firstAttribute="trailing" secondItem="mqJ-pY-LIU" secondAttribute="trailing" constant="10" id="WNc-pC-iKa"/>
                                                 <constraint firstItem="zcZ-Vp-RT7" firstAttribute="leading" secondItem="AZ9-oK-Ebe" secondAttribute="leading" id="ZXH-HU-vDh"/>
+                                                <constraint firstAttribute="bottom" secondItem="mqJ-pY-LIU" secondAttribute="bottom" constant="10" id="qN5-04-CtN"/>
                                                 <constraint firstItem="zcZ-Vp-RT7" firstAttribute="top" secondItem="AZ9-oK-Ebe" secondAttribute="top" id="xF2-QJ-58j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="zcZ-Vp-RT7" id="YXs-Pj-8uW"/>
+                                            <outlet property="pageLabel" destination="UEI-Oq-1lt" id="PeH-HB-BDk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

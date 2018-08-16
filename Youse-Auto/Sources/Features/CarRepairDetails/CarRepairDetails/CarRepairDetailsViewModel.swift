@@ -139,6 +139,8 @@ class CarRepairDetailsViewModel: NSObject {
             
             if let images = details.images {
                 basicInfoViewModels.append(GalleryCellViewModel(images: images))
+            } else {
+                basicInfoViewModels.append(GalleryCellViewModel(images: [Photo()]))
             }
             
             self.cellViewModels.append(basicInfoViewModels)

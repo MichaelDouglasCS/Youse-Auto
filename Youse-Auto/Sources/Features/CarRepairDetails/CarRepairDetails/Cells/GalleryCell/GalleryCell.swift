@@ -15,6 +15,7 @@ class GalleryCell: UITableViewCell {
     //*************************************************
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageLabel: UILabel!
     
     //*************************************************
     // MARK: - Private Properties
@@ -30,11 +31,25 @@ class GalleryCell: UITableViewCell {
         self.viewModel = viewModel
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.collectionView.reloadData()
+        self.updatePageNumber()
+    }
+    
+    //*************************************************
+    // MARK: - Private Methods
+    //*************************************************
+    
+    private func updatePageNumber() {
+        let x = self.collectionView.contentOffset.x
+        let width = self.collectionView.bounds.size.width
+        let currentPage = Int(ceil(x / width))
+        
+        self.pageLabel.text = self.viewModel.pageTitle(forCurrentPage: currentPage)
     }
 }
 
 //*************************************************
-// MARK: -
+// MARK: - UICollectionViewDataSource
 //*************************************************
 
 extension GalleryCell: UICollectionViewDataSource {
@@ -52,9 +67,24 @@ extension GalleryCell: UICollectionViewDataSource {
     }
 }
 
+//*************************************************
+// MARK: - UICollectionViewDelegateFlowLayout
+//*************************************************
+
 extension GalleryCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.viewModel.sizeForItem(at: indexPath, from: collectionView)
+    }
+}
+
+//*************************************************
+// MARK: - UICollectionViewDelegate
+//*************************************************
+
+extension GalleryCell: UICollectionViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.updatePageNumber()
     }
 }

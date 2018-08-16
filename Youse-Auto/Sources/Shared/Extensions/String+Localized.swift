@@ -25,6 +25,7 @@ extension String {
         // MARK: - Car Repair Details
         //*************************************************
         
+        static var of: String { return "OF".localized }
         static var details: String { return "DETAILS".localized }
         static var reviews: String { return "REVIEWS".localized }
         static var informations: String { return "INFORMATIONS".localized }

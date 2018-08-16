@@ -168,7 +168,27 @@ extension CarRepairsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "CarRepairDetailsSegue", sender: indexPath.row)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            self.performSegue(withIdentifier: "CarRepairDetailsSegue", sender: indexPath.row)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+                cell.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            })
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            UIView.animate(withDuration: 0.4, delay: 0.05, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.2, options: .allowUserInteraction, animations: {
+                cell.transform = .identity
+            })
+        }
     }
 }
 

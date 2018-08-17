@@ -15,7 +15,7 @@ extension UIApplication {
     //*************************************************
     
     var topMostViewController: UIViewController? {
-        return self.keyWindow?.rootViewController?.topMostViewController()
+        return self.keyWindow?.rootViewController?.topMostViewController
     }
 }
 

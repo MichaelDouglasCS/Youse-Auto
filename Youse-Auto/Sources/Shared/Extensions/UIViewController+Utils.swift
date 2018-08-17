@@ -11,25 +11,25 @@ import UIKit
 extension UIViewController {
     
     //*************************************************
-    // MARK: - Public Methods
+    // MARK: - Public Properties
     //*************************************************
     
-    func topMostViewController() -> UIViewController {
+    var topMostViewController: UIViewController {
         
         if let presented = self.presentedViewController {
-            return presented.topMostViewController()
-        }
-        
-        if let navigation = self as? UINavigationController {
-            return navigation.visibleViewController?.topMostViewController() ?? navigation
-        }
-        
-        if let tab = self as? UITabBarController {
-            return tab.selectedViewController?.topMostViewController() ?? tab
+            return presented.topMostViewController
+        } else if let navigation = self as? UINavigationController {
+            return navigation.visibleViewController?.topMostViewController ?? navigation
+        } else if let tab = self as? UITabBarController {
+            return tab.selectedViewController?.topMostViewController ?? tab
         }
         
         return self
     }
+    
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
     
     /// This method is used to change Status Bar background color
     ///

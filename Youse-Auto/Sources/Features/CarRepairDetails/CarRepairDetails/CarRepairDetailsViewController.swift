@@ -33,7 +33,8 @@ class CarRepairDetailsViewController: UIViewController {
         // Navigation
         self.navigationItem.title = self.viewModel.navigationTitle
         self.navigationController?.hidesBarsOnSwipe = true
-        self.navigationController?.setStatusBarBackground(UIColor.YouseAuto.blue)
+        self.setStatusBarBackground(color: UIColor.YouseAuto.blue,
+                                    with: .lightContent)
         
         // Table View
         self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -47,8 +48,8 @@ class CarRepairDetailsViewController: UIViewController {
         
         // Load Data
         self.showLoading()
-        self.loadData {
-            self.stopLoading()
+        self.loadData { [weak self] in
+            self?.stopLoading()
         }
     }
     
@@ -73,21 +74,21 @@ class CarRepairDetailsViewController: UIViewController {
     
     private func loadData(completion: @escaping () -> Void) {
         
-        self.viewModel.loadData { (error) in
+        self.viewModel.loadData { [weak self] (error) in
             
             if let error = error {
-                self.showInfoAlert(title: String.YouseAuto.oops, message: error)
+                self?.showInfoAlert(title: String.YouseAuto.oops, message: error)
             }
             
-            self.tableView.placeholder(isShow: error != nil, animate: true)
-            self.tableView.reloadData()
+            self?.tableView.placeholder(isShow: error != nil, animate: true)
+            self?.tableView.reloadData()
             completion()
         }
     }
     
     @objc private func refreshData() {
-        self.loadData {
-            self.refreshControl.endRefreshing()
+        self.loadData { [weak self] in
+            self?.refreshControl.endRefreshing()
         }
     }
 }
@@ -149,11 +150,11 @@ extension CarRepairDetailsViewController: UITableViewPlaceholderDelegate {
 
 extension CarRepairDetailsViewController: DetailsCellDelegate {
     
-    func didTouchCall(toNumber number: String) {
+    func didTouchCall(_ cell: UITableViewCell, toNumber number: String) {
         self.viewModel.call(toNumber: number)
     }
     
-    func didTouchGetDirections(fromAddress address: String) {
+    func didTouchGetDirections(_ cell: UITableViewCell, fromAddress address: String) {
         self.viewModel.directions(fromAddress: address, at: self)
     }    
 }

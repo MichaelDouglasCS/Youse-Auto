@@ -13,6 +13,13 @@ extension String {
     struct YouseAuto {
         
         //*************************************************
+        // MARK: - Location
+        //*************************************************
+        
+        static var nearYou: String { return "NEAR_YOU".localized }
+        static var continueNext: String { return "CONTINUE".localized }
+        
+        //*************************************************
         // MARK: - Car Repairs
         //*************************************************
         
@@ -20,6 +27,7 @@ extension String {
         static var address: String { return "ADDRESS".localized }
         static var open: String { return "OPEN".localized }
         static var closed: String { return "CLOSED".localized }
+        static var locationError: String { return "LOCATION_ERROR".localized }
         
         //*************************************************
         // MARK: - Car Repair Details
@@ -45,6 +53,7 @@ extension String {
         static var noDetailsLoad: String { return "NO_DETAILS_LOAD".localized }
         static var noConnection: String { return "NO_CONECTION_ERROR".localized }
         static var noDirections: String { return "NO_DIRECTIONS".localized }
+        static var allowLocation: String { return "ALLOW_LOCATION".localized }
     }
     
     //*************************************************

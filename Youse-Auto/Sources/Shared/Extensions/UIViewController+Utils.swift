@@ -30,4 +30,18 @@ extension UIViewController {
         
         return self
     }
+    
+    /// This method is used to change Status Bar background color
+    ///
+    /// - Parameter color: Set Color, default nil uses navigation bar tint color
+    func setStatusBarBackground(color: UIColor? = nil, with style: UIStatusBarStyle) {
+        
+        if UIApplication.shared.responds(to: Selector(("statusBar"))),
+            let statusBar = UIApplication.shared.value(forKey: "statusBar") as? UIView {
+            let color = color ?? self.navigationController?.navigationBar.barTintColor
+            
+            UIApplication.shared.statusBarStyle = style
+            statusBar.backgroundColor = color
+        }
+    }
 }

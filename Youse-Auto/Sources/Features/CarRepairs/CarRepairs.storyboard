@@ -199,11 +199,20 @@
                     <connections>
                         <outlet property="tableView" destination="k9j-d1-tXx" id="okA-uL-Boc"/>
                         <segue destination="bOx-7a-86C" kind="show" identifier="CarRepairDetailsSegue" id="ekW-dh-YFb"/>
+                        <segue destination="nFV-K9-pK1" kind="presentation" identifier="LocationSegue" id="mNU-VK-mrh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2A-Ib-Hso" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="178.81773399014779"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="Lee-E3-I8X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Location" id="nFV-K9-pK1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3C-1Z-vAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="561"/>
         </scene>
         <!--CarRepairDetails-->
         <scene sceneID="FTG-UP-vpu">
@@ -211,7 +220,7 @@
                 <viewControllerPlaceholder storyboardName="CarRepairDetails" id="bOx-7a-86C" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0Q-YS-B5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="179"/>
+            <point key="canvasLocation" x="738" y="179"/>
         </scene>
     </scenes>
 </document>

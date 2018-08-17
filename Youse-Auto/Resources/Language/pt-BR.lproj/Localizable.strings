@@ -7,6 +7,15 @@
 */
 
 //*************************
+// Location
+//*************************
+
+"NEAR_YOU" = "Permita o acesso a sua localização para ver Oficinas próximas a você.";
+"CONTINUE" = "Continuar";
+"ALLOW_LOCATION" = "Vá até Configurações -> Youse Auto -> Localização e permita o acesso para continuar usando o app.";
+"LOCATION_ERROR" = "Não foi possível verificar sua localização. Por favor, Vá até Configurações -> Youse Auto -> Localização e verifique se já permitiu.";
+
+//*************************
 // Car Repairs
 //*************************
 

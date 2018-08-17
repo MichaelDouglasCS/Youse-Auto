@@ -79,14 +79,35 @@ class CarRepairsViewModel: NSObject {
     ///   - type: A property to set what kind of request will be performed
     ///   - completion: This parameter produces (error: String?) -> Void
     func loadData(type: LoadDataType, completion: @escaping (_ error: String?) -> Void) {
-        let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
-        let nextPage = type == .refresh ? nil : self.nextPage
+        
+        LocationService.shared.getLocation(success: { (location) in
+            let nextPage = type == .refresh ? nil : self.nextPage
+            
+            self.loadCarRepairs(by: type,
+                                with: location,
+                                nextPage: nextPage,
+                                completion: completion)
+        }) { (error) in
+            completion(error)
+        }
+    }
+    
+    //*************************************************
+    // MARK: - Private Methods
+    //*************************************************
+    
+    private func loadCarRepairs(by type: LoadDataType,
+                                with location: CLLocation,
+                                nextPage: String?,
+                                completion: @escaping (_ error: String?) -> Void) {
         
         self.provider.carRepairs(by: location,
                                  nextPage: nextPage) { (carRepairs, nextPage, error) in
             var cellViewModels: [CarRepairCellViewModel] = []
             
-            carRepairs.forEach { cellViewModels.append(CarRepairCellViewModel(carRepair: $0)) }
+            carRepairs.forEach {
+                cellViewModels.append(CarRepairCellViewModel(carRepair: $0))
+            }
             
             switch type {
             case .refresh:

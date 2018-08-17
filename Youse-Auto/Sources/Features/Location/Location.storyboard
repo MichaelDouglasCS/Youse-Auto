@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAn-Kg-5Te">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location View Controller-->
+        <scene sceneID="hrp-6P-sPF">
+            <objects>
+                <viewController id="rAn-Kg-5Te" customClass="LocationViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Le-9V-fX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="localization-circle" translatesAutoresizingMaskIntoConstraints="NO" id="jxo-6F-Ghd" userLabel="Image">
+                                <rect key="frame" x="114.66666666666669" y="101" width="146" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jxo-6F-Ghd" secondAttribute="height" multiplier="1:1" id="FqF-I2-a18"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-N5-K3o">
+                                <rect key="frame" x="30" y="398.66666666666669" width="315" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.33000001311302185" blue="0.33000001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoS-Dp-QSg" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
+                                <rect key="frame" x="20" y="688" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xoC-as-nXu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Title">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueAction:" destination="rAn-Kg-5Te" eventType="touchUpInside" id="LWO-nZ-sUr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GsH-N5-K3o" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jxo-6F-Ghd" secondAttribute="bottom" constant="50" id="0Do-su-15m"/>
+                            <constraint firstItem="PSC-7G-wxE" firstAttribute="trailing" secondItem="GsH-N5-K3o" secondAttribute="trailing" constant="30" id="3hH-RX-PgT"/>
+                            <constraint firstItem="DoS-Dp-QSg" firstAttribute="leading" secondItem="PSC-7G-wxE" secondAttribute="leading" constant="20" id="7NI-1X-GjI"/>
+                            <constraint firstItem="PSC-7G-wxE" firstAttribute="trailing" secondItem="DoS-Dp-QSg" secondAttribute="trailing" constant="20" id="Ir2-0K-B4o"/>
+                            <constraint firstItem="jxo-6F-Ghd" firstAttribute="centerY" secondItem="PSC-7G-wxE" secondAttribute="top" constant="130" id="VcX-zl-yZo"/>
+                            <constraint firstItem="GsH-N5-K3o" firstAttribute="leading" secondItem="PSC-7G-wxE" secondAttribute="leading" constant="30" id="WDG-Jw-aXY"/>
+                            <constraint firstItem="PSC-7G-wxE" firstAttribute="bottom" secondItem="DoS-Dp-QSg" secondAttribute="bottom" constant="40" id="cFM-O2-wDf"/>
+                            <constraint firstItem="GsH-N5-K3o" firstAttribute="centerX" secondItem="PSC-7G-wxE" secondAttribute="centerX" id="etp-uo-ECY"/>
+                            <constraint firstItem="jxo-6F-Ghd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PSC-7G-wxE" secondAttribute="leading" constant="100" id="gK1-rd-4NS"/>
+                            <constraint firstItem="PSC-7G-wxE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jxo-6F-Ghd" secondAttribute="trailing" constant="100" id="ljk-Op-xhK"/>
+                            <constraint firstItem="GsH-N5-K3o" firstAttribute="centerY" secondItem="PSC-7G-wxE" secondAttribute="centerY" priority="750" id="vxV-d5-jtu"/>
+                            <constraint firstItem="jxo-6F-Ghd" firstAttribute="centerX" secondItem="PSC-7G-wxE" secondAttribute="centerX" id="wde-pX-ucJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PSC-7G-wxE"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="DoS-Dp-QSg" id="aJc-8S-KsW"/>
+                        <outlet property="messageLabel" destination="GsH-N5-K3o" id="bsb-iq-kCs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyz-Sj-rcu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="localization-circle" width="146" height="146"/>
+    </resources>
+</document>

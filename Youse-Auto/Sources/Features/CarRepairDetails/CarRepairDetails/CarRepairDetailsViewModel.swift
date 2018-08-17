@@ -139,8 +139,8 @@ class CarRepairDetailsViewModel: NSObject {
     ///   - type: A property to set what kind of request will be performed
     ///   - completion: This parameter produces (isSuccess: Bool, localizedError: String?) -> Void
     func loadData(completion: @escaping (_ error: String?) -> Void) {
-        self.provider.carRepairDetails(byPlaceID: self.placeID) { (carRepairDetails, error) in
-            self.handleCellViewModels(with: carRepairDetails)
+        self.provider.carRepairDetails(byPlaceID: self.placeID) { [weak self] (carRepairDetails, error) in
+            self?.handleCellViewModels(with: carRepairDetails)
             completion(error)
         }
     }

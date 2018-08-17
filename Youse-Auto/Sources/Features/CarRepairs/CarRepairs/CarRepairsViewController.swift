@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class CarRepairsViewController: UIViewController {
     
@@ -54,20 +55,30 @@ class CarRepairsViewController: UIViewController {
         // Loading Pagination
         self.loadingPagination.color = UIColor.YouseAuto.blue
         
-        // Load Data
-        self.showLoading()
-        self.loadData {
-            self.stopLoading()
+        // Verify Location
+        if LocationService.isEnabled {
+            // Load Data
+            self.showLoading()
+            self.loadData {
+                self.stopLoading()
+            }
+        } else {
+            // Show Location View Controller
+            self.performSegue(withIdentifier: "LocationSegue", sender: nil)
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if let carRepairDetails = segue.destination as? CarRepairDetailsViewController,
             let index = sender as? Int {
             let provider = CarRepairDetailsProvider()
             let placeID = self.viewModel.placeID(at: index)
             let viewModel = CarRepairDetailsViewModel(provider: provider, placeID: placeID)
             carRepairDetails.setupUI(with: viewModel)
+        } else if let location = segue.destination as? LocationViewController {
+            location.delegate = self
+            location.setupUI(with: LocationViewModel())
         }
     }
     
@@ -89,7 +100,6 @@ class CarRepairsViewController: UIViewController {
             if let error = error {
                 self.showInfoAlert(title: String.YouseAuto.oops, message: error)
             }
-
             self.tableView.placeholder(isShow: error != nil, animate: true)
             self.tableView.reloadSections([0], with: .automatic)
             completion()
@@ -202,5 +212,19 @@ extension CarRepairsViewController: UITableViewPlaceholderDelegate {
         return PlaceholderViewModel(image: UIImage.YouseAuto.carRepairOil,
                                     title: String.YouseAuto.sorry,
                                     message: String.YouseAuto.noResultsFound)
+    }
+}
+
+//*************************************************
+// MARK: - LocationViewControllerDelegate
+//*************************************************
+
+extension CarRepairsViewController: LocationViewControllerDelegate {
+    
+    func didGetLocation(location: CLLocation) {
+        self.showLoading()
+        self.loadData {
+            self.stopLoading()
+        }
     }
 }

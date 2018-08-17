@@ -9,8 +9,8 @@
 import UIKit
 
 protocol DetailsCellDelegate: class {
-    func didTouchCall(toNumber number: String)
-    func didTouchGetDirections(fromAddress address: String)
+    func didTouchCall(_ cell: UITableViewCell, toNumber number: String)
+    func didTouchGetDirections(_ cell: UITableViewCell, fromAddress address: String)
 }
 
 class DetailsCell: UITableViewCell {
@@ -69,10 +69,10 @@ class DetailsCell: UITableViewCell {
     //*************************************************
     
     @IBAction func call(_ sender: CustomButton) {
-        self.delegate?.didTouchCall(toNumber: self.viewModel.phoneNumber)
+        self.delegate?.didTouchCall(self, toNumber: self.viewModel.phoneNumber)
     }
     
     @IBAction func directions(_ sender: CustomButton) {
-        self.delegate?.didTouchGetDirections(fromAddress: self.viewModel.address)
+        self.delegate?.didTouchGetDirections(self, fromAddress: self.viewModel.address)
     }
 }

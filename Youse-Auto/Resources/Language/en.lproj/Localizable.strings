@@ -7,6 +7,15 @@
 */
 
 //*************************
+// Location
+//*************************
+
+"NEAR_YOU" = "Allow access to your location to see car repairs near to you.";
+"CONTINUE" = "Continue";
+"ALLOW_LOCATION" = "Go to Settings -> Youse Auto -> Location and allow access to continue using app.";
+"LOCATION_ERROR" = "We couldn't get you location. Please, go to Settings -> Youse Auto -> Location and verify if is allowed.";
+
+//*************************
 // Car Repairs
 //*************************
 

@@ -73,7 +73,6 @@ class CarRepairDetailsViewController: UIViewController {
     //*************************************************
     
     private func loadData(completion: @escaping () -> Void) {
-        
         self.viewModel.loadData { [weak self] (error) in
             
             if let error = error {

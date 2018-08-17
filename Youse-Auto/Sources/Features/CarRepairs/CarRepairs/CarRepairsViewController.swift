@@ -169,7 +169,10 @@ extension CarRepairsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1
         
-        if lastRowIndex == indexPath.row && self.viewModel.hasNextPage {
+        if lastRowIndex == indexPath.row &&
+            self.viewModel.hasNextPage &&
+            !self.viewModel.isLoading {
+            
             self.loadingPagination.startAnimating()
             self.bringMoreData {
                 self.loadingPagination.stopAnimating()

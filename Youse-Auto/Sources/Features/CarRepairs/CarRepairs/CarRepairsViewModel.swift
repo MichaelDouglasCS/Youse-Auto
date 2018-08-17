@@ -28,6 +28,8 @@ class CarRepairsViewModel: NSObject {
         return self.nextPage != nil && !self.cellViewModels.isEmpty
     }
     
+    private(set) var isLoading: Bool = false
+    
     //*************************************************
     // MARK: - Private Properties
     //*************************************************
@@ -79,7 +81,7 @@ class CarRepairsViewModel: NSObject {
     ///   - type: A property to set what kind of request will be performed
     ///   - completion: This parameter produces (error: String?) -> Void
     func loadData(type: LoadDataType, completion: @escaping (_ error: String?) -> Void) {
-        
+        self.isLoading = true
         LocationService.shared.getLocation(success: { (location) in
             let nextPage = type == .refresh ? nil : self.nextPage
             
@@ -88,6 +90,7 @@ class CarRepairsViewModel: NSObject {
                                 nextPage: nextPage,
                                 completion: completion)
         }) { (error) in
+            self.isLoading = false
             completion(error)
         }
     }
@@ -118,6 +121,7 @@ class CarRepairsViewModel: NSObject {
                 self.cellViewModels.append(contentsOf: cellViewModels)
             }
             self.nextPage = nextPage
+            self.isLoading = false
             completion(error)
         }
     }

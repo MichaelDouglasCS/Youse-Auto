@@ -182,8 +182,8 @@ class CarRepairDetailsViewModel: NSObject {
         var contactInfo: [CarRepairDetailsCellProtocol] = []
         
         // Address
-        if let icon = UIImage.YouseAuto.localization,
-            let address = details.addressFormatted {
+        if let icon = UIImage.YouseAuto.location {
+            let address = details.addressFormatted ?? details.address
             contactInfo.append(ContactInfoCellViewModel(icon: icon, title: address))
         }
         
@@ -199,9 +199,9 @@ class CarRepairDetailsViewModel: NSObject {
         
         // Phone
         if let icon = UIImage.YouseAuto.phone,
-            let phoneFormatted = details.phoneFormatted {
+            let phone = details.phoneFormatted ?? details.internationalPhone {
             contactInfo.append(ContactInfoCellViewModel(icon: icon,
-                                                        title: phoneFormatted))
+                                                        title: phone))
         }
         
         // Append Contact Info

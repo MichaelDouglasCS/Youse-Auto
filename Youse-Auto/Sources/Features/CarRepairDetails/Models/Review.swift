@@ -16,7 +16,7 @@ struct Review {
     
     var authorName: String
     var authorPhotoURL: URL?
-    var rating: Double?
+    var rating: Double
     var text: String
     var timeDescription: String?
     
@@ -26,11 +26,12 @@ struct Review {
     
     init?(json: JSON) {
         guard let authorName = json["author_name"].string, !authorName.isEmpty else { return nil }
+        guard let rating = json["rating"].double else { return nil }
         guard let text = json["text"].string, !text.isEmpty else { return nil }
         
         self.authorName = authorName
         self.authorPhotoURL = json["profile_photo_url"].url
-        self.rating = json["rating"].double
+        self.rating = rating
         self.text = text
         self.timeDescription = json["relative_time_description"].string
     }

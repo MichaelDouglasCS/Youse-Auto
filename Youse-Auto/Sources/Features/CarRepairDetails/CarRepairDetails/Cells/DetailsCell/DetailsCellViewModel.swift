@@ -43,20 +43,20 @@ struct DetailsCellViewModel: CarRepairDetailsCellProtocol {
     }
     
     var hasPhone: Bool {
-        let number = self.carRepairDetails.phoneFormatted?.digits ?? ""
-        return PhoneService.canCall(toNumber: number)
+        
+        if let number = self.carRepairDetails.phoneFormatted?.digits {
+            return PhoneService.canCall(toNumber: number)
+        } else {
+            return false
+        }
     }
     
     var phoneNumber: String {
         return self.carRepairDetails.phoneFormatted?.digits ?? ""
     }
     
-    var hasDirections: Bool {
-        return self.carRepairDetails.address != nil
-    }
-    
     var address: String {
-        return self.carRepairDetails.address ?? ""
+        return self.carRepairDetails.address
     }
     
     //*************************************************

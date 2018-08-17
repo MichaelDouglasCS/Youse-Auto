@@ -24,7 +24,7 @@ struct ReviewCellViewModel: CarRepairDetailsCellProtocol {
     
     var authorName: String
     var authorPhotoURL: URL?
-    var rating: Double?
+    var rating: Double
     var text: String
     var timeDescription: String?
     

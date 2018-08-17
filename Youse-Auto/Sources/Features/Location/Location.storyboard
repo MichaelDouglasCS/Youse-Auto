@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="localization-circle" translatesAutoresizingMaskIntoConstraints="NO" id="jxo-6F-Ghd" userLabel="Image">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location-circle" translatesAutoresizingMaskIntoConstraints="NO" id="jxo-6F-Ghd" userLabel="Image">
                                 <rect key="frame" x="114.66666666666669" y="101" width="146" height="146"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jxo-6F-Ghd" secondAttribute="height" multiplier="1:1" id="FqF-I2-a18"/>
@@ -86,6 +86,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="localization-circle" width="146" height="146"/>
+        <image name="icon-location-circle" width="146" height="146"/>
     </resources>
 </document>

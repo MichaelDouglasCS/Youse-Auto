@@ -31,7 +31,6 @@ class CarRepairCell: UITableViewCell {
     func setupUI(with viewModel: CarRepairCellViewModel) {
         self.nameLabel.text = viewModel.name
         self.addressLabel.attributedText = viewModel.address
-        self.availabilityLabel.attributedText = viewModel.availability
         
         self.ratingView.isHidden = viewModel.rating == nil
         self.ratingLabel.text = viewModel.rating?.toString(withDecimalPlaces: 1)
@@ -39,6 +38,9 @@ class CarRepairCell: UITableViewCell {
         
         self.distanceView.isHidden = viewModel.distance == nil
         self.distanceLabel.text = viewModel.distance
+        
+        self.availabilityLabel.isHidden = viewModel.availability == nil
+        self.availabilityLabel.attributedText = viewModel.availability
         
         if let imageURL = viewModel.imageURL {
             self.customImageView.load(from: imageURL,

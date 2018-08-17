@@ -20,7 +20,7 @@ class CarRepair {
     var name: String
     var rating: Double?
     var location: CLLocation?
-    var address: String?
+    var address: String
     var isOpenNow: Bool?
     var isOpenFormatted: NSAttributedString?
     var image: Photo?
@@ -32,12 +32,13 @@ class CarRepair {
     init?(json: JSON) {
         guard let placeID = json["place_id"].string, !placeID.isEmpty else { return nil }
         guard let name = json["name"].string, !name.isEmpty else { return nil }
+        guard let address = json["vicinity"].string, !address.isEmpty else { return nil }
         
         self.id = json["id"].string
         self.placeID = placeID
         self.name = name
         self.rating = json["rating"].double
-        self.address = json["vicinity"].string
+        self.address = address
         self.isOpenNow = json["opening_hours"]["open_now"].bool
         
         if let latitude = json["geometry"]["location"]["lat"].double,

@@ -26,7 +26,8 @@ class ReviewCell: UITableViewCell {
     
     func setupUI(with viewModel: ReviewCellViewModel) {
         self.nameLabel.text = viewModel.authorName
-        self.ratingStars.rating = viewModel.rating ?? 0.0
+        self.ratingStars.rating = viewModel.rating
+        self.timeLabel.isHidden = viewModel.timeDescription == nil
         self.timeLabel.text = viewModel.timeDescription
         self.contentLabel.text = viewModel.text
         

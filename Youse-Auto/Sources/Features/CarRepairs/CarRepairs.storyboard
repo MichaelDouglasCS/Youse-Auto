@@ -125,7 +125,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JVH-Tv-cko">
                                                                             <rect key="frame" x="0.0" y="65.333333333333314" width="325" height="12"/>
                                                                             <subviews>
-                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="haS-1Y-xLl">
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="haS-1Y-xLl">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
                                                                                     <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
@@ -254,6 +254,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location" width="62" height="84"/>
+        <image name="icon-location" width="62" height="84"/>
     </resources>
 </document>

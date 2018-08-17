@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="du6-z5-JOr">
                                 <rect key="frame" x="50" y="154" width="275" height="158"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-repair-wheel" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-RG-pLg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-car-wheel" translatesAutoresizingMaskIntoConstraints="NO" id="AYw-RG-pLg">
                                         <rect key="frame" x="77.666666666666686" y="0.0" width="120" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="TJP-jk-I8C"/>
@@ -59,7 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car-repair-wheel" width="134" height="100"/>
+        <image name="icon-car-wheel" width="134" height="100"/>
         <image name="welcome-background" width="1125" height="2436"/>
     </resources>
 </document>

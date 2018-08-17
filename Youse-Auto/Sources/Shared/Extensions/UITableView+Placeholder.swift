@@ -56,7 +56,7 @@ extension UITableView {
     
     private func setupPlaceholder(with viewModel: PlaceholderViewModel) {
         
-        if let topMostViewController = UIApplication.shared.topMostViewController() {
+        if let topMostViewController = UIApplication.shared.topMostViewController {
             let frame = topMostViewController.view.frame
             let placeholder = PlaceholderView(frame: CGRect(x: frame.origin.x,
                                                             y: frame.origin.y,

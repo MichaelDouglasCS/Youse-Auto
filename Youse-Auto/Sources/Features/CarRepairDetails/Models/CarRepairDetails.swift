@@ -17,6 +17,7 @@ class CarRepairDetails: CarRepair {
     
     var addressFormatted: String?
     var phoneFormatted: String?
+    var internationalPhone: String?
     var openingHours: [String]?
     var images: [Photo]?
     var reviews: [Review]?
@@ -30,6 +31,7 @@ class CarRepairDetails: CarRepair {
         
         self.addressFormatted = json["formatted_address"].string
         self.phoneFormatted = json["formatted_phone_number"].string
+        self.internationalPhone = json["international_phone_number"].string
         
         if let openingHours = json["opening_hours"]["weekday_text"].array {
             self.openingHours = openingHours.compactMap { $0.stringValue }

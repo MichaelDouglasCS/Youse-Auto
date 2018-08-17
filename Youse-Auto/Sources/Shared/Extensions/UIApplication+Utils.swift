@@ -11,10 +11,10 @@ import UIKit
 extension UIApplication {
     
     //*************************************************
-    // MARK: - Public Methods
+    // MARK: - Public Properties
     //*************************************************
     
-    func topMostViewController() -> UIViewController? {
+    var topMostViewController: UIViewController? {
         return self.keyWindow?.rootViewController?.topMostViewController()
     }
 }

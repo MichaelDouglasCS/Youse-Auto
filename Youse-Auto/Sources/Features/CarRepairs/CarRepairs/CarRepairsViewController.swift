@@ -212,7 +212,7 @@ extension CarRepairsViewController: UITableViewDelegate {
 extension CarRepairsViewController: UITableViewPlaceholderDelegate {
     
     func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel {
-        return PlaceholderViewModel(image: UIImage.YouseAuto.carRepairOil,
+        return PlaceholderViewModel(image: UIImage.YouseAuto.carOil,
                                     title: String.YouseAuto.sorry,
                                     message: String.YouseAuto.noResultsFound)
     }

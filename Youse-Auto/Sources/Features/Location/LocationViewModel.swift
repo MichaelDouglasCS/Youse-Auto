@@ -26,8 +26,11 @@ struct LocationViewModel {
     // MARK: - Public Methods
     //*************************************************
     
-    func getLocation(completion: @escaping (CLLocation?) -> Void) {
+    func requestAuthorization() {
         LocationService.shared.requestAuthorization()
+    }
+    
+    func getLocation(completion: @escaping (CLLocation?) -> Void) {
         LocationService.shared.getLocation(success: { (location) in
             completion(location)
         }) { (_) in

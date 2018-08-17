@@ -49,6 +49,7 @@ class LocationViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.setStatusBarBackground(color: nil, with: .default)
+        self.viewModel.requestAuthorization()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

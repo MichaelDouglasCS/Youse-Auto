@@ -18,7 +18,7 @@ class NetworkLogger: NSObject {
         self.logSeparator()
         
         if let url = request.url?.absoluteString {
-            print("📤 Request: \(request.httpMethod!) \(url)")
+            print("📩 Request: \(request.httpMethod!) \(url)")
         }
         
         if let headers = request.allHTTPHeaderFields {
@@ -45,12 +45,12 @@ class NetworkLogger: NSObject {
         self.logSeparator()
         
         guard let response = response else {
-            print("📥 Response: nil")
+            print("📦 Response: nil")
             return
         }
         
         if let url = response.url?.absoluteString {
-            print("📥 Response: \(url)")
+            print("📦 Response: \(url)")
         }
         
         if let httpResponse = response as? HTTPURLResponse {

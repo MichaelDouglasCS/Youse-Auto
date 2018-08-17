@@ -8,17 +8,9 @@
 
 import UIKit
 
-//*************************************************
-// MARK: - UITableViewPlaceholderDelegate
-//*************************************************
-
 protocol UITableViewPlaceholderDelegate: class {
     func placeholderViewModel(in tableView: UITableView) -> PlaceholderViewModel
 }
-
-//*************************************************
-// MARK: - UITableView
-//*************************************************
 
 extension UITableView {
     

@@ -32,7 +32,6 @@ class CarRepairDetailsViewController: UIViewController {
         
         // Navigation
         self.navigationItem.title = self.viewModel.navigationTitle
-        self.navigationController?.hidesBarsOnSwipe = true
         self.setStatusBarBackground(color: UIColor.YouseAuto.blue,
                                     with: .lightContent)
         
@@ -51,11 +50,6 @@ class CarRepairDetailsViewController: UIViewController {
         self.loadData { [weak self] in
             self?.stopLoading()
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.hidesBarsOnSwipe = false
     }
     
     //*************************************************

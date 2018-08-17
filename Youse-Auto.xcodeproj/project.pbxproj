@@ -50,7 +50,6 @@
 		6157B11121253FE80082A78C /* DetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B11021253FE80082A78C /* DetailsCellViewModel.swift */; };
 		6157B1132125467A0082A78C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6157B1122125467A0082A78C /* CustomButton.swift */; };
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
-		615FEEFF212552ED00465FB3 /* DateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEEFE212552ED00465FB3 /* DateKit.swift */; };
 		615FEF042125D83600465FB3 /* DirectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEF032125D83600465FB3 /* DirectionsService.swift */; };
 		616F9B712126751600883648 /* CLLocationDistance+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F9B702126751600883648 /* CLLocationDistance+String.swift */; };
 		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
@@ -144,7 +143,6 @@
 		6157B11021253FE80082A78C /* DetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCellViewModel.swift; sourceTree = "<group>"; };
 		6157B1122125467A0082A78C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		615FEEFE212552ED00465FB3 /* DateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateKit.swift; sourceTree = "<group>"; };
 		615FEF032125D83600465FB3 /* DirectionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsService.swift; sourceTree = "<group>"; };
 		616F9B702126751600883648 /* CLLocationDistance+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDistance+String.swift"; sourceTree = "<group>"; };
 		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 		615FEF002125530C00465FB3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				615FEEFE212552ED00465FB3 /* DateKit.swift */,
 				615FEF032125D83600465FB3 /* DirectionsService.swift */,
 				61211BF72126219700DBEB9D /* LocationService.swift */,
 				61A83EFA2125E3710096EA6C /* PhoneService.swift */,
@@ -798,7 +795,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */,
-				615FEEFF212552ED00465FB3 /* DateKit.swift in Sources */,
 				610B8DD12122B95000491CF7 /* CosmosView.swift in Sources */,
 				610400812123939100BCE794 /* UIViewController+Utils.swift in Sources */,
 				610B8DD321233E8600491CF7 /* UIViewController+Alert.swift in Sources */,

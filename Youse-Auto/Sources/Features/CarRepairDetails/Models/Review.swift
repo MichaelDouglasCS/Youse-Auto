@@ -19,6 +19,7 @@ struct Review {
     var rating: Double
     var text: String
     var timeDescription: String?
+    var time: TimeInterval?
     
     //*************************************************
     // MARK: - Inits
@@ -34,5 +35,6 @@ struct Review {
         self.rating = rating
         self.text = text
         self.timeDescription = json["relative_time_description"].string
+        self.time = json["time"].double
     }
 }

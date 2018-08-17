@@ -41,8 +41,9 @@ class CarRepairDetails: CarRepair {
             self.images = images.compactMap { Photo(json: $0) }
         }
         
-        if let reviews = json["reviews"].array {
-            self.reviews = reviews.compactMap { Review(json: $0) }
+        if let reviewsJSON = json["reviews"].array {
+            let reviews = reviewsJSON.compactMap { Review(json: $0) }
+            self.reviews = reviews.sorted(by: { $0.time ?? 0 > $1.time ?? 0 })
         }
     }
 }

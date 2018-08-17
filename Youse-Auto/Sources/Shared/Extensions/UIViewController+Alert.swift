@@ -31,7 +31,6 @@ extension UIViewController {
         let defaultAction = UIAlertAction(title: String.YouseAuto.ok,
                                           style: .default,
                                           handler: completion)
-        
         alert.addAction(defaultAction)
         
         DispatchQueue.main.async {

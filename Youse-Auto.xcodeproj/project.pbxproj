@@ -434,8 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				615AD878211E3C03009EA364 /* .swiftlint.yml */,
-				61211BF52126211B00DBEB9D /* Info.plist */,
 				610F84DF2127753000FC0CDD /* Youse.gpx */,
+				61211BF52126211B00DBEB9D /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

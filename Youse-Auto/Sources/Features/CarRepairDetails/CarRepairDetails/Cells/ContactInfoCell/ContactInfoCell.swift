@@ -17,7 +17,7 @@ class ContactInfoCell: UITableViewCell {
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var contentLabel: UILabel!
-
+    
     //*************************************************
     // MARK: - Public Methods
     //*************************************************

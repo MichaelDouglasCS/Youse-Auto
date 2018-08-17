@@ -64,6 +64,8 @@ class LocationService: NSObject {
         
         if let lastLocation = self.lastLocation {
             success(lastLocation)
+        } else if !LocationService.isEnabled {
+            error?(String.YouseAuto.locationError)
         } else {
             self.success = success
             self.error = error

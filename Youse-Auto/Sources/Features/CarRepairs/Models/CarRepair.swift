@@ -48,7 +48,7 @@ class CarRepair {
         if let isOpenNow = self.isOpenNow {
             let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed
             let color: UIColor = isOpenNow ? UIColor.YouseAuto.green : UIColor.YouseAuto.red
-            let font = UIFont.boldSystemFont(ofSize: 13)
+            let font = UIFont.boldSystemFont(ofSize: 12)
             
             self.isOpenFormatted = NSMutableAttributedString(string: title, attributes: [.foregroundColor: color, .font: font])
         }

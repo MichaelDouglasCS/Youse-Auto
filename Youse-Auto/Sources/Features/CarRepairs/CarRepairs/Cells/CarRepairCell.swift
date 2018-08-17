@@ -19,6 +19,8 @@ class CarRepairCell: UITableViewCell {
     @IBOutlet private weak var ratingView: UIStackView!
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var ratingStars: CosmosView!
+    @IBOutlet private weak var distanceView: UIStackView!
+    @IBOutlet private weak var distanceLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var availabilityLabel: UILabel!
 
@@ -28,11 +30,15 @@ class CarRepairCell: UITableViewCell {
     
     func setupUI(with viewModel: CarRepairCellViewModel) {
         self.nameLabel.text = viewModel.name
+        self.addressLabel.attributedText = viewModel.address
+        self.availabilityLabel.attributedText = viewModel.availability
+        
         self.ratingView.isHidden = viewModel.rating == nil
         self.ratingLabel.text = viewModel.rating?.toString(withDecimalPlaces: 1)
         self.ratingStars.rating = viewModel.rating ?? 0.0
-        self.addressLabel.attributedText = viewModel.address
-        self.availabilityLabel.attributedText = viewModel.availability
+        
+        self.distanceView.isHidden = viewModel.distance == nil
+        self.distanceLabel.text = viewModel.distance
         
         if let imageURL = viewModel.imageURL {
             self.customImageView.load(from: imageURL,

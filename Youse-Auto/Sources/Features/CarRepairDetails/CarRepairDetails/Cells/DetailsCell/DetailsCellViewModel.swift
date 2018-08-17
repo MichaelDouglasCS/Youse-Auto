@@ -33,7 +33,9 @@ struct DetailsCellViewModel: CarRepairDetailsCellProtocol {
     }
     
     var distance: String? {
-        return "10km"
+        guard let placeLocation = self.carRepairDetails.location,
+                let userLocation = LocationService.shared.lastLocation else { return nil }
+        return userLocation.distance(from: placeLocation).kilometers
     }
     
     var availability: NSAttributedString? {

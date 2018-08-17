@@ -7,6 +7,7 @@
 //
 
 import SwiftyJSON
+import CoreLocation
 
 class CarRepair {
     
@@ -18,6 +19,7 @@ class CarRepair {
     var placeID: String
     var name: String
     var rating: Double?
+    var location: CLLocation?
     var address: String?
     var isOpenNow: Bool?
     var isOpenFormatted: NSAttributedString?
@@ -37,6 +39,11 @@ class CarRepair {
         self.rating = json["rating"].double
         self.address = json["vicinity"].string
         self.isOpenNow = json["opening_hours"]["open_now"].bool
+        
+        if let latitude = json["geometry"]["location"]["lat"].double,
+            let longitude = json["geometry"]["location"]["lng"].double {
+            self.location = CLLocation(latitude: latitude, longitude: longitude)
+        }
         
         if let isOpenNow = self.isOpenNow {
             let title: String = isOpenNow ? String.YouseAuto.open : String.YouseAuto.closed

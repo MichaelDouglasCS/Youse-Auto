@@ -14,7 +14,7 @@ struct CarRepairCellViewModel {
     // MARK: - Public Properties
     //*************************************************
     
-    let height: CGFloat = 250.0
+    let height: CGFloat = 270.0
     
     var placeID: String {
         return self.carRepair.placeID
@@ -44,6 +44,12 @@ struct CarRepairCellViewModel {
         }
         
         return mutable
+    }
+    
+    var distance: String? {
+        guard let placeLocation = self.carRepair.location,
+            let userLocation = LocationService.shared.lastLocation else { return nil }
+        return userLocation.distance(from: placeLocation).kilometers
     }
     
     var availability: NSAttributedString? {

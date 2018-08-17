@@ -134,7 +134,7 @@
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hp-wu-BuI" customClass="CosmosView" customModule="Youse_Auto" customModuleProvider="target">
-                                                                                    <rect key="frame" x="48.666666666666657" y="1.6666666666666643" width="296.33333333333337" height="16"/>
+                                                                                    <rect key="frame" x="48.666666666666657" y="1.6666666666666643" width="295.66666666666674" height="16"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <userDefinedRuntimeAttributes>
                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -176,7 +176,7 @@
                                                                                         <constraint firstAttribute="width" constant="15" id="TaY-UU-DmB"/>
                                                                                     </constraints>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu5-zX-Syy" userLabel="Distance">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu5-zX-Syy" userLabel="Distance">
                                                                                     <rect key="frame" x="18" y="0.0" width="327" height="15"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,14 +195,10 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hw-M5-uB3">
                                                                     <rect key="frame" x="10" y="125" width="345" height="35"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e5-zi-XSU" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e5-zi-XSU" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="35"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <state key="normal" title="Title">
-                                                                                <color key="titleColor" red="0.0" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            </state>
-                                                                            <state key="highlighted">
-                                                                                <color key="titleColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                                                <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </state>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -219,16 +215,10 @@
                                                                                 <action selector="call:" destination="LGP-gS-mDC" eventType="touchUpInside" id="OXf-8c-qPb"/>
                                                                             </connections>
                                                                         </button>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-YM-bry" userLabel="Directions" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-YM-bry" userLabel="Directions" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
                                                                             <rect key="frame" x="177.66666666666663" y="0.0" width="167.33333333333337" height="35"/>
                                                                             <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                            <state key="normal" title="Title">
-                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            </state>
-                                                                            <state key="highlighted">
-                                                                                <color key="titleColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                                            </state>
+                                                                            <state key="normal" title="Title"/>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                     <real key="value" value="16"/>

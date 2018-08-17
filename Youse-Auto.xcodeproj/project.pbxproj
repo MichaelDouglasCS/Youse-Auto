@@ -52,6 +52,7 @@
 		615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 615AD878211E3C03009EA364 /* .swiftlint.yml */; };
 		615FEEFF212552ED00465FB3 /* DateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEEFE212552ED00465FB3 /* DateKit.swift */; };
 		615FEF042125D83600465FB3 /* DirectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615FEF032125D83600465FB3 /* DirectionsService.swift */; };
+		616F9B712126751600883648 /* CLLocationDistance+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F9B702126751600883648 /* CLLocationDistance+String.swift */; };
 		617ABB2B21220364001B6D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 617ABB2A21220364001B6D73 /* Assets.xcassets */; };
 		617E4FA92120C49300C6057F /* CarRepairs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617E4FA82120C49300C6057F /* CarRepairs.storyboard */; };
 		617E4FAD2120C56400C6057F /* CarRepairsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */; };
@@ -145,6 +146,7 @@
 		615AD878211E3C03009EA364 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		615FEEFE212552ED00465FB3 /* DateKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateKit.swift; sourceTree = "<group>"; };
 		615FEF032125D83600465FB3 /* DirectionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsService.swift; sourceTree = "<group>"; };
+		616F9B702126751600883648 /* CLLocationDistance+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationDistance+String.swift"; sourceTree = "<group>"; };
 		617ABB2A21220364001B6D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		617E4FA82120C49300C6057F /* CarRepairs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarRepairs.storyboard; sourceTree = "<group>"; };
 		617E4FAC2120C56400C6057F /* CarRepairsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsViewController.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 		61BD1BC4211E5CBB009BB88A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				616F9B702126751600883648 /* CLLocationDistance+String.swift */,
 				61B8830E2121377D00B6A5B7 /* Double+Utils.swift */,
 				61BD1BC5211E5CDB009BB88A /* String+Localized.swift */,
 				6112AAFD21248726000AE094 /* UIApplication+Utils.swift */,
@@ -804,6 +807,7 @@
 				6155CD6E21222AF7003306FA /* CarRepairCellViewModel.swift in Sources */,
 				610B8DCE2122B95000491CF7 /* CosmosSettings.swift in Sources */,
 				610B8DC82122B95000491CF7 /* CosmosSize.swift in Sources */,
+				616F9B712126751600883648 /* CLLocationDistance+String.swift in Sources */,
 				610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */,
 				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
 				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,

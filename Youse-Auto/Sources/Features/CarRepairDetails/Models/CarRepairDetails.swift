@@ -7,6 +7,7 @@
 //
 
 import SwiftyJSON
+import CoreLocation
 
 class CarRepairDetails: CarRepair {
     
@@ -14,7 +15,6 @@ class CarRepairDetails: CarRepair {
     // MARK: - Public Properties
     //*************************************************
     
-    var location: Location?
     var addressFormatted: String?
     var phoneFormatted: String?
     var openingHours: [String]?
@@ -28,7 +28,6 @@ class CarRepairDetails: CarRepair {
     override init?(json: JSON) {
         super.init(json: json)
         
-        self.location = Location(json: json["geometry"])
         self.addressFormatted = json["formatted_address"].string
         self.phoneFormatted = json["formatted_phone_number"].string
         

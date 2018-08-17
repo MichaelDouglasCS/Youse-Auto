@@ -55,8 +55,6 @@ class CarRepairDetailsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // Navigation
         self.navigationController?.hidesBarsOnSwipe = false
     }
     

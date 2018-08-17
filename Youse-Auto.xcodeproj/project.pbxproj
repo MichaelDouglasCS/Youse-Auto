@@ -117,6 +117,7 @@
 		610B8DC12122B95000491CF7 /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeft.swift; sourceTree = "<group>"; };
 		610B8DC22122B95000491CF7 /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosView.swift; sourceTree = "<group>"; };
 		610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		610F84DF2127753000FC0CDD /* Youse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youse.gpx; sourceTree = "<group>"; };
 		6112AAFD21248726000AE094 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
 		61203D332126089200928F1A /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		61203D35212608A200928F1A /* ReviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCellViewModel.swift; sourceTree = "<group>"; };
@@ -434,6 +435,7 @@
 			children = (
 				615AD878211E3C03009EA364 /* .swiftlint.yml */,
 				61211BF52126211B00DBEB9D /* Info.plist */,
+				610F84DF2127753000FC0CDD /* Youse.gpx */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

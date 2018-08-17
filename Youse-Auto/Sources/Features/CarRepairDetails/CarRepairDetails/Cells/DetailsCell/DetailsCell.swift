@@ -58,7 +58,7 @@ class DetailsCell: UITableViewCell {
         self.distanceLabel.text = self.viewModel.distance
         
         self.callButton.setTitle(String.YouseAuto.call, for: .normal)
-//        self.callButton.isHidden = !self.viewModel.hasPhone
+        self.callButton.isHidden = !self.viewModel.hasPhone
         
         self.directionsButton.setTitle(String.YouseAuto.directions, for: .normal)
         self.directionsButton.isHidden = !self.viewModel.hasDirections

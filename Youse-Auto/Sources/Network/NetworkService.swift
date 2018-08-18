@@ -113,6 +113,11 @@ enum NetworkService {
                             path: "/place/nearbysearch/json?location=\(latitude),\(longitude)&rankby=distance&type=car_repair&key=\(API.key)"))
         }
         
+        static func details(fromPlaceID placeID: String) -> NetworkService {
+            return .mobile((method: .get,
+                            path: "/place/details/json?placeid=\(placeID)&key=\(API.key)"))
+        }
+        
         static func image(fromReferenceID referenceID: String,
                           width: Int,
                           height: Int?) -> NetworkService {
@@ -126,11 +131,6 @@ enum NetworkService {
             
             return .mobile((method: .get,
                             path: path))
-        }
-        
-        static func details(fromPlaceID placeID: String) -> NetworkService {
-            return .mobile((method: .get,
-                            path: "/place/details/json?placeid=\(placeID)&key=\(API.key)"))
         }
     }
     

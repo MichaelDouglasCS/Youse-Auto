@@ -37,16 +37,4 @@ extension UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    func showActionAlert(title: String, message: String, actions: [UIAlertAction]) {
-        let alert = UIViewController.generateAlert(for: title, message: message)
-        
-        for action in actions {
-            alert.addAction(action)
-        }
-        
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
 }

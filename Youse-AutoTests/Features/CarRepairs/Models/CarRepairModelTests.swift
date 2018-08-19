@@ -28,48 +28,48 @@ class CarRepairModelTests: XCTestCase {
     // MARK: - Public Methods
     //*************************************************
     
-    func testCarRepairParsingShouldExist() {
+    func testCarRepairParsingShouldExists() {
         let json = self.localJSONFrom(fileName: "carRepair")
         let carRepair = CarRepair(json: json ?? [:])
-        XCTAssertNotNil(carRepair, "Car Repair should exist")
+        XCTAssertNotNil(carRepair, "Car Repair should exists")
     }
     
-    func testCarRepairParsingShouldNotExist() {
+    func testCarRepairParsingShouldNotExists() {
         let carRepair = CarRepair(json: [:])
-        XCTAssertNil(carRepair, "Car Repair should not exist")
+        XCTAssertNil(carRepair, "Car Repair should not exists")
     }
     
-    func testCarRepairWithValidateParamsShouldSuccess() {
+    func testCarRepairWithValidateParamsShouldBeSuccess() {
         var json: JSON = ["place_id": "Test",
                           "name": "Test",
                           "vicinity": "Test"]
-        XCTAssertNotNil(CarRepair(json: json), "Car Repair should exist")
+        XCTAssertNotNil(CarRepair(json: json), "Car Repair should exists")
         
         json = [:]
         json["place_id"] = "Test"
-        XCTAssertNil(CarRepair(json: json), "Car Repair should not exist")
+        XCTAssertNil(CarRepair(json: json), "Car Repair should not exists")
         
         json = [:]
         json["name"] = "Test"
-        XCTAssertNil(CarRepair(json: json), "Car Repair should not exist")
+        XCTAssertNil(CarRepair(json: json), "Car Repair should not exists")
         
         json = [:]
         json["vicinity"] = "Test"
-        XCTAssertNil(CarRepair(json: json), "Car Repair should not exist")
+        XCTAssertNil(CarRepair(json: json), "Car Repair should not exists")
     }
     
-    func testCarRepairParsingAllParamsSuccess() {
+    func testCarRepairParsingAllParamsShouldBeSuccess() {
         let json = self.localJSONFrom(fileName: "carRepair")
         let carRepair = CarRepair(json: json ?? [:])
         
-        XCTAssertTrue(carRepair?.id?.isEmpty == false)
-        XCTAssertTrue(carRepair?.placeID.isEmpty == false)
-        XCTAssertTrue(carRepair?.name.isEmpty == false)
-        XCTAssertNotNil(carRepair?.rating)
-        XCTAssertNotNil(carRepair?.location)
-        XCTAssertTrue(carRepair?.address.isEmpty == false)
-        XCTAssertNotNil(carRepair?.isOpenNow)
-        XCTAssertNotNil(carRepair?.isOpenFormatted)
-        XCTAssertNotNil(carRepair?.image)
+        XCTAssertTrue(carRepair?.id?.isEmpty == false, "ID should exists")
+        XCTAssertTrue(carRepair?.placeID.isEmpty == false, "PlaceID should exists")
+        XCTAssertTrue(carRepair?.name.isEmpty == false, "Name should exists")
+        XCTAssertNotNil(carRepair?.rating, "Rating should exists")
+        XCTAssertNotNil(carRepair?.location, "Location should exists")
+        XCTAssertTrue(carRepair?.address.isEmpty == false, "Address should exists")
+        XCTAssertNotNil(carRepair?.isOpenNow, "isOpenNow should exists")
+        XCTAssertNotNil(carRepair?.isOpenFormatted, "isOpenFormatted should exists")
+        XCTAssertNotNil(carRepair?.image, "Image should exists")
     }
 }

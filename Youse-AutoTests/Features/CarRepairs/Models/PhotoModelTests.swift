@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import SwiftyJSON
 @testable import Youse_Auto
 
 class PhotoModelTests: XCTestCase {
@@ -40,17 +39,17 @@ class PhotoModelTests: XCTestCase {
         XCTAssertNil(photo, "Photo should not exist")
     }
     
-    func testPhotoWithReferenceParamShouldSuccess() {
+    func testPhotoWithReferenceParamShouldBeSuccess() {
         XCTAssertNotNil(Photo(json: ["photo_reference": "Test"]), "Photo should exist")
     }
     
-    func testCarRepairParsingAllParamsSuccess() {
+    func testCarRepairParsingAllParamsShouldBeSuccess() {
         let json = self.localJSONFrom(fileName: "photo")
         let photo = Photo(json: json ?? [:])
         
-        XCTAssertTrue(photo?.id?.isEmpty == false)
-        XCTAssertNotNil(photo?.width)
-        XCTAssertNotNil(photo?.height)
-        XCTAssertNotNil(photo?.url)
+        XCTAssertTrue(photo?.id?.isEmpty == false, "ID should exists")
+        XCTAssertNotNil(photo?.width, "Width should exists")
+        XCTAssertNotNil(photo?.height, "Height should exists")
+        XCTAssertNotNil(photo?.url, "URL should exists")
     }
 }

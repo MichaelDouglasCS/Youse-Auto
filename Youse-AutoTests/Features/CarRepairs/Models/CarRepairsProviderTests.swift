@@ -7,19 +7,10 @@
 //
 
 import XCTest
-import CoreLocation
-import SwiftyJSON
-import OHHTTPStubs
 @testable import Youse_Auto
 
 class CarRepairsProviderTests: XCTestCase {
-    
-    //*************************************************
-    // MARK: - Public Properties
-    //*************************************************
-    
-    var locationValid = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
-    
+
     //*************************************************
     // MARK: - Lifecycle
     //*************************************************
@@ -37,21 +28,21 @@ class CarRepairsProviderTests: XCTestCase {
     // MARK: - Public Methods
     //*************************************************
     
-    func testCarRepairsWithValidLocationShouldSuccess() {
+    func testCarRepairsWithValidLocationShouldBeSuccess() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         let provider = CarRepairsProvider()
         
         provider.carRepairs(by: location) { (_, _, error) in
-            XCTAssertNil(error, "Should success")
+            XCTAssertNil(error, "Should be success")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsWithValidLocationShouldReturnResults() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         let provider = CarRepairsProvider()
         let stubService = StubService()
         stubService.addStub(for: .carRepairsList)
@@ -60,12 +51,12 @@ class CarRepairsProviderTests: XCTestCase {
             XCTAssertFalse(carRepairs.isEmpty, "Results should exists")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsWithValidLocationShouldReturnNextPage() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         let provider = CarRepairsProvider()
         let stubService = StubService()
         stubService.addStub(for: .carRepairsList)
@@ -74,20 +65,20 @@ class CarRepairsProviderTests: XCTestCase {
             XCTAssertTrue(nextPage?.isEmpty == false, "Next Page should exist")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
-    func testCarRepairsWithValidLocationShouldFailed() {
+    func testCarRepairsWithValidLocationShouldBeFailed() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         let provider = CarRepairsProvider()
         let stubService = StubService()
         stubService.addStub(for: .noConnection)
         
         provider.carRepairs(by: location) { (_, _, error) in
-            XCTAssertNotNil(error, "Should failed")
+            XCTAssertNotNil(error, "Should be failed")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
 }

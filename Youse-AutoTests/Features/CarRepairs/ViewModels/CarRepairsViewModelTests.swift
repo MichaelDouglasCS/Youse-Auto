@@ -7,18 +7,9 @@
 //
 
 import XCTest
-import CoreLocation
-import SwiftyJSON
-import OHHTTPStubs
 @testable import Youse_Auto
 
 class CarRepairsViewModelTests: XCTestCase {
-    
-    //*************************************************
-    // MARK: - Public Properties
-    //*************************************************
-    
-    var locationValid = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
     
     //*************************************************
     // MARK: - Lifecycle
@@ -37,7 +28,7 @@ class CarRepairsViewModelTests: XCTestCase {
     // MARK: - Public Methods
     //*************************************************
     
-    func testCarRepairsViewModelShouldRefreshSuccess() {
+    func testCarRepairsViewModelShouldRefreshBeSuccess() {
         let expectation = self.expectation(description: #function)
         let viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         let stubService = StubService()
@@ -47,10 +38,10 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertNil(error, "Error should nil")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
-    func testCarRepairsViewModelShouldRefreshFailed() {
+    func testCarRepairsViewModelShouldRefreshBeFailed() {
         let expectation = self.expectation(description: #function)
         let viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         let stubService = StubService()
@@ -60,7 +51,7 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertNotNil(error, "Error should not nil")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldHasNextPageTrue() {
@@ -73,7 +64,7 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertTrue(viewModel.hasNextPage, "Should hasNextPage true")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldHasNextPageFalse() {
@@ -86,7 +77,7 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertFalse(viewModel.hasNextPage, "Should hasNextPage false")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldReturnPlaceID() {
@@ -99,7 +90,7 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertTrue(!viewModel.placeID(at: 0).isEmpty, "Should return placeID")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldNumberOfRowsEqualZero() {
@@ -112,7 +103,7 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertTrue(viewModel.numberOfRows() == 0, "Should be equal 0")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldNumberOfRowsEqual40() {
@@ -127,7 +118,7 @@ class CarRepairsViewModelTests: XCTestCase {
                 expectation.fulfill()
             })
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testCarRepairsViewModelShouldIsLoadingFalse() {
@@ -140,6 +131,6 @@ class CarRepairsViewModelTests: XCTestCase {
             XCTAssertFalse(viewModel.isLoading, "Should be false")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
 }

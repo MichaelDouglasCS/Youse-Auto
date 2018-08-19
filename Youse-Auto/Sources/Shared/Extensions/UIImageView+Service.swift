@@ -19,17 +19,17 @@ extension UIImageView {
                      completion: ((_ image: UIImage?) -> Void)? = nil ) {
         self.af_setImage(withURL: url,
                          placeholderImage: placeholder,
-                         imageTransition: .crossDissolve(0.25)) { (dataResponse) in
+                         imageTransition: .crossDissolve(0.25)) { [weak self] (dataResponse) in
                             
                             if let theImage = dataResponse.result.value {
-                                self.image = theImage
+                                self?.image = theImage
                             } else if let data = dataResponse.data, let theImage = UIImage(data: data) {
-                                self.image = theImage
+                                self?.image = theImage
                             } else {
-                                self.image = placeholder
+                                self?.image = placeholder
                             }
                             
-                            completion?(self.image)
+                            completion?(self?.image)
         }
     }
 }

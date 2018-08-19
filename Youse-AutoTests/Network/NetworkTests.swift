@@ -7,18 +7,9 @@
 //
 
 import XCTest
-import CoreLocation
-import SwiftyJSON
-import OHHTTPStubs
 @testable import Youse_Auto
 
 class NetworkTests: XCTestCase {
-    
-    //*************************************************
-    // MARK: - Private Properties
-    //*************************************************
-    
-    var locationValid = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
     
     //*************************************************
     // MARK: - Lifecycle
@@ -29,7 +20,7 @@ class NetworkTests: XCTestCase {
     }
     
     override func tearDown() {
-        OHHTTPStubs.removeAllStubs()
+        StubService.removeAllStubs()
         super.tearDown()
     }
     
@@ -37,11 +28,9 @@ class NetworkTests: XCTestCase {
     // MARK: - Public Methods
     //*************************************************
     
-    // Car Repairs List
-    
     func testListNearbyWithLocationShouldSuccess() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (_, response) in
             XCTAssertTrue(response.isSuccess, "Response should success")
@@ -52,35 +41,32 @@ class NetworkTests: XCTestCase {
     
     func testListNearbyWithLocationShouldFailed() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
-        
-        stub(condition: isHost("maps.googleapis.com")) { (_) in
-            let notConnected = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
-            return OHHTTPStubsResponse(error: notConnected)
-        }
+        let location = self.userLocationYouse
+        let stubService = StubService()
+        stubService.addStub(for: .noConnection)
         
         NetworkService.CarRepair.listNearby(to: location).execute { (_, response) in
             XCTAssertTrue(!response.isSuccess, "Response should Failed")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testListNearbyWithLocationShouldResultsExists() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             let results = json["results"].arrayValue
             XCTAssertTrue(!results.isEmpty, "Results should exists")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testListNearbyWithNextPageTokenShouldResultsExists() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             let nextPage = json["next_page_token"].string
@@ -93,14 +79,12 @@ class NetworkTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
-    
-    // Car Repair Details
 
     func testDetailsWithValidPlaceIDShouldSuccess() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             let results = json["results"].arrayValue
@@ -112,12 +96,12 @@ class NetworkTests: XCTestCase {
                 expectation.fulfill()
             })
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testDetailsWithValidPlaceIDShouldResultsExists() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             let results = json["results"].arrayValue
@@ -130,28 +114,25 @@ class NetworkTests: XCTestCase {
                 expectation.fulfill()
             })
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testLocalizedErrorShouldExists() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
-        
-        stub(condition: isHost("maps.googleapis.com")) { (_) in
-            let notConnected = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
-            return OHHTTPStubsResponse(error: notConnected)
-        }
+        let location = self.userLocationYouse
+        let stubService = StubService()
+        stubService.addStub(for: .noConnection)
         
         NetworkService.CarRepair.listNearby(to: location).execute { (_, response) in
             XCTAssertTrue(!response.localizedError.isEmpty, "LocalizedError Should Exists")
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testImageWithValidReferenceIDShouldImageExists() {
         let expectation = self.expectation(description: #function)
-        let location = self.locationValid
+        let location = self.userLocationYouse
         
         NetworkService.CarRepair.listNearby(to: location).execute { (json, _) in
             let results = json["results"].arrayValue
@@ -174,11 +155,14 @@ class NetworkTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
     
     func testImageWithValidReferenceIDShouldImageNotExists() {
         let expectation = self.expectation(description: #function)
+        let stubService = StubService()
+        stubService.addStub(for: .noConnection)
+        
         let path = NetworkService.CarRepair.image(fromReferenceID: "",
                                                   width: 0,
                                                   height: 0).path
@@ -191,7 +175,6 @@ class NetworkTests: XCTestCase {
             XCTAssertTrue(true)
             expectation.fulfill()
         }
-        
-        self.waitForExpectations(timeout: 30.0)
+        self.waitForExpectations(timeout: self.timeout)
     }
 }

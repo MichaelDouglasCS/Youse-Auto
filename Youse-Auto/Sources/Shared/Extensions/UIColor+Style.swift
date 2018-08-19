@@ -28,16 +28,4 @@ extension UIColor {
         
         self.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
-    
-    convenience init(string: String) {
-        let hexaString = "0x\(string)"
-        let scanner = Scanner(string: hexaString)
-        var value: UInt64 = 0
-        
-        if scanner.scanHexInt64(&value) {
-            self.init(hexadecimal: Int(value))
-        } else {
-            self.init()
-        }
-    }
 }

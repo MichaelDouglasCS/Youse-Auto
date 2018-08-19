@@ -1,5 +1,5 @@
 //
-//  XCTestCase+JSON.swift
+//  XCTestCase+Utils.swift
 //  Youse-AutoTests
 //
 //  Created by Michael Douglas on 18/08/18.
@@ -7,10 +7,23 @@
 //
 
 import XCTest
+import CoreLocation
 import SwiftyJSON
 @testable import Youse_Auto
 
 extension XCTestCase {
+    
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    var userLocationYouse: CLLocation {
+        return CLLocation(latitude: -23.5941355, longitude: -46.6802735)
+    }
+    
+    var timeout: TimeInterval {
+        return 30.0
+    }
     
     //*************************************************
     // MARK: - Public Methods

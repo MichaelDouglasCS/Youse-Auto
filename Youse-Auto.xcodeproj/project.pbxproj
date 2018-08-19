@@ -85,7 +85,7 @@
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
 		61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC9211E8A37009BB88A /* NetworkTests.swift */; };
 		61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0B9D211E33B400D28BDA /* AppDelegate.swift */; };
-		61DC0BBE211E33B600D28BDA /* Youse_AutoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */; };
+		61DC0BBE211E33B600D28BDA /* LocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* LocationUITests.swift */; };
 		61F07477212255980010D900 /* UIImage+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F07476212255980010D900 /* UIImage+Style.swift */; };
 		61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F074782122923C0010D900 /* UIViewController+Loading.swift */; };
 		61F14E212127DE3800A44A37 /* CarRepairsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14E202127DE3800A44A37 /* CarRepairsProviderTests.swift */; };
@@ -137,6 +137,13 @@
 		610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		610F84DF2127753000FC0CDD /* Youse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youse.gpx; sourceTree = "<group>"; };
 		6112AAFD21248726000AE094 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
+		611BAE57212935AA0035F626 /* carRepairsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairsList.json; sourceTree = "<group>"; };
+		611BAE58212935AA0035F626 /* photo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photo.json; sourceTree = "<group>"; };
+		611BAE59212935AA0035F626 /* review.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = review.json; sourceTree = "<group>"; };
+		611BAE5A212935AA0035F626 /* carRepair.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepair.json; sourceTree = "<group>"; };
+		611BAE5B212935AA0035F626 /* carRepairDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairDetails.json; sourceTree = "<group>"; };
+		611BAE5C212935BA0035F626 /* XCTestCase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Utils.swift"; sourceTree = "<group>"; };
+		611BAE5D212935BA0035F626 /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 		61203D332126089200928F1A /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		61203D35212608A200928F1A /* ReviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCellViewModel.swift; sourceTree = "<group>"; };
 		61211BE721261D9000DBEB9D /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
@@ -202,7 +209,7 @@
 		61DC0BAE211E33B600D28BDA /* Youse-AutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0BB4211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DC0BB9211E33B600D28BDA /* Youse-AutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youse_AutoUITests.swift; sourceTree = "<group>"; };
+		61DC0BBD211E33B600D28BDA /* LocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUITests.swift; sourceTree = "<group>"; };
 		61DC0BBF211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F07476212255980010D900 /* UIImage+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Style.swift"; sourceTree = "<group>"; };
 		61F074782122923C0010D900 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
@@ -293,6 +300,59 @@
 				6104007E212381C300BCE794 /* PlaceholderViewModel.swift */,
 			);
 			path = PlaceholderView;
+			sourceTree = "<group>";
+		};
+		611BAE55212935970035F626 /* TestTools */ = {
+			isa = PBXGroup;
+			children = (
+				611BAE5C212935BA0035F626 /* XCTestCase+Utils.swift */,
+				611BAE5D212935BA0035F626 /* StubService.swift */,
+			);
+			path = TestTools;
+			sourceTree = "<group>";
+		};
+		611BAE56212935970035F626 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				611BAE5A212935AA0035F626 /* carRepair.json */,
+				611BAE5B212935AA0035F626 /* carRepairDetails.json */,
+				611BAE57212935AA0035F626 /* carRepairsList.json */,
+				611BAE58212935AA0035F626 /* photo.json */,
+				611BAE59212935AA0035F626 /* review.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		611BAE5E212935CC0035F626 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				611BAE6F2129365A0035F626 /* Location */,
+				611BAE5F212935CC0035F626 /* CarRepairDetails */,
+				611BAE67212935CC0035F626 /* CarRepairs */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		611BAE5F212935CC0035F626 /* CarRepairDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CarRepairDetails;
+			sourceTree = "<group>";
+		};
+		611BAE67212935CC0035F626 /* CarRepairs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CarRepairs;
+			sourceTree = "<group>";
+		};
+		611BAE6F2129365A0035F626 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				61DC0BBD211E33B600D28BDA /* LocationUITests.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		61203D322126087200928F1A /* ReviewCell */ = {
@@ -640,7 +700,9 @@
 		61DC0BBC211E33B600D28BDA /* Youse-AutoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				61DC0BBD211E33B600D28BDA /* Youse_AutoUITests.swift */,
+				611BAE5E212935CC0035F626 /* Features */,
+				611BAE55212935970035F626 /* TestTools */,
+				611BAE56212935970035F626 /* Stubs */,
 				61DC0BBF211E33B600D28BDA /* Info.plist */,
 			);
 			path = "Youse-AutoUITests";
@@ -1041,7 +1103,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DC0BBE211E33B600D28BDA /* Youse_AutoUITests.swift in Sources */,
+				61DC0BBE211E33B600D28BDA /* LocationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

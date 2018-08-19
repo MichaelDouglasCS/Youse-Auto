@@ -115,7 +115,7 @@
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXV-PJ-EB4" userLabel="Container View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="365" height="140"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6sS-E6-XmE">
+                                                                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6sS-E6-XmE">
                                                                     <rect key="frame" x="10" y="9.6666666666666643" width="345" height="75.333333333333343"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGT-Ot-Z9B" userLabel="Name">
@@ -197,6 +197,7 @@
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1e5-zi-XSU" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="35"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="call_button" label="CallButton"/>
                                                                             <state key="normal" title="Title">
                                                                                 <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </state>
@@ -218,6 +219,7 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-YM-bry" userLabel="Directions" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
                                                                             <rect key="frame" x="177.66666666666663" y="0.0" width="167.33333333333337" height="35"/>
                                                                             <color key="backgroundColor" red="0.0" green="0.3294117647" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="directions_button" label="DirectionsButton"/>
                                                                             <state key="normal" title="Title"/>
                                                                             <userDefinedRuntimeAttributes>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

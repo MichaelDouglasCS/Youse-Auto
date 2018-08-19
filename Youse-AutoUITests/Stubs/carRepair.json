@@ -1,0 +1,49 @@
+{
+    "geometry": {
+        "location": {
+            "lat": -23.5962565,
+            "lng": -46.67955369999999
+        },
+        "viewport": {
+            "northeast": {
+                "lat": -23.5949210197085,
+                "lng": -46.6782587197085
+            },
+            "southwest": {
+                "lat": -23.5976189802915,
+                "lng": -46.6809566802915
+            }
+        }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+    "id": "0d2743d136889e306a2d63bc248b64d5144bdbba",
+    "name": "Shibuya Garage",
+    "opening_hours": {
+        "open_now": false
+    },
+    "photos": [
+        {
+            "height": 3464,
+            "html_attributions": [
+                "<a href=\"https://maps.google.com/maps/contrib/109392988483932034314/photos\">Rafael Pick</a>"
+            ],
+            "photo_reference": "CmRaAAAAW7Z7yDu4gVRVMRZGcbsN5_6RB4GmEq7-pgOECBb2kRNxRd2-To_c0GM9lQjesKOSZGC_RENgDgDgMNupH1eaIl7aPal7qt7tqt8E6VztwLojMRKx53N08frebCRktITvEhCyAMYkKi_blKGWvu96vqzRGhSdIu-uDGtQ7HefWUKe-beOsYRFVA",
+            "width": 4618
+        }
+    ],
+    "place_id": "ChIJixhV71FXzpQR3D1DOPxv9Pk",
+    "plus_code": {
+        "compound_code": "C83C+F5 São Paulo, State of São Paulo, Brazil",
+        "global_code": "588MC83C+F5"
+    },
+    "rating": 4.5,
+    "reference": "CmRSAAAA8vaDoE0yhI5UPRa10Qn1Eu6r_j2CYUWCevNnU-iKmmLlHiKePtEecYkTezKYnQPItRbscJ1hBUtZJwXujLcBvIRuek0KPfuvsk3_abRabVBainXi2U19jWvVIfv662W0EhCitSH0a38JHL-D6W0rbl-yGhS84sCYgB57fiFaH54kYx9US-Tf1Q",
+    "scope": "GOOGLE",
+    "types": [
+        "car_repair",
+        "store",
+        "point_of_interest",
+        "establishment"
+    ],
+    "vicinity": "Avenida Brigadeiro Faria Lima, 4565 - Vila Olimpia, São Paulo"
+}

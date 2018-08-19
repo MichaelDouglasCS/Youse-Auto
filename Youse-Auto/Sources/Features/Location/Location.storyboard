@@ -35,6 +35,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoS-Dp-QSg" customClass="CustomButton" customModule="Youse_Auto" customModuleProvider="target">
                                 <rect key="frame" x="20" y="688" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="continue_button" label="ContinueButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xoC-as-nXu"/>
                                 </constraints>

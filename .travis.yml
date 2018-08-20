@@ -8,7 +8,7 @@ before_install:
 - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/Youse-Auto-*/
 - rvm use $RVM_RUBY_VERSION
 - brew update
-- brew install swiftlint
+- brew upgrade swiftlint
 - pod repo update
 
 script:

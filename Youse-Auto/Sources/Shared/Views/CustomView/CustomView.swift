@@ -21,7 +21,6 @@ import UIKit
     @IBInspectable var shadowColor: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
     @IBInspectable var borderWidth: CGFloat = 0.0
     @IBInspectable var borderColor: UIColor = UIColor.lightGray
-    @IBInspectable var dashedLine: Int = 0
     
     //*************************************************
     // MARK: - Public Properties
@@ -68,29 +67,10 @@ import UIKit
         self.stroke.removeFromSuperlayer()
         
         if self.borderWidth > 0.0 {
+            let caLayer = self.layer
             
-            if self.dashedLine > 0 {
-                let caLayer = self.layer
-                let line = CAShapeLayer()
-                
-                line.frame = self.bounds
-                line.strokeColor = self.borderColor.cgColor
-                line.lineWidth = self.borderWidth
-                line.lineDashPattern = [NSNumber(value: self.dashedLine)]
-                line.lineDashPhase = 2.0
-                line.path = path.cgPath
-                line.fillColor = nil
-                self.stroke = line
-                
-                caLayer.insertSublayer(self.stroke, at: 0)
-                caLayer.borderColor = nil
-                caLayer.borderWidth = 0
-            } else {
-                let caLayer = self.layer
-                
-                caLayer.borderColor = self.borderColor.cgColor
-                caLayer.borderWidth = self.borderWidth
-            }
+            caLayer.borderColor = self.borderColor.cgColor
+            caLayer.borderWidth = self.borderWidth
         }
         
         if self.shadowRadius > 0.0 || self.shadowOffset != CGSize.zero {

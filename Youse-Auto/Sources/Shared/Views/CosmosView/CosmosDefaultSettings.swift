@@ -6,7 +6,6 @@ Defaults setting values.
 
 */
 struct CosmosDefaultSettings {
-  init() {}
   
   static let defaultColor = UIColor(red: 1, green: 149/255, blue: 0, alpha: 1)
   

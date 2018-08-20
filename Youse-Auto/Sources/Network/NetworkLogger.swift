@@ -24,21 +24,6 @@ class NetworkLogger: NSObject {
         if let headers = request.allHTTPHeaderFields {
             self.logHeaders(headers as [String: AnyObject])
         }
-        
-        if let httpBody = request.httpBody {
-            do {
-                let json = try JSONSerialization.jsonObject(with: httpBody, options: .allowFragments)
-                let pretty = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-                
-                if let string = NSString(data: pretty, encoding: String.Encoding.utf8.rawValue) {
-                    print("JSON: \(string)")
-                }
-            } catch {
-                if let string = NSString(data: httpBody, encoding: String.Encoding.utf8.rawValue) {
-                    print("Data: \(string)")
-                }
-            }
-        }
     }
     
     class func logResponse(_ response: URLResponse?, data: Data? = nil) {

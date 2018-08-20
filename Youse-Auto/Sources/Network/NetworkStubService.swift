@@ -69,8 +69,4 @@ class NetworkStubService: NSObject {
             }
         }
     }
-    
-    func removeAllStubs() {
-        OHHTTPStubs.removeAllStubs()
-    }
 }

@@ -50,6 +50,10 @@ class LocationService: NSObject {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
+        
+        if self.isRunningUnitTests() {
+            self.lastLocation = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
+        }
     }
     
     deinit {
@@ -68,8 +72,11 @@ class LocationService: NSObject {
                      error: ((String?) -> Void)? = nil) {
         let arguments = ProcessInfo.processInfo.arguments
         
-        if arguments.contains(Constants.testLocationSuccess) {
-            success(CLLocation(latitude: -23.5941355, longitude: -46.6802735))
+        if arguments.contains(Constants.testLocationSuccess) || self.isRunningUnitTests() {
+            let location = CLLocation(latitude: -23.5941355, longitude: -46.6802735)
+            
+            success(location)
+            self.lastLocation = location
             return
         } else if arguments.contains(Constants.testLocationError) {
             error?(String.YouseAuto.locationError)
@@ -93,6 +100,13 @@ class LocationService: NSObject {
     private func resetCompletions() {
         self.success = nil
         self.error = nil
+    }
+    
+    /// Detect if the app is running unit tests.
+    ///
+    /// - Returns: Returns a Boolean that indicates if is running or not Unit tests
+    func isRunningUnitTests() -> Bool {
+        return ProcessInfo.processInfo.environment.keys.contains("TEST_LOCATION")
     }
 }
 

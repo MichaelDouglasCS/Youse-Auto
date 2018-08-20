@@ -23,19 +23,13 @@ import UIKit
     @IBInspectable var borderColor: UIColor = UIColor.lightGray
     
     //*************************************************
-    // MARK: - Public Properties
-    //*************************************************
-    
-    var bezierPath: UIBezierPath {
-        let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius)
-        return path
-    }
-    
-    //*************************************************
     // MARK: - Private Properties
     //*************************************************
     
-    private var stroke: CALayer = CALayer()
+    private var bezierPath: UIBezierPath {
+        let path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius)
+        return path
+    }
     
     //*************************************************
     // MARK: - Lifecycle
@@ -62,9 +56,8 @@ import UIKit
     
     private func setupView() {
         let path = self.bezierPath
-        
+
         self.layer.cornerRadius = self.cornerRadius
-        self.stroke.removeFromSuperlayer()
         
         if self.borderWidth > 0.0 {
             let caLayer = self.layer

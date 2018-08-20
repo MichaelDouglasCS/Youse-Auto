@@ -7,11 +7,9 @@ xcode_sdk: iphonesimulator11.4
 before_install:
 - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/wascar-*/
 - rvm use $RVM_RUBY_VERSION
+- brew update
+- brew install swiftlint
 - pod repo update
-
-install:
-- bundle
-- bundle install --without=documentation --path ../travis_bundle_dir
 
 script:
 - xcodebuild -workspace Youse-Auto.xcworkspace -scheme Youse-Auto -destination "platform=iOS Simulator,name=iPhone X,OS=11.4" clean test | xcpretty

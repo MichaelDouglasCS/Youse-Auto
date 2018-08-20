@@ -105,7 +105,7 @@ class LocationService: NSObject {
     /// Detect if the app is running unit tests.
     ///
     /// - Returns: Returns a Boolean that indicates if is running or not Unit tests
-    func isRunningUnitTests() -> Bool {
+    private func isRunningUnitTests() -> Bool {
         return ProcessInfo.processInfo.environment.keys.contains("TEST_LOCATION")
     }
 }

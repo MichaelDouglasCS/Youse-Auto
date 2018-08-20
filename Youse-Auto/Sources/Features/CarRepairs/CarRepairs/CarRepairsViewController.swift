@@ -16,12 +16,17 @@ class CarRepairsViewController: UIViewController {
     //*************************************************
     
     @IBOutlet private weak var tableView: UITableView!
+    
+    //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    private(set) var viewModel: CarRepairsViewModel!
 
     //*************************************************
     // MARK: - Private Properties
     //*************************************************
     
-    private var viewModel: CarRepairsViewModel!
     private let refreshControl = UIRefreshControl()
     private let loadingPagination = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
@@ -90,11 +95,7 @@ class CarRepairsViewController: UIViewController {
         self.viewModel = viewModel
     }
     
-    //*************************************************
-    // MARK: - Private Methods
-    //*************************************************
-    
-    private func loadData(completion: @escaping () -> Void) {
+    func loadData(completion: @escaping () -> Void) {
         self.viewModel.loadData(type: .refresh) { (error) in
             
             if let error = error {
@@ -106,7 +107,7 @@ class CarRepairsViewController: UIViewController {
         }
     }
     
-    private func bringMoreData(completion: @escaping () -> Void) {
+    func bringMoreData(completion: @escaping () -> Void) {
         self.viewModel.loadData(type: .bringMore) { (error) in
 
             if let error = error {
@@ -118,9 +119,10 @@ class CarRepairsViewController: UIViewController {
         }
     }
     
-    @objc private func refreshData() {
+    @objc func refreshData(completion: (() -> Void)? = nil) {
         self.loadData {
             self.refreshControl.endRefreshing()
+            completion?()
         }
     }
 }

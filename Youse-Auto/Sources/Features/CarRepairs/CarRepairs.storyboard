@@ -38,7 +38,7 @@
         <!--Car Repairs View Controller-->
         <scene sceneID="2Ka-Ro-Nrf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYh-Uw-Vpu" customClass="CarRepairsViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarRepairsViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYh-Uw-Vpu" customClass="CarRepairsViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ne0-SV-pTw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,7 +15,7 @@
         <!--Location View Controller-->
         <scene sceneID="hrp-6P-sPF">
             <objects>
-                <viewController id="rAn-Kg-5Te" customClass="LocationViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" id="rAn-Kg-5Te" customClass="LocationViewController" customModule="Youse_Auto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Le-9V-fX8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-N5-K3o">
-                                <rect key="frame" x="30" y="398.66666666666669" width="315" height="25.333333333333314"/>
+                                <rect key="frame" x="30" y="398.33333333333331" width="315" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.32941176470588235" green="0.33000001311302185" blue="0.33000001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

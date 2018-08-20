@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0940"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "61DC0B99211E33B400D28BDA"
+               BuildableName = "Youse-Auto.app"
+               BlueprintName = "Youse-Auto"
+               ReferencedContainer = "container:Youse-Auto.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "61DC0B99211E33B400D28BDA"
+            BuildableName = "Youse-Auto.app"
+            BlueprintName = "Youse-Auto"
+            ReferencedContainer = "container:Youse-Auto.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "61DC0BAD211E33B600D28BDA"
+               BuildableName = "Youse-AutoTests.xctest"
+               BlueprintName = "Youse-AutoTests"
+               ReferencedContainer = "container:Youse-Auto.xcodeproj">
+            </BuildableReference>
+            <LocationScenarioReference
+               identifier = "../Youse-Auto/Resources/Supporting Files/Youse.gpx"
+               referenceType = "0">
+            </LocationScenarioReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "61DC0BB8211E33B600D28BDA"
+               BuildableName = "Youse-AutoUITests.xctest"
+               BlueprintName = "Youse-AutoUITests"
+               ReferencedContainer = "container:Youse-Auto.xcodeproj">
+            </BuildableReference>
+            <LocationScenarioReference
+               identifier = "../Youse-Auto/Resources/Supporting Files/Youse.gpx"
+               referenceType = "0">
+            </LocationScenarioReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "61DC0B99211E33B400D28BDA"
+            BuildableName = "Youse-Auto.app"
+            BlueprintName = "Youse-Auto"
+            ReferencedContainer = "container:Youse-Auto.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "61DC0B99211E33B400D28BDA"
+            BuildableName = "Youse-Auto.app"
+            BlueprintName = "Youse-Auto"
+            ReferencedContainer = "container:Youse-Auto.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <LocationScenarioReference
+         identifier = "../Youse-Auto/Resources/Supporting Files/Youse.gpx"
+         referenceType = "0">
+      </LocationScenarioReference>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "61DC0B99211E33B400D28BDA"
+            BuildableName = "Youse-Auto.app"
+            BlueprintName = "Youse-Auto"
+            ReferencedContainer = "container:Youse-Auto.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

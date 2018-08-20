@@ -4,6 +4,10 @@ xcode_project: Youse-Auto.xcworkspace
 xcode_scheme: Youse-Auto
 xcode_sdk: iphonesimulator11.4
 
+branches:
+  only:
+  - master
+
 before_install:
 - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/Youse-Auto-*/
 - rvm use $RVM_RUBY_VERSION
@@ -13,3 +17,6 @@ before_install:
 
 script:
 - xcodebuild -workspace Youse-Auto.xcworkspace -scheme Youse-Auto -destination "platform=iOS Simulator,name=iPhone X,OS=11.4" clean test | xcpretty
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 2ead56a9-e540-4531-b7fe-85b2676662f9

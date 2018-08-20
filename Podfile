@@ -4,7 +4,6 @@ inhibit_all_warnings!
 
 # Project Pods
 def project_pods
-    pod 'SwiftLint'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire', '~> 4.7'
     pod 'AlamofireImage', '~> 3.3'

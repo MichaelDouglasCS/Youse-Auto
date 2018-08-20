@@ -56,6 +56,10 @@
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="placeholder_view" label="PlaceholderView">
+                <accessibilityTraits key="traits" none="YES"/>
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <constraints>
                 <constraint firstItem="ESQ-Ls-o0R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="0rE-YI-ox1"/>
                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ESQ-Ls-o0R" secondAttribute="bottom" constant="40" id="27r-61-SvJ"/>

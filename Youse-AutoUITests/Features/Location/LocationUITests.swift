@@ -30,41 +30,40 @@ class LocationUITests: XCTestCase {
     
     func testLocationScreenShouldAppear() {
         let app = XCUIApplication()
-        app.launchArguments.append("TEST_LOCATION")
+        app.launchArguments.append("TEST_LOCATION_ERROR")
         app.launch()
         
-        XCTAssert(app.buttons["continue_button"].exists, "Should open Location Screen")
+        XCTAssertTrue(app.buttons["continue_button"].exists, "Should open Location Screen")
     }
     
     func testLocationScreenShouldDismiss() {
         let app = XCUIApplication()
-        app.launchArguments.append("TEST_LOCATION")
+        app.launchArguments.append("TEST_LOCATION_ERROR")
+        app.launchArguments.append("TEST_LOCATION_SUCCESS")
         app.launch()
         
         app.buttons["continue_button"].tap()
-        XCTAssert(!app.buttons["continue_button"].exists, "Should dismiss Location Screen")
+        XCTAssertFalse(app.buttons["continue_button"].exists, "Should dismiss Location Screen")
     }
     
     func testLocationScreenShouldAlertAppear() {
         let app = XCUIApplication()
-        app.launchArguments.append("TEST_LOCATION")
         app.launchArguments.append("TEST_LOCATION_ERROR")
         app.launch()
         
         app.buttons["continue_button"].tap()
-        XCTAssert(app.alerts.firstMatch.exists, "Should alert appear")
+        XCTAssertTrue(app.alerts.firstMatch.exists, "Should alert appear")
     }
     
     func testLocationScreenShouldAlertDismiss() {
         let app = XCUIApplication()
-        app.launchArguments.append("TEST_LOCATION")
         app.launchArguments.append("TEST_LOCATION_ERROR")
         app.launch()
         
         app.buttons["continue_button"].tap()
-        XCTAssert(app.alerts.firstMatch.exists, "Should alert appear")
+        XCTAssertTrue(app.alerts.firstMatch.exists, "Should alert appear")
         
         app.alerts.firstMatch.buttons.firstMatch.tap()
-        XCTAssert(!app.alerts.firstMatch.exists, "Should alert disappear")
+        XCTAssertFalse(app.alerts.firstMatch.exists, "Should alert disappear")
     }
 }

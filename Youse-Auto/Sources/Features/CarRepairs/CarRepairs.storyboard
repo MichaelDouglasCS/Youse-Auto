@@ -50,11 +50,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarRepairCell" rowHeight="270" id="uau-cW-BZL" customClass="CarRepairCell" customModule="Youse_Auto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uau-cW-BZL" id="l8z-If-mdy">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uau-cW-BZL" id="l8z-If-mdy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-bp-Zle" userLabel="ShadowView" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ip-bp-Zle" userLabel="ShadowView" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="10" width="345" height="250"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-nn-33Q" userLabel="Container View" customClass="CustomView" customModule="Youse_Auto" customModuleProvider="target">

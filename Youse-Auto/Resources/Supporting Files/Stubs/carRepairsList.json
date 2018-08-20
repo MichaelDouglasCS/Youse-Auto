@@ -4,40 +4,6 @@
                 {
                 "geometry": {
                 "location": {
-                "lat": -23.5949062,
-                "lng": -46.6766643
-                },
-                "viewport": {
-                "northeast": {
-                "lat": -23.5935686197085,
-                "lng": -46.6753575697085
-                },
-                "southwest": {
-                "lat": -23.5962665802915,
-                "lng": -46.67805553029149
-                }
-                }
-                },
-                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-                "id": "1f02c9c01d32d769102602ee5ceed0e48784180d",
-                "name": "Mobil Oilexpress",
-                "place_id": "ChIJcSN9FVFXzpQRY8JS2t0lxbg",
-                "plus_code": {
-                "compound_code": "C84F+28 São Paulo, State of São Paulo, Brazil",
-                "global_code": "588MC84F+28"
-                },
-                "reference": "CmRSAAAAr1r-XbU9uSJNJblXtT7US_Qk3XIzrxi4slIr0_TpmNd-i_o1RuV1GNdL8ku61Nfa5IBVL4goIOFyhb-_ucSI8kmj3u1NUCOupqranpqgDbw7CTqtUm258U0joGv0BCguEhCE3vJ0VsgwScW6-iR0T141GhQZexbuRANG0BKmhEVDlrPPFTO8DA",
-                "scope": "GOOGLE",
-                "types": [
-                          "car_repair",
-                          "point_of_interest",
-                          "establishment"
-                          ],
-                "vicinity": "Rua Clodomiro Amazonas, 1225 - Vila Nova Conceição, São Paulo"
-                },
-                {
-                "geometry": {
-                "location": {
                 "lat": -23.5962565,
                 "lng": -46.67955369999999
                 },
@@ -83,6 +49,40 @@
                           "establishment"
                           ],
                 "vicinity": "Avenida Brigadeiro Faria Lima, 4565 - Vila Olimpia, São Paulo"
+                },
+                {
+                "geometry": {
+                "location": {
+                "lat": -23.5949062,
+                "lng": -46.6766643
+                },
+                "viewport": {
+                "northeast": {
+                "lat": -23.5935686197085,
+                "lng": -46.6753575697085
+                },
+                "southwest": {
+                "lat": -23.5962665802915,
+                "lng": -46.67805553029149
+                }
+                }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+                "id": "1f02c9c01d32d769102602ee5ceed0e48784180d",
+                "name": "Mobil Oilexpress",
+                "place_id": "ChIJcSN9FVFXzpQRY8JS2t0lxbg",
+                "plus_code": {
+                "compound_code": "C84F+28 São Paulo, State of São Paulo, Brazil",
+                "global_code": "588MC84F+28"
+                },
+                "reference": "CmRSAAAAr1r-XbU9uSJNJblXtT7US_Qk3XIzrxi4slIr0_TpmNd-i_o1RuV1GNdL8ku61Nfa5IBVL4goIOFyhb-_ucSI8kmj3u1NUCOupqranpqgDbw7CTqtUm258U0joGv0BCguEhCE3vJ0VsgwScW6-iR0T141GhQZexbuRANG0BKmhEVDlrPPFTO8DA",
+                "scope": "GOOGLE",
+                "types": [
+                          "car_repair",
+                          "point_of_interest",
+                          "establishment"
+                          ],
+                "vicinity": "Rua Clodomiro Amazonas, 1225 - Vila Nova Conceição, São Paulo"
                 }
                 ],
     "status": "OK"

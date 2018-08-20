@@ -97,6 +97,9 @@
                                                 <constraint firstItem="zcZ-Vp-RT7" firstAttribute="top" secondItem="AZ9-oK-Ebe" secondAttribute="top" id="xF2-QJ-58j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="gallery_cell" label="GalleryCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="collectionView" destination="zcZ-Vp-RT7" id="YXs-Pj-8uW"/>
                                             <outlet property="pageLabel" destination="UEI-Oq-1lt" id="PeH-HB-BDk"/>
@@ -255,9 +258,6 @@
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <accessibility key="accessibilityConfiguration" identifier="details_cell" label="DetailsCell">
-                                                        <bool key="isElement" value="YES"/>
-                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="EXV-PJ-EB4" secondAttribute="bottom" id="Lw9-Wx-vGx"/>
                                                         <constraint firstItem="EXV-PJ-EB4" firstAttribute="leading" secondItem="bvp-Wt-oFz" secondAttribute="leading" id="T44-MW-2xL"/>
@@ -288,6 +288,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="details_cell" label="DetailsCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="availabilityLabel" destination="YA5-ES-ot7" id="OQG-Gh-1hu"/>
                                             <outlet property="callButton" destination="1e5-zi-XSU" id="4f2-V2-xBD"/>
@@ -382,6 +385,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="contact_info_cell" label="ContactInfoCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="contentLabel" destination="XmF-dQ-IHH" id="HQW-t1-U6P"/>
                                             <outlet property="iconImageView" destination="RnX-8h-VK7" id="JQe-ue-mbU"/>
@@ -515,6 +521,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="review_cell" label="ReviewCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="contentLabel" destination="7L5-eN-jaK" id="0pk-gG-nTF"/>
                                             <outlet property="nameLabel" destination="W4X-XG-Amk" id="A0t-0Q-QYi"/>

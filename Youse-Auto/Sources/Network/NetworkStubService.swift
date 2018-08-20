@@ -26,12 +26,14 @@ class NetworkStubService: NSObject {
         
         if arguments.contains("TEST_CAR_REPAIRS_LIST") {
             self.addStub(for: .carRepairsList)
-        } else if arguments.contains("TEST_CAR_REPAIR_DETAILS") {
+        }
+        
+        if arguments.contains("TEST_CAR_REPAIR_DETAILS") {
             self.addStub(for: .carRepairDetails)
-        } else if arguments.contains("TEST_NO_CONNECTION") {
+        }
+            
+        if arguments.contains("TEST_NO_CONNECTION") {
             self.addStub(for: .noConnection)
-        } else {
-            self.removeAllStubs()
         }
     }
     
@@ -39,7 +41,9 @@ class NetworkStubService: NSObject {
         
         switch stubType {
         case .carRepairsList:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
+            stub(condition: { (request) -> Bool in
+                return request.url?.absoluteString.contains("nearbysearch/") ?? false
+            }) { (_) in
                 let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
                 return OHHTTPStubsResponse(
                     fileAtPath: path,
@@ -48,7 +52,9 @@ class NetworkStubService: NSObject {
                 )
             }
         case .carRepairDetails:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
+            stub(condition: { (request) -> Bool in
+                return request.url?.absoluteString.contains("details/") ?? false
+            }){ (_) in
                 let path = OHPathForFile("carRepairDetails.json", type(of: self)) ?? ""
                 return OHHTTPStubsResponse(
                     fileAtPath: path,

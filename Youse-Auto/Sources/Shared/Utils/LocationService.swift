@@ -19,7 +19,7 @@ class LocationService: NSObject {
     static var isEnabled: Bool {
         
         if CLLocationManager.locationServicesEnabled() &&
-            !ProcessInfo.processInfo.arguments.contains(Constants.testLocation) {
+            !ProcessInfo.processInfo.arguments.contains(Constants.testLocationError) {
             switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways, .authorizedWhenInUse:
                 return true
@@ -66,8 +66,12 @@ class LocationService: NSObject {
     
     func getLocation(success: @escaping ((CLLocation) -> Void),
                      error: ((String?) -> Void)? = nil) {
-
-        if ProcessInfo.processInfo.arguments.contains(Constants.testLocationError) {
+        let arguments = ProcessInfo.processInfo.arguments
+        
+        if arguments.contains(Constants.testLocationSuccess) {
+            success(CLLocation(latitude: -23.5941355, longitude: -46.6802735))
+            return
+        } else if arguments.contains(Constants.testLocationError) {
             error?(String.YouseAuto.locationError)
             return
         }

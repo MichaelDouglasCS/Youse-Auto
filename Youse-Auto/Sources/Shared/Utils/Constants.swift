@@ -17,6 +17,6 @@ struct Constants {
     static let testCarRepairsList: String = "TEST_CAR_REPAIRS_LIST"
     static let testCarRepairDetails: String = "TEST_CAR_REPAIRS_DETAILS"
     static let testNoConnection: String = "TEST_NO_CONNECTION"
-    static let testLocation: String = "TEST_LOCATION"
+    static let testLocationSuccess: String = "TEST_LOCATION_SUCCESS"
     static let testLocationError: String = "TEST_LOCATION_ERROR"
 }

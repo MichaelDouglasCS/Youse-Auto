@@ -54,7 +54,7 @@ class NetworkStubService: NSObject {
         case .carRepairDetails:
             stub(condition: { (request) -> Bool in
                 return request.url?.absoluteString.contains("details/") ?? false
-            }){ (_) in
+            }) { (_) in
                 let path = OHPathForFile("carRepairDetails.json", type(of: self)) ?? ""
                 return OHHTTPStubsResponse(
                     fileAtPath: path,

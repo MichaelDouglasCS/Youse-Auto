@@ -50,7 +50,6 @@ struct CosmosRating {
     }
   }
   
-  
   /**
   
   Helper function for calculating the rating that is displayed to the user

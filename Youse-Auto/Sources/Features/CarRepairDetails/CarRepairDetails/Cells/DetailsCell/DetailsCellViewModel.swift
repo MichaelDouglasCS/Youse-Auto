@@ -73,5 +73,3 @@ struct DetailsCellViewModel: CarRepairDetailsCellProtocol {
         self.carRepairDetails = details
     }
 }
-
-

@@ -69,7 +69,6 @@ class LocationViewController: UIViewController {
     // MARK: - Actions
     //*************************************************
     
-    
     @IBAction func continueAction(_ sender: CustomButton) {
         self.viewModel.getLocation { [weak self] (location) in
             

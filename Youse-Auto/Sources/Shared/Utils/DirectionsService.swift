@@ -14,7 +14,7 @@ struct DirectionsService {
 	enum Navigator {
 		
 		case urlScheme(AppInfo)
-		
+        
 		typealias AppInfo = (name: String, url: String, path: String)
 		
 		struct App {

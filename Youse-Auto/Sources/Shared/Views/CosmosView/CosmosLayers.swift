@@ -1,6 +1,5 @@
 import UIKit
 
-
 /**
 
 Colection of helper functions for creating star layers.
@@ -38,7 +37,6 @@ class CosmosLayers {
     return starLayers
   }
 
-  
   /**
   
   Creates an layer that shows a star that can look empty, fully filled or partially filled.
@@ -79,7 +77,6 @@ class CosmosLayers {
   class func createPartialStar(_ starFillLevel: Double, settings: CosmosSettings, isRightToLeft: Bool) -> CALayer {
     let filledStar = createStarLayer(true, settings: settings)
     let emptyStar = createStarLayer(false, settings: settings)
-
 
     let parentLayer = CALayer()
     parentLayer.contentsScale = UIScreen.main.scale
@@ -127,7 +124,7 @@ class CosmosLayers {
 
   */
   class func positionStarLayers(_ layers: [CALayer], starMargin: Double) {
-    var positionX:CGFloat = 0
+    var positionX: CGFloat = 0
 
     for layer in layers {
       layer.position.x = positionX

@@ -105,7 +105,6 @@ Shows: ★★★★☆ (123)
     
     layer.sublayers = layers
     
-    
     // Update size
     // ------------
 
@@ -129,7 +128,7 @@ Shows: ★★★★☆ (123)
   }
   
   /// Returns the content size to fit all the star and text layers.
-  override open var intrinsicContentSize:CGSize {
+  override open var intrinsicContentSize: CGSize {
     return viewSize
   }
   

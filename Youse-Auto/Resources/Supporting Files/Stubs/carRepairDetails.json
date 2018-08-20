@@ -1,0 +1,311 @@
+{
+    "html_attributions": [],
+    "result": {
+        "address_components": [
+                               {
+                               "long_name": "4565",
+                               "short_name": "4565",
+                               "types": [
+                                         "street_number"
+                                         ]
+                               },
+                               {
+                               "long_name": "Avenida Brigadeiro Faria Lima",
+                               "short_name": "Av. Brg. Faria Lima",
+                               "types": [
+                                         "route"
+                                         ]
+                               },
+                               {
+                               "long_name": "Vila Olimpia",
+                               "short_name": "Vila Olimpia",
+                               "types": [
+                                         "sublocality_level_1",
+                                         "sublocality",
+                                         "political"
+                                         ]
+                               },
+                               {
+                               "long_name": "São Paulo",
+                               "short_name": "São Paulo",
+                               "types": [
+                                         "administrative_area_level_2",
+                                         "political"
+                                         ]
+                               },
+                               {
+                               "long_name": "São Paulo",
+                               "short_name": "SP",
+                               "types": [
+                                         "administrative_area_level_1",
+                                         "political"
+                                         ]
+                               },
+                               {
+                               "long_name": "Brazil",
+                               "short_name": "BR",
+                               "types": [
+                                         "country",
+                                         "political"
+                                         ]
+                               },
+                               {
+                               "long_name": "04538-133",
+                               "short_name": "04538-133",
+                               "types": [
+                                         "postal_code"
+                                         ]
+                               }
+                               ],
+        "adr_address": "<span class=\"street-address\">Av. Brg. Faria Lima, 4565</span> - <span class=\"extended-address\">Vila Olimpia</span>, <span class=\"locality\">São Paulo</span> - <span class=\"region\">SP</span>, <span class=\"postal-code\">04538-133</span>, <span class=\"country-name\">Brazil</span>",
+        "formatted_address": "Av. Brg. Faria Lima, 4565 - Vila Olimpia, São Paulo - SP, 04538-133, Brazil",
+        "formatted_phone_number": "(11) 3969-4657",
+        "geometry": {
+            "location": {
+                "lat": -23.5962565,
+                "lng": -46.67955369999999
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -23.5949210197085,
+                    "lng": -46.6782587197085
+                },
+                "southwest": {
+                    "lat": -23.5976189802915,
+                    "lng": -46.6809566802915
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+        "id": "0d2743d136889e306a2d63bc248b64d5144bdbba",
+        "international_phone_number": "+55 11 3969-4657",
+        "name": "Shibuya Garage",
+        "opening_hours": {
+            "open_now": false,
+            "periods": [
+                        {
+                        "close": {
+                        "day": 1,
+                        "time": "1800"
+                        },
+                        "open": {
+                        "day": 1,
+                        "time": "0900"
+                        }
+                        },
+                        {
+                        "close": {
+                        "day": 2,
+                        "time": "1800"
+                        },
+                        "open": {
+                        "day": 2,
+                        "time": "0900"
+                        }
+                        },
+                        {
+                        "close": {
+                        "day": 3,
+                        "time": "1800"
+                        },
+                        "open": {
+                        "day": 3,
+                        "time": "0900"
+                        }
+                        },
+                        {
+                        "close": {
+                        "day": 4,
+                        "time": "1800"
+                        },
+                        "open": {
+                        "day": 4,
+                        "time": "0900"
+                        }
+                        },
+                        {
+                        "close": {
+                        "day": 5,
+                        "time": "1800"
+                        },
+                        "open": {
+                        "day": 5,
+                        "time": "0900"
+                        }
+                        },
+                        {
+                        "close": {
+                        "day": 6,
+                        "time": "1400"
+                        },
+                        "open": {
+                        "day": 6,
+                        "time": "0900"
+                        }
+                        }
+                        ],
+            "weekday_text": [
+                             "Monday: 9:00 AM – 6:00 PM",
+                             "Tuesday: 9:00 AM – 6:00 PM",
+                             "Wednesday: 9:00 AM – 6:00 PM",
+                             "Thursday: 9:00 AM – 6:00 PM",
+                             "Friday: 9:00 AM – 6:00 PM",
+                             "Saturday: 9:00 AM – 2:00 PM",
+                             "Sunday: Closed"
+                             ]
+        },
+        "photos": [
+                   {
+                   "height": 3464,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/109392988483932034314/photos\">Rafael Pick</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAjL9hH61IrMrvpFeFdgJ1aNeA9LHYepnbY9kg1ezqSxqGimIBJMjeikwV4LOCVkaXU4nfLH2cnqgFCUwkahg5DBsWZjwM7QY_Sz50HYrN7aWH2gmv0b0JzYn8ni43NfzfEhD9jUL8T9eEJeHxd5HwJXyQGhR7jNCHjT1yuCXgxqWU-Iz3gnraqQ",
+                   "width": 4618
+                   },
+                   {
+                   "height": 3464,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/109392988483932034314/photos\">Rafael Pick</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAY80mf5amhFcyrwGuCmcO8ZCb0soPwnnZ19WPUOKHffz3fkqvEtpR9rCSXn6cpKoaD3GfjQo3sqL6cbBQZt6LpCq__2M6xwIgJI4aECHmxK9naxUi6zfgfb632HE0qM-yEhA-2myW9SbMzejLnNaMCAGXGhRVZG-toSLKm9rNpfiAlUyyVB1MfA",
+                   "width": 4618
+                   },
+                   {
+                   "height": 3024,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/110340799396051373302/photos\">Arthur Rossetti</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAunhY8wkEMUDBq2tMNBP_ZUUC8iWqEJjh4gumrAfqicMflBW5cVYrdoaxiljK8_JxqFzRleWVwNMpNjbM__jIYTYiqJBats5ZbfeE53S9sgEZdbndjk6cvY4qQlIKEGFfEhAxr2_mRr9nzL-Bx--Q5jE0GhS0rIi4mJJ33fGUfhQQA-RoPrEFdg",
+                   "width": 4032
+                   },
+                   {
+                   "height": 1836,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/105377961102876134996/photos\">Sidnei Oliveira</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAna1TFa4j_HQk2ZKmPUSYgBHOoFk1W_i8Wle6DKY9FWoVEJoQsAoPuHRCUcR7yDWDghc6SH3E3MwkdyxQXlHWLyXP37PFMCMmVvlVS0TYoo9MkszcDHeZV1GZhwjc4uSBEhCyHzprof1cyzRYgEfYGj-qGhRoswbgEyUwSOaxbXQdcifm7qKuFA",
+                   "width": 3264
+                   },
+                   {
+                   "height": 3024,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/101239968334089734310/photos\">fausto vinicius ruas</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAAiTHOuHKwRQEHHLS_bRXmjZPKb5rn8BoGJM_A_-DodAzRrGXlQzy36dwBNMMJrSf5EEiVHP74K3VdvXCCodZJn-WN573IT-ZawildrYJFTa5iOE6HkVOWhp07qq-OSKuEhCUZuqm1Wvu_CEsTFjwi5GXGhTVLvl_6lLKOggkJsDtrsLt0COrXw",
+                   "width": 4032
+                   },
+                   {
+                   "height": 2988,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/106051284789657800063/photos\">Frederico Lage</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAMPHcaaLJfVJeZENUsfRYW5M9405axBQzXrmSgkX19_QuTKoVZSHYKTGRYnwSoMQhZJtOogZ0tCr8SiX62lJa8syilMwLgteN5MGLo4Q_OOsPOOlZa5PeKCj-iVsOscgkEhDH60Q7ay7scg9GeMqfbOwmGhTPPLvNcvQn_EZByBAgxKNaWRzBcA",
+                   "width": 5312
+                   },
+                   {
+                   "height": 654,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/114553333510070686300/photos\">Shibuya Garage</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAa0fN5_3NfMLA1eOAfvLiVk1fNQ5Rcrocd8dhK_DqWaw99iOhQKJMV9NZXcXdWwlhsV2UgpQzhXsqCwE4-JDT-QJVsMMUNulAzQi7zAVCRGeZZQsYcAyAQgP0_2BMx2caEhCBoDzrbVn52VkqqzDn06kMGhTgVpLLqOgtSB79aHH-pqJuG5mAqQ",
+                   "width": 960
+                   },
+                   {
+                   "height": 3456,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/102226174892183185006/photos\">Daniel nakamura simões</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAARWz-dfiK2QoBsBMAK1GZlY5vVBRlEImjjCJehhI5dqt7lX_w7MBTQ20Y-dLp069gfHeK1cklZ-OSJxH-MnGcsy46mm5-bMIhN15kCCt4Wc6QK9XTelHPJaJExnfsJpMPEhDnK7STVUSZSwsqpTDG52fWGhSFHbXjwCUcKdujEqz9GHW6CIhtQQ",
+                   "width": 4608
+                   },
+                   {
+                   "height": 2322,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/117590471393000909189/photos\">Rogerio Leite</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAX9pD3p4XPgoMeY1EGL8V1XT8urxQBkRjs6Kv23SBzU5MuCL3DN4jyHAPF9wjYPEYUa1ooD8vUJJkCVtIqPjUfKQ1r16D9P1hZSN-cCxX2oCPkWjDyr3wpzUSZAOWrER2EhAfGgBopVPHA2-B__-2FhuDGhQXIAGn_KzbwrytkaHbqLTyG5snXA",
+                   "width": 4128
+                   },
+                   {
+                   "height": 3456,
+                   "html_attributions": [
+                                         "<a href=\"https://maps.google.com/maps/contrib/102226174892183185006/photos\">Daniel nakamura simões</a>"
+                                         ],
+                   "photo_reference": "CmRaAAAAY-Lnhd0wgoYaQJtieNZ27t1tpZl-Aw4TGaCLf1CXXYGT1ajZToN3mrkSy3CKMuqMy7dlKhH5kefveTlPGbh-uDWcnQeup4eqEgkXVvqRamu8WAo67mMmMf-RzJO8L_ukEhAo0nObGmYIljX9ZaBsOFEmGhTaM3S137PCGFXDkT30jnHHr8BBCQ",
+                   "width": 4608
+                   }
+                   ],
+        "place_id": "ChIJixhV71FXzpQR3D1DOPxv9Pk",
+        "plus_code": {
+            "compound_code": "C83C+F5 São Paulo, State of São Paulo, Brazil",
+            "global_code": "588MC83C+F5"
+        },
+        "rating": 4.5,
+        "reference": "CmRSAAAACxylfGYoz3Z_tDZa9-hYUEx701v0T1H8PgmL-LvozOegCE4xTibVXueXFaniEAw8_vtRZMR5FrGWcLyyzMyfgeDP2kvVJgbP2PhfuYZxqr3LLWTu4-WmvDQ5gVW87_MBEhAc1ji1dEyr_bPyk-YYvvi0GhSpfYTLlvZ8FKhlRVFGR32xHJzPCw",
+        "reviews": [
+                    {
+                    "author_name": "Eddie Em Apuros",
+                    "author_url": "https://www.google.com/maps/contrib/105923627156341478937/reviews",
+                    "language": "en",
+                    "profile_photo_url": "https://lh6.googleusercontent.com/-BEQb15BnJ70/AAAAAAAAAAI/AAAAAAAAJ2c/vsLQfqtgYX4/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg",
+                    "rating": 5,
+                    "relative_time_description": "2 years ago",
+                    "text": "Good happy hour. ",
+                    "time": 1471240984
+                    },
+                    {
+                    "author_name": "Alejandro Sanchez",
+                    "author_url": "https://www.google.com/maps/contrib/116454346478338019204/reviews",
+                    "language": "en",
+                    "profile_photo_url": "https://lh6.googleusercontent.com/-Huul6cz6uRk/AAAAAAAAAAI/AAAAAAABmSg/wQBwhJ75wvU/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg",
+                    "rating": 5,
+                    "relative_time_description": "a year ago",
+                    "text": "Top ",
+                    "time": 1481129015
+                    },
+                    {
+                    "author_name": "Shiudi Deguchi",
+                    "author_url": "https://www.google.com/maps/contrib/108335436886699123345/reviews",
+                    "language": "en",
+                    "profile_photo_url": "https://lh6.googleusercontent.com/-vYIW2ejIIW4/AAAAAAAAAAI/AAAAAAAAG5Y/JR_Y-mmfA-E/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating": 5,
+                    "relative_time_description": "4 years ago",
+                    "text": "Cool",
+                    "time": 1408129297
+                    },
+                    {
+                    "author_name": "Eduardo Bitencourt Tersi",
+                    "author_url": "https://www.google.com/maps/contrib/117635777619737136884/reviews",
+                    "language": "pt",
+                    "profile_photo_url": "https://lh5.googleusercontent.com/-lUc4aW_-_XI/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaOuGfR5TN0ihIWJwjDSTlyM29RT1Q/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating": 4,
+                    "relative_time_description": "3 months ago",
+                    "text": "Não customizei a moto ainda, mas conversando com o pessoal percebi que são muito gente boa.\n\nO trabalho é impecável. Entrei na oficina e achei muito legal a forma que eles trabalham.",
+                    "time": 1526080813
+                    },
+                    {
+                    "author_name": "marco aurelio castella felix da silva",
+                    "author_url": "https://www.google.com/maps/contrib/107650469368468508698/reviews",
+                    "language": "pt",
+                    "profile_photo_url": "https://lh5.googleusercontent.com/-gwhPaihmR94/AAAAAAAAAAI/AAAAAAAAAJo/Zo4ly81YuNc/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg",
+                    "rating": 4,
+                    "relative_time_description": "5 months ago",
+                    "text": "A melhor garagem de customização do Brasil! Deixa até muito gringo pra trás.",
+                    "time": 1519766702
+                    }
+                    ],
+        "scope": "GOOGLE",
+        "types": [
+                  "car_repair",
+                  "store",
+                  "point_of_interest",
+                  "establishment"
+                  ],
+        "url": "https://maps.google.com/?cid=18011143938827828700",
+        "utc_offset": -180,
+        "vicinity": "Avenida Brigadeiro Faria Lima, 4565 - Vila Olimpia, São Paulo",
+        "website": "http://shibuyagarage.com.br/"
+    },
+    "status": "OK"
+}

@@ -106,7 +106,7 @@ class CarRepairsViewModelTests: XCTestCase {
         self.waitForExpectations(timeout: self.timeout)
     }
     
-    func testCarRepairsViewModelShouldNumberOfRowsEqual40() {
+    func testCarRepairsViewModelShouldNumberOfRowsEqual4() {
         let expectation = self.expectation(description: #function)
         let viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
         let stubService = StubService()
@@ -114,7 +114,7 @@ class CarRepairsViewModelTests: XCTestCase {
         
         viewModel.loadData(type: .refresh) { (_) in
             viewModel.loadData(type: .bringMore, completion: { (_) in
-                XCTAssertTrue(viewModel.numberOfRows() == 40, "Should be equal to 40")
+                XCTAssertTrue(viewModel.numberOfRows() == 4, "Should be equal to 4")
                 expectation.fulfill()
             })
         }

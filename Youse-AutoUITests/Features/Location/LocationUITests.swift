@@ -7,25 +7,64 @@
 //
 
 import XCTest
+@testable import Youse_Auto
 
 class LocationUITests: XCTestCase {
+    
+    //*************************************************
+    // MARK: - Lifecycle
+    //*************************************************
         
     override func setUp() {
         super.setUp()
-        continueAfterFailure = false
-        XCUIApplication().launch()
+        self.continueAfterFailure = false
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testLocationShouldAppear() {
-        
+    //*************************************************
+    // MARK: - Public Methods
+    //*************************************************
+    
+    func testLocationScreenShouldAppear() {
         let app = XCUIApplication()
-        app.tables/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Address: Rua Chilon, 193 - Vila Olimpia, São Paulo")/*[[".cells.containing(.staticText, identifier:\"W. B. A. Mecânica, Funil e Pintura\")",".cells.containing(.staticText, identifier:\"Address: Rua Chilon, 193 - Vila Olimpia, São Paulo\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["0.1 m"].tap()
-        app.navigationBars["Details"].buttons["Car Repairs"].tap()
+        app.launchArguments.append("TEST_LOCATION")
+        app.launch()
         
+        XCTAssert(app.buttons["continue_button"].exists, "Should open Location Screen")
+    }
+    
+    func testLocationScreenShouldDismiss() {
+        let app = XCUIApplication()
+        app.launchArguments.append("TEST_LOCATION")
+        app.launch()
+        
+        app.buttons["continue_button"].tap()
+        XCTAssert(!app.buttons["continue_button"].exists, "Should dismiss Location Screen")
+    }
+    
+    func testLocationScreenShouldAlertAppear() {
+        let app = XCUIApplication()
+        app.launchArguments.append("TEST_LOCATION")
+        app.launchArguments.append("TEST_LOCATION_ERROR")
+        app.launch()
+        
+        app.buttons["continue_button"].tap()
+        XCTAssert(app.alerts.firstMatch.exists, "Should alert appear")
+    }
+    
+    func testLocationScreenShouldAlertDismiss() {
+        let app = XCUIApplication()
+        app.launchArguments.append("TEST_LOCATION")
+        app.launchArguments.append("TEST_LOCATION_ERROR")
+        app.launch()
+        
+        app.buttons["continue_button"].tap()
+        XCTAssert(app.alerts.firstMatch.exists, "Should alert appear")
+        
+        app.alerts.firstMatch.buttons.firstMatch.tap()
+        XCTAssert(!app.alerts.firstMatch.exists, "Should alert disappear")
     }
 }

@@ -255,6 +255,9 @@
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="details_cell" label="DetailsCell">
+                                                        <bool key="isElement" value="YES"/>
+                                                    </accessibility>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="EXV-PJ-EB4" secondAttribute="bottom" id="Lw9-Wx-vGx"/>
                                                         <constraint firstItem="EXV-PJ-EB4" firstAttribute="leading" secondItem="bvp-Wt-oFz" secondAttribute="leading" id="T44-MW-2xL"/>

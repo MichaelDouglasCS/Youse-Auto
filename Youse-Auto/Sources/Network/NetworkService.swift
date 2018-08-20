@@ -165,6 +165,9 @@ enum NetworkService {
     func execute(path: String? = nil,
                  params: [String: Any]? = nil,
                  completion: @escaping (JSON, NetworkResponse) -> Void) {
+        let stubService = NetworkStubService()
+        stubService.addStubByArguments()
+        
         DispatchQueue.global(qos: .background).async {
             let method = self.method
             let finalPath = path ?? self.path

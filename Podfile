@@ -18,15 +18,14 @@ end
 # Targets
 target 'Youse-Auto' do
   project_pods
+  test_pods
 
   target 'Youse-AutoTests' do
     inherit! :search_paths
-    test_pods
   end
 
   target 'Youse-AutoUITests' do
     inherit! :search_paths
-    test_pods
   end
   
 end

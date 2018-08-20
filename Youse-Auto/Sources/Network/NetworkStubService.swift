@@ -1,22 +1,18 @@
 //
-//  StubService.swift
-//  Youse-AutoTests
+//  NetworkStubService.swift
+//  Youse-Auto
 //
-//  Created by Michael Douglas on 18/08/18.
+//  Created by Michael Douglas on 19/08/18.
 //  Copyright © 2018 Michael Douglas. All rights reserved.
 //
 
 import OHHTTPStubs
-import XCTest
-@testable import Youse_Auto
 
-class StubService: NSObject {
+class NetworkStubService: NSObject {
     
     enum StubType {
         case carRepairsList
-        case carRepair
         case carRepairDetails
-        case photo
         case noConnection
     }
     
@@ -24,19 +20,25 @@ class StubService: NSObject {
     // MARK: - Public Methods
     //*************************************************
     
+    /// This method is used to inject arguments at your test to mock your requests
+    func addStubByArguments() {
+        let arguments = ProcessInfo.processInfo.arguments
+        
+        if arguments.contains("TEST_CAR_REPAIRS_LIST") {
+            self.addStub(for: .carRepairsList)
+        } else if arguments.contains("TEST_CAR_REPAIR_DETAILS") {
+            self.addStub(for: .carRepairDetails)
+        } else if arguments.contains("TEST_NO_CONNECTION") {
+            self.addStub(for: .noConnection)
+        } else {
+            self.removeAllStubs()
+        }
+    }
+    
     func addStub(for stubType: StubType) {
         
         switch stubType {
         case .carRepairsList:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
-                let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
-                return OHHTTPStubsResponse(
-                    fileAtPath: path,
-                    statusCode: 200,
-                    headers: ["Content-Type": "application/json"]
-                )
-            }
-        case .carRepair:
             stub(condition: isHost("maps.googleapis.com")) { (_) in
                 let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
                 return OHHTTPStubsResponse(
@@ -54,15 +56,6 @@ class StubService: NSObject {
                     headers: ["Content-Type": "application/json"]
                 )
             }
-        case .photo:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
-                let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
-                return OHHTTPStubsResponse(
-                    fileAtPath: path,
-                    statusCode: 200,
-                    headers: ["Content-Type": "application/json"]
-                )
-            }
         case .noConnection:
             stub(condition: isHost("maps.googleapis.com")) { (_) in
                 let notConnected = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
@@ -71,7 +64,7 @@ class StubService: NSObject {
         }
     }
     
-    class func removeAllStubs() {
+    func removeAllStubs() {
         OHHTTPStubs.removeAllStubs()
     }
 }

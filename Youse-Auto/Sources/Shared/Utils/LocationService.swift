@@ -18,7 +18,8 @@ class LocationService: NSObject {
     
     static var isEnabled: Bool {
         
-        if CLLocationManager.locationServicesEnabled() {
+        if CLLocationManager.locationServicesEnabled() &&
+            !ProcessInfo.processInfo.arguments.contains(Constants.testLocation) {
             switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways, .authorizedWhenInUse:
                 return true
@@ -59,8 +60,17 @@ class LocationService: NSObject {
     // MARK: - Public Methods
     //*************************************************
     
+    func requestAuthorization() {
+        self.locationManager.requestAlwaysAuthorization()
+    }
+    
     func getLocation(success: @escaping ((CLLocation) -> Void),
                      error: ((String?) -> Void)? = nil) {
+
+        if ProcessInfo.processInfo.arguments.contains(Constants.testLocationError) {
+            error?(String.YouseAuto.locationError)
+            return
+        }
         
         if let lastLocation = self.lastLocation {
             success(lastLocation)
@@ -70,10 +80,6 @@ class LocationService: NSObject {
             self.success = success
             self.error = error
         }
-    }
-    
-    func requestAuthorization() {
-        self.locationManager.requestAlwaysAuthorization()
     }
     
     //*************************************************

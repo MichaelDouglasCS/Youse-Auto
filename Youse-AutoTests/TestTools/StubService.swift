@@ -14,9 +14,7 @@ class StubService: NSObject {
     
     enum StubType {
         case carRepairsList
-        case carRepair
         case carRepairDetails
-        case photo
         case noConnection
     }
     
@@ -36,27 +34,9 @@ class StubService: NSObject {
                     headers: ["Content-Type": "application/json"]
                 )
             }
-        case .carRepair:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
-                let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
-                return OHHTTPStubsResponse(
-                    fileAtPath: path,
-                    statusCode: 200,
-                    headers: ["Content-Type": "application/json"]
-                )
-            }
         case .carRepairDetails:
             stub(condition: isHost("maps.googleapis.com")) { (_) in
                 let path = OHPathForFile("carRepairDetails.json", type(of: self)) ?? ""
-                return OHHTTPStubsResponse(
-                    fileAtPath: path,
-                    statusCode: 200,
-                    headers: ["Content-Type": "application/json"]
-                )
-            }
-        case .photo:
-            stub(condition: isHost("maps.googleapis.com")) { (_) in
-                let path = OHPathForFile("carRepairsList.json", type(of: self)) ?? ""
                 return OHHTTPStubsResponse(
                     fileAtPath: path,
                     statusCode: 200,

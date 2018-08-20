@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510427AC214D4695C4A4CB6A /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5BF7739A766F0BB4416101 /* Pods_Youse_AutoUITests.framework */; };
 		61040077212364E800BCE794 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61040076212364E800BCE794 /* PlaceholderView.swift */; };
 		61040079212364F300BCE794 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61040078212364F300BCE794 /* PlaceholderView.xib */; };
 		6104007D2123813900BCE794 /* UITableView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6104007C2123813900BCE794 /* UITableView+Placeholder.swift */; };
@@ -73,6 +74,7 @@
 		617E4FB12120C77C00C6057F /* CarRepairsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E4FB02120C77C00C6057F /* CarRepairsProvider.swift */; };
 		618ED113211E362400CD177E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 618ED115211E362400CD177E /* Localizable.strings */; };
 		618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618ED11A211E376600CD177E /* LaunchScreen.storyboard */; };
+		61909B6B212A3F1B0064119D /* NetworkStubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61909B6A212A3F1B0064119D /* NetworkStubService.swift */; };
 		6197DB9D211EB92400237222 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197DB9C211EB92400237222 /* UIColor+Style.swift */; };
 		61A83EFB2125E3710096EA6C /* PhoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFA2125E3710096EA6C /* PhoneService.swift */; };
 		61A83EFE2125ED0D0096EA6C /* ContactInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A83EFD2125ED0D0096EA6C /* ContactInfoCell.swift */; };
@@ -84,14 +86,17 @@
 		61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */; };
 		61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC5211E5CDB009BB88A /* String+Localized.swift */; };
 		61BD1BCA211E8A37009BB88A /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD1BC9211E8A37009BB88A /* NetworkTests.swift */; };
+		61D5069E212A39C60065347C /* CarRepairsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D5069D212A39C30065347C /* CarRepairsUITests.swift */; };
 		61DC0B9E211E33B400D28BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0B9D211E33B400D28BDA /* AppDelegate.swift */; };
 		61DC0BBE211E33B600D28BDA /* LocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0BBD211E33B600D28BDA /* LocationUITests.swift */; };
+		61EC3AD2212A434800923EF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EC3AD1212A434800923EF4 /* Constants.swift */; };
+		61EC3AD9212A485B00923EF4 /* carRepairDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 61EC3AD6212A47F500923EF4 /* carRepairDetails.json */; };
+		61EC3ADA212A485B00923EF4 /* carRepairsList.json in Resources */ = {isa = PBXBuildFile; fileRef = 61EC3AD4212A47F500923EF4 /* carRepairsList.json */; };
 		61F07477212255980010D900 /* UIImage+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F07476212255980010D900 /* UIImage+Style.swift */; };
 		61F074792122923C0010D900 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F074782122923C0010D900 /* UIViewController+Loading.swift */; };
 		61F14E212127DE3800A44A37 /* CarRepairsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14E202127DE3800A44A37 /* CarRepairsProviderTests.swift */; };
-		8DC1C06672CDF9073AF24861 /* Pods_Youse_AutoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78FFD83BB50EDF9CCB6D848 /* Pods_Youse_AutoUITests.framework */; };
-		95DF3029CE8C1A2842A57E93 /* Pods_Youse_AutoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0F98AF3E371BB2BEE13124 /* Pods_Youse_AutoTests.framework */; };
-		D8AE3047320514F1AFAD6830 /* Pods_Youse_Auto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E3D4EB041E59A593BAA1A2 /* Pods_Youse_Auto.framework */; };
+		8B9260BE95060CE5F71BD9DC /* Pods_Youse_Auto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE039F830994E74A560F3E2 /* Pods_Youse_Auto.framework */; };
+		EAF7D2652FD54547C0C6F78D /* Pods_Youse_AutoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CEF9B3A1DF29F896E29165 /* Pods_Youse_AutoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,11 +117,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07495C3A1058F66890364548 /* Pods-Youse-Auto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.debug.xcconfig"; sourceTree = "<group>"; };
-		357B7D09EC0B507A24429F81 /* Pods-Youse-AutoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		39774BDBE25B0E197A3480F2 /* Pods-Youse-AutoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		47129AFA78889EFDCC0B1E9B /* Pods-Youse-Auto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.release.xcconfig"; sourceTree = "<group>"; };
-		60E3D4EB041E59A593BAA1A2 /* Pods_Youse_Auto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_Auto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		196B293989135CC6EB315AAF /* Pods-Youse-AutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.release.xcconfig"; sourceTree = "<group>"; };
+		33CEF9B3A1DF29F896E29165 /* Pods_Youse_AutoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE039F830994E74A560F3E2 /* Pods_Youse_Auto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_Auto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5179693FD487BD3CADD919A9 /* Pods-Youse-AutoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		58B129D783333D9D58480DF0 /* Pods-Youse-AutoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61040076212364E800BCE794 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		61040078212364F300BCE794 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 		6104007C2123813900BCE794 /* UITableView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Placeholder.swift"; sourceTree = "<group>"; };
@@ -137,13 +142,6 @@
 		610B8DD221233E8600491CF7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		610F84DF2127753000FC0CDD /* Youse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Youse.gpx; sourceTree = "<group>"; };
 		6112AAFD21248726000AE094 /* UIApplication+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Utils.swift"; sourceTree = "<group>"; };
-		611BAE57212935AA0035F626 /* carRepairsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairsList.json; sourceTree = "<group>"; };
-		611BAE58212935AA0035F626 /* photo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photo.json; sourceTree = "<group>"; };
-		611BAE59212935AA0035F626 /* review.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = review.json; sourceTree = "<group>"; };
-		611BAE5A212935AA0035F626 /* carRepair.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepair.json; sourceTree = "<group>"; };
-		611BAE5B212935AA0035F626 /* carRepairDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairDetails.json; sourceTree = "<group>"; };
-		611BAE5C212935BA0035F626 /* XCTestCase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Utils.swift"; sourceTree = "<group>"; };
-		611BAE5D212935BA0035F626 /* StubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubService.swift; sourceTree = "<group>"; };
 		61203D332126089200928F1A /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		61203D35212608A200928F1A /* ReviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCellViewModel.swift; sourceTree = "<group>"; };
 		61211BE721261D9000DBEB9D /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
@@ -193,6 +191,7 @@
 		618ED114211E362400CD177E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		618ED116211E364000CD177E /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		618ED11A211E376600CD177E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61909B6A212A3F1B0064119D /* NetworkStubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStubService.swift; sourceTree = "<group>"; };
 		6197DB9C211EB92400237222 /* UIColor+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		61A83EFA2125E3710096EA6C /* PhoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneService.swift; sourceTree = "<group>"; };
 		61A83EFD2125ED0D0096EA6C /* ContactInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoCell.swift; sourceTree = "<group>"; };
@@ -204,6 +203,7 @@
 		61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		61BD1BC5211E5CDB009BB88A /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		61BD1BC9211E8A37009BB88A /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		61D5069D212A39C30065347C /* CarRepairsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsUITests.swift; sourceTree = "<group>"; };
 		61DC0B9A211E33B400D28BDA /* Youse-Auto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youse-Auto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0B9D211E33B400D28BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DC0BAE211E33B600D28BDA /* Youse-AutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,13 +211,16 @@
 		61DC0BB9211E33B600D28BDA /* Youse-AutoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youse-AutoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DC0BBD211E33B600D28BDA /* LocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUITests.swift; sourceTree = "<group>"; };
 		61DC0BBF211E33B600D28BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61EC3AD1212A434800923EF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		61EC3AD4212A47F500923EF4 /* carRepairsList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairsList.json; sourceTree = "<group>"; };
+		61EC3AD6212A47F500923EF4 /* carRepairDetails.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = carRepairDetails.json; sourceTree = "<group>"; };
 		61F07476212255980010D900 /* UIImage+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Style.swift"; sourceTree = "<group>"; };
 		61F074782122923C0010D900 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		61F14E202127DE3800A44A37 /* CarRepairsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsProviderTests.swift; sourceTree = "<group>"; };
-		682BC28D0EB54B12798A5E69 /* Pods-Youse-AutoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests.release.xcconfig"; sourceTree = "<group>"; };
-		7F0F98AF3E371BB2BEE13124 /* Pods_Youse_AutoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78FFD83BB50EDF9CCB6D848 /* Pods_Youse_AutoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F189C618D45C317829E14ED8 /* Pods-Youse-AutoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84372352AF1833888EBA7036 /* Pods-Youse-Auto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.release.xcconfig"; sourceTree = "<group>"; };
+		8A5BF7739A766F0BB4416101 /* Pods_Youse_AutoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youse_AutoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D492A51997FB043F831C24 /* Pods-Youse-Auto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-Auto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto.debug.xcconfig"; sourceTree = "<group>"; };
+		D3B71C7891C70761341A86D7 /* Pods-Youse-AutoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youse-AutoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8AE3047320514F1AFAD6830 /* Pods_Youse_Auto.framework in Frameworks */,
+				8B9260BE95060CE5F71BD9DC /* Pods_Youse_Auto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95DF3029CE8C1A2842A57E93 /* Pods_Youse_AutoTests.framework in Frameworks */,
+				EAF7D2652FD54547C0C6F78D /* Pods_Youse_AutoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC1C06672CDF9073AF24861 /* Pods_Youse_AutoUITests.framework in Frameworks */,
+				510427AC214D4695C4A4CB6A /* Pods_Youse_AutoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,33 +305,12 @@
 			path = PlaceholderView;
 			sourceTree = "<group>";
 		};
-		611BAE55212935970035F626 /* TestTools */ = {
-			isa = PBXGroup;
-			children = (
-				611BAE5C212935BA0035F626 /* XCTestCase+Utils.swift */,
-				611BAE5D212935BA0035F626 /* StubService.swift */,
-			);
-			path = TestTools;
-			sourceTree = "<group>";
-		};
-		611BAE56212935970035F626 /* Stubs */ = {
-			isa = PBXGroup;
-			children = (
-				611BAE5A212935AA0035F626 /* carRepair.json */,
-				611BAE5B212935AA0035F626 /* carRepairDetails.json */,
-				611BAE57212935AA0035F626 /* carRepairsList.json */,
-				611BAE58212935AA0035F626 /* photo.json */,
-				611BAE59212935AA0035F626 /* review.json */,
-			);
-			path = Stubs;
-			sourceTree = "<group>";
-		};
 		611BAE5E212935CC0035F626 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				611BAE6F2129365A0035F626 /* Location */,
-				611BAE5F212935CC0035F626 /* CarRepairDetails */,
 				611BAE67212935CC0035F626 /* CarRepairs */,
+				611BAE5F212935CC0035F626 /* CarRepairDetails */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -343,6 +325,7 @@
 		611BAE67212935CC0035F626 /* CarRepairs */ = {
 			isa = PBXGroup;
 			children = (
+				61D5069D212A39C30065347C /* CarRepairsUITests.swift */,
 			);
 			path = CarRepairs;
 			sourceTree = "<group>";
@@ -492,6 +475,7 @@
 		615FEF002125530C00465FB3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				61EC3AD1212A434800923EF4 /* Constants.swift */,
 				615FEF032125D83600465FB3 /* DirectionsService.swift */,
 				61211BF72126219700DBEB9D /* LocationService.swift */,
 				61A83EFA2125E3710096EA6C /* PhoneService.swift */,
@@ -572,6 +556,7 @@
 		618ED10C211E351000CD177E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61EC3AD3212A47F500923EF4 /* Stubs */,
 				615AD878211E3C03009EA364 /* .swiftlint.yml */,
 				610F84DF2127753000FC0CDD /* Youse.gpx */,
 				61211BF52126211B00DBEB9D /* Info.plist */,
@@ -594,6 +579,7 @@
 			children = (
 				61BD1BC0211E58DE009BB88A /* NetworkService.swift */,
 				61BD1BC2211E59ED009BB88A /* NetworkLogger.swift */,
+				61909B6A212A3F1B0064119D /* NetworkStubService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -661,8 +647,8 @@
 				61DC0BB1211E33B600D28BDA /* Youse-AutoTests */,
 				61DC0BBC211E33B600D28BDA /* Youse-AutoUITests */,
 				61DC0B9B211E33B400D28BDA /* Products */,
-				81B438939126EE79896A749A /* Pods */,
-				B9072C172C88CA65E6061247 /* Frameworks */,
+				890DC228FC791DA179EFAEA8 /* Pods */,
+				D83ABEF9313E00C988F9146B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -701,11 +687,18 @@
 			isa = PBXGroup;
 			children = (
 				611BAE5E212935CC0035F626 /* Features */,
-				611BAE55212935970035F626 /* TestTools */,
-				611BAE56212935970035F626 /* Stubs */,
 				61DC0BBF211E33B600D28BDA /* Info.plist */,
 			);
 			path = "Youse-AutoUITests";
+			sourceTree = "<group>";
+		};
+		61EC3AD3212A47F500923EF4 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				61EC3AD6212A47F500923EF4 /* carRepairDetails.json */,
+				61EC3AD4212A47F500923EF4 /* carRepairsList.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		61F14E1B2127DD0F00A44A37 /* Features */ = {
@@ -736,25 +729,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		81B438939126EE79896A749A /* Pods */ = {
+		890DC228FC791DA179EFAEA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07495C3A1058F66890364548 /* Pods-Youse-Auto.debug.xcconfig */,
-				47129AFA78889EFDCC0B1E9B /* Pods-Youse-Auto.release.xcconfig */,
-				39774BDBE25B0E197A3480F2 /* Pods-Youse-AutoTests.debug.xcconfig */,
-				682BC28D0EB54B12798A5E69 /* Pods-Youse-AutoTests.release.xcconfig */,
-				357B7D09EC0B507A24429F81 /* Pods-Youse-AutoUITests.debug.xcconfig */,
-				F189C618D45C317829E14ED8 /* Pods-Youse-AutoUITests.release.xcconfig */,
+				C8D492A51997FB043F831C24 /* Pods-Youse-Auto.debug.xcconfig */,
+				84372352AF1833888EBA7036 /* Pods-Youse-Auto.release.xcconfig */,
+				58B129D783333D9D58480DF0 /* Pods-Youse-AutoTests.debug.xcconfig */,
+				196B293989135CC6EB315AAF /* Pods-Youse-AutoTests.release.xcconfig */,
+				D3B71C7891C70761341A86D7 /* Pods-Youse-AutoUITests.debug.xcconfig */,
+				5179693FD487BD3CADD919A9 /* Pods-Youse-AutoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B9072C172C88CA65E6061247 /* Frameworks */ = {
+		D83ABEF9313E00C988F9146B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60E3D4EB041E59A593BAA1A2 /* Pods_Youse_Auto.framework */,
-				7F0F98AF3E371BB2BEE13124 /* Pods_Youse_AutoTests.framework */,
-				C78FFD83BB50EDF9CCB6D848 /* Pods_Youse_AutoUITests.framework */,
+				4AE039F830994E74A560F3E2 /* Pods_Youse_Auto.framework */,
+				33CEF9B3A1DF29F896E29165 /* Pods_Youse_AutoTests.framework */,
+				8A5BF7739A766F0BB4416101 /* Pods_Youse_AutoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -766,11 +759,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC2211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-Auto" */;
 			buildPhases = (
-				D3CFB419699CB0CEE2378D68 /* [CP] Check Pods Manifest.lock */,
+				0E1305798F9C8C1AA92CC356 /* [CP] Check Pods Manifest.lock */,
 				61DC0B96211E33B400D28BDA /* Sources */,
 				61DC0B97211E33B400D28BDA /* Frameworks */,
 				61DC0B98211E33B400D28BDA /* Resources */,
-				9A2F22B89F7BA9C43611B4E6 /* [CP] Embed Pods Frameworks */,
+				7D3F37C8F09D53322E5A2C3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -785,11 +778,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC5211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-AutoTests" */;
 			buildPhases = (
-				C86C213E13C76E97EC8A3E0F /* [CP] Check Pods Manifest.lock */,
+				A460FB95CD786DAEB98D9EDC /* [CP] Check Pods Manifest.lock */,
 				61DC0BAA211E33B600D28BDA /* Sources */,
 				61DC0BAB211E33B600D28BDA /* Frameworks */,
 				61DC0BAC211E33B600D28BDA /* Resources */,
-				E223B5F0291C827B2A43F11D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -805,11 +797,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61DC0BC8211E33B600D28BDA /* Build configuration list for PBXNativeTarget "Youse-AutoUITests" */;
 			buildPhases = (
-				4CFB3699E05FE5539269A7A9 /* [CP] Check Pods Manifest.lock */,
+				D3632AFF49F7622EBA8F3247 /* [CP] Check Pods Manifest.lock */,
 				61DC0BB5211E33B600D28BDA /* Sources */,
 				61DC0BB6211E33B600D28BDA /* Frameworks */,
 				61DC0BB7211E33B600D28BDA /* Resources */,
-				C4B12DD731B57BCF3FEEBBB6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -869,6 +860,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61EC3AD9212A485B00923EF4 /* carRepairDetails.json in Resources */,
+				61EC3ADA212A485B00923EF4 /* carRepairsList.json in Resources */,
 				61040079212364F300BCE794 /* PlaceholderView.xib in Resources */,
 				615AD879211E3C03009EA364 /* .swiftlint.yml in Resources */,
 				618ED11B211E376600CD177E /* LaunchScreen.storyboard in Resources */,
@@ -902,83 +895,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CFB3699E05FE5539269A7A9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Youse-AutoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A2F22B89F7BA9C43611B4E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4B12DD731B57BCF3FEEBBB6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youse-AutoUITests/Pods-Youse-AutoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C86C213E13C76E97EC8A3E0F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Youse-AutoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3CFB419699CB0CEE2378D68 /* [CP] Check Pods Manifest.lock */ = {
+		0E1305798F9C8C1AA92CC356 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -996,22 +913,64 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E223B5F0291C827B2A43F11D /* [CP] Embed Pods Frameworks */ = {
+		7D3F37C8F09D53322E5A2C3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youse-AutoTests/Pods-Youse-AutoTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youse-Auto/Pods-Youse-Auto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A460FB95CD786DAEB98D9EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Youse-AutoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3632AFF49F7622EBA8F3247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Youse-AutoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1033,6 +992,7 @@
 				616F9B712126751600883648 /* CLLocationDistance+String.swift in Sources */,
 				610B8DC72122B95000491CF7 /* CosmosDefaultSettings.swift in Sources */,
 				61B8830F2121377D00B6A5B7 /* Double+Utils.swift in Sources */,
+				61909B6B212A3F1B0064119D /* NetworkStubService.swift in Sources */,
 				610B8DC32122B95000491CF7 /* StarFillMode.swift in Sources */,
 				610B8DC92122B95000491CF7 /* CosmosLayers.swift in Sources */,
 				6157B10F21253FC50082A78C /* DetailsCell.swift in Sources */,
@@ -1040,6 +1000,7 @@
 				61BD1BC6211E5CDB009BB88A /* String+Localized.swift in Sources */,
 				6157B0F921249F270082A78C /* CarRepairDetails.swift in Sources */,
 				6157B10C2124F8FD0082A78C /* GalleryCollectionCellViewModel.swift in Sources */,
+				61EC3AD2212A434800923EF4 /* Constants.swift in Sources */,
 				6112AAFE21248726000AE094 /* UIApplication+Utils.swift in Sources */,
 				6157B10A2124F8B30082A78C /* GalleryCollectionCell.swift in Sources */,
 				61BD1BC3211E59ED009BB88A /* NetworkLogger.swift in Sources */,
@@ -1103,6 +1064,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D5069E212A39C60065347C /* CarRepairsUITests.swift in Sources */,
 				61DC0BBE211E33B600D28BDA /* LocationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1253,7 +1215,7 @@
 		};
 		61DC0BC3211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07495C3A1058F66890364548 /* Pods-Youse-Auto.debug.xcconfig */;
+			baseConfigurationReference = C8D492A51997FB043F831C24 /* Pods-Youse-Auto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1272,7 +1234,7 @@
 		};
 		61DC0BC4211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47129AFA78889EFDCC0B1E9B /* Pods-Youse-Auto.release.xcconfig */;
+			baseConfigurationReference = 84372352AF1833888EBA7036 /* Pods-Youse-Auto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1291,7 +1253,7 @@
 		};
 		61DC0BC6211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39774BDBE25B0E197A3480F2 /* Pods-Youse-AutoTests.debug.xcconfig */;
+			baseConfigurationReference = 58B129D783333D9D58480DF0 /* Pods-Youse-AutoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1313,7 +1275,7 @@
 		};
 		61DC0BC7211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 682BC28D0EB54B12798A5E69 /* Pods-Youse-AutoTests.release.xcconfig */;
+			baseConfigurationReference = 196B293989135CC6EB315AAF /* Pods-Youse-AutoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1335,7 +1297,7 @@
 		};
 		61DC0BC9211E33B600D28BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357B7D09EC0B507A24429F81 /* Pods-Youse-AutoUITests.debug.xcconfig */;
+			baseConfigurationReference = D3B71C7891C70761341A86D7 /* Pods-Youse-AutoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1356,7 +1318,7 @@
 		};
 		61DC0BCA211E33B600D28BDA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F189C618D45C317829E14ED8 /* Pods-Youse-AutoUITests.release.xcconfig */;
+			baseConfigurationReference = 5179693FD487BD3CADD919A9 /* Pods-Youse-AutoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;

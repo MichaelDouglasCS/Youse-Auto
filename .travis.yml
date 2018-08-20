@@ -5,7 +5,7 @@ xcode_scheme: Youse-Auto
 xcode_sdk: iphonesimulator11.4
 
 before_install:
-- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/wascar-*/
+- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/Youse-Auto-*/
 - rvm use $RVM_RUBY_VERSION
 - brew update
 - brew install swiftlint

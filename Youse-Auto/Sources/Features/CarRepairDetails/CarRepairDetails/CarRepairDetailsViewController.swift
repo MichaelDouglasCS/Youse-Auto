@@ -17,10 +17,15 @@ class CarRepairDetailsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     //*************************************************
+    // MARK: - Public Properties
+    //*************************************************
+    
+    private(set) var viewModel: CarRepairDetailsViewModel!
+    
+    //*************************************************
     // MARK: - Private Properties
     //*************************************************
     
-    private var viewModel: CarRepairDetailsViewModel!
     private let refreshControl = UIRefreshControl()
     
     //*************************************************
@@ -60,11 +65,7 @@ class CarRepairDetailsViewController: UIViewController {
         self.viewModel = viewModel
     }
     
-    //*************************************************
-    // MARK: - Private Methods
-    //*************************************************
-    
-    private func loadData(completion: @escaping () -> Void) {
+    func loadData(completion: @escaping () -> Void) {
         self.viewModel.loadData { [weak self] (error) in
             
             if let error = error {
@@ -77,7 +78,7 @@ class CarRepairDetailsViewController: UIViewController {
         }
     }
     
-    @objc private func refreshData() {
+    @objc func refreshData() {
         self.loadData { [weak self] in
             self?.refreshControl.endRefreshing()
         }

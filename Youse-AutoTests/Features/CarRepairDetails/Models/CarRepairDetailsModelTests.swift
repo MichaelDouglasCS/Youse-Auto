@@ -30,7 +30,7 @@ class CarRepairDetailsModelTests: XCTestCase {
     
     func testCarRepairDetailsParsingShouldExists() {
         let json = self.localJSONFrom(fileName: "carRepairDetails")
-        let carRepairDetails = CarRepairDetails(json: json ?? [:])
+        let carRepairDetails = CarRepairDetails(json: json?["result"] ?? [:])
         XCTAssertNotNil(carRepairDetails, "Car Repair Details should exists")
     }
     
@@ -60,7 +60,7 @@ class CarRepairDetailsModelTests: XCTestCase {
     
     func testCarRepairParsingAllParamsShouldBeSuccess() {
         let json = self.localJSONFrom(fileName: "carRepairDetails")
-        let carRepairDetails = CarRepairDetails(json: json ?? [:])
+        let carRepairDetails = CarRepairDetails(json: json?["result"] ?? [:])
         
         XCTAssertTrue(carRepairDetails?.id?.isEmpty == false, "ID should exists")
         XCTAssertTrue(carRepairDetails?.placeID.isEmpty == false, "PlaceID should exists")

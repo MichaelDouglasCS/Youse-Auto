@@ -44,6 +44,7 @@
 		6127B557212B32F20053D886 /* LocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127B556212B32F20053D886 /* LocationViewModelTests.swift */; };
 		6127B559212B34800053D886 /* LocationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127B558212B34800053D886 /* LocationViewControllerTests.swift */; };
 		6127B55E212B38D20053D886 /* CarRepairsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127B55D212B38D20053D886 /* CarRepairsViewControllerTests.swift */; };
+		6127B561212B4C8F0053D886 /* CarRepairDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127B560212B4C8F0053D886 /* CarRepairDetailsViewControllerTests.swift */; };
 		612B585C2128F3F6005D9F39 /* CarRepairCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B585B2128F3F6005D9F39 /* CarRepairCellViewModelTests.swift */; };
 		612B58612129073D005D9F39 /* CarRepairDetailsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B58602129073D005D9F39 /* CarRepairDetailsProviderTests.swift */; };
 		612B586321291088005D9F39 /* CarRepairDetailsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B586221291088005D9F39 /* CarRepairDetailsModelTests.swift */; };
@@ -161,6 +162,7 @@
 		6127B556212B32F20053D886 /* LocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelTests.swift; sourceTree = "<group>"; };
 		6127B558212B34800053D886 /* LocationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewControllerTests.swift; sourceTree = "<group>"; };
 		6127B55D212B38D20053D886 /* CarRepairsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairsViewControllerTests.swift; sourceTree = "<group>"; };
+		6127B560212B4C8F0053D886 /* CarRepairDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		612B585B2128F3F6005D9F39 /* CarRepairCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairCellViewModelTests.swift; sourceTree = "<group>"; };
 		612B58602129073D005D9F39 /* CarRepairDetailsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsProviderTests.swift; sourceTree = "<group>"; };
 		612B586221291088005D9F39 /* CarRepairDetailsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailsModelTests.swift; sourceTree = "<group>"; };
@@ -420,6 +422,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		6127B55F212B4C6C0053D886 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6127B560212B4C8F0053D886 /* CarRepairDetailsViewControllerTests.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		612B585D212900A3005D9F39 /* TestTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				612B585F21290714005D9F39 /* Models */,
+				6127B55F212B4C6C0053D886 /* ViewControllers */,
 				612B586A21291B8C005D9F39 /* ViewModels */,
 			);
 			path = CarRepairDetails;
@@ -1110,6 +1121,7 @@
 				612B5867212918DA005D9F39 /* ReviewModelTests.swift in Sources */,
 				61F14E212127DE3800A44A37 /* CarRepairsProviderTests.swift in Sources */,
 				612619902127F132008415D9 /* CarRepairsViewModelTests.swift in Sources */,
+				6127B561212B4C8F0053D886 /* CarRepairDetailsViewControllerTests.swift in Sources */,
 				6127B559212B34800053D886 /* LocationViewControllerTests.swift in Sources */,
 				612B585C2128F3F6005D9F39 /* CarRepairCellViewModelTests.swift in Sources */,
 				6126198B2127EEDC008415D9 /* PhotoModelTests.swift in Sources */,

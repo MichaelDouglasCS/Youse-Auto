@@ -48,6 +48,7 @@ class CarRepairsUITests: XCTestCase {
     
     func testCarRepairsScreenWithoutStubShouldLoadCells() {
         let app = XCUIApplication()
+        app.launchArguments.append("TEST_LOCATION_SUCCESS")
         app.launch()
         
         let predicate = NSPredicate(format: "exists == 1")

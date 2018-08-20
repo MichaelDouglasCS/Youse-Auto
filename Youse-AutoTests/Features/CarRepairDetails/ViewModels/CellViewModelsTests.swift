@@ -52,7 +52,7 @@ class CellViewModelsTests: XCTestCase {
     func testDetailsCellViewModelAllParamsShouldExists() {
         let json = self.localJSONFrom(fileName: "carRepairDetails")
         
-        if let carRepairDetails = CarRepairDetails(json: json ?? [:]) {
+        if let carRepairDetails = CarRepairDetails(json: json?["result"] ?? [:]) {
             let viewModel = DetailsCellViewModel(details: carRepairDetails)
             XCTAssertTrue(viewModel.name.isEmpty == false, "Name should exists")
             XCTAssertNotNil(viewModel.rating, "Rating should exists")
@@ -70,7 +70,7 @@ class CellViewModelsTests: XCTestCase {
         let json = self.localJSONFrom(fileName: "carRepairDetails")
         
         LocationService.shared.getLocation(success: { (_) in
-            if let carRepairDetails = CarRepairDetails(json: json ?? [:]),
+            if let carRepairDetails = CarRepairDetails(json: json?["result"] ?? [:]),
                 let placeLocation = carRepairDetails.location {
                 let viewModel = DetailsCellViewModel(details: carRepairDetails)
                 let userLocation = self.userLocationYouse

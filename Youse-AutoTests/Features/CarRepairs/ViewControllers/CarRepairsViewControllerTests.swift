@@ -143,28 +143,4 @@ class CarRepairsViewControllerTests: XCTestCase {
             XCTAssertTrue(numberOfRows ?? 0 == 0, "Should not bring more cells")
         }
     }
-    
-    func testCarRepairsViewControllerShouldRefreshLoad2Cells() {
-        let expectation = self.expectation(description: #function)
-        let stubService = StubService()
-        stubService.addStub(for: .carRepairsList)
-        
-        let storyboard = UIStoryboard(name: "CarRepairs", bundle: nil)
-        let viewControllerID = String(describing: CarRepairsViewController.self)
-        let viewController = storyboard.instantiateViewController(withIdentifier: viewControllerID) as? CarRepairsViewController
-        self.carRepairsViewController = viewController
-        
-        let viewModel = CarRepairsViewModel(provider: CarRepairsProvider())
-        self.carRepairsViewController?.setupUI(with: viewModel)
-        _ = self.carRepairsViewController?.view
-        
-        self.carRepairsViewController?.refreshData {
-            expectation.fulfill()
-        }
-        
-        self.waitForExpectations(timeout: self.timeout) { (_) in
-            let numberOfRows = self.carRepairsViewController?.viewModel.numberOfRows()
-            XCTAssertTrue(numberOfRows ?? 0 == 2, "Should load 4 cells")
-        }
-    }
 }

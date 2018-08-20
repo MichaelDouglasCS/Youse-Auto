@@ -119,10 +119,9 @@ class CarRepairsViewController: UIViewController {
         }
     }
     
-    @objc func refreshData(completion: (() -> Void)? = nil) {
+    @objc func refreshData() {
         self.loadData {
             self.refreshControl.endRefreshing()
-            completion?()
         }
     }
 }

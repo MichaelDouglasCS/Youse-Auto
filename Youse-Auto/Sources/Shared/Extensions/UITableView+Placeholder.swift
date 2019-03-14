@@ -13,19 +13,24 @@ protocol UITableViewPlaceholderDelegate: class {
 }
 
 extension UITableView {
+
+    private struct PlaceHolder {
+        static var delegate: UITableViewPlaceholderDelegate?
+    }
     
     //*************************************************
     // MARK: - Public Properties
     //*************************************************
     
-    weak var placeholderDelegate: UITableViewPlaceholderDelegate? {
+    var placeholderDelegate: UITableViewPlaceholderDelegate? {
         get {
-            return self.placeholderDelegate
+            return PlaceHolder.delegate
         }
         set(newValue) {
-            if let viewModel = newValue?.placeholderViewModel(in: self) {
-                self.setupPlaceholder(with: viewModel)
-            }
+            PlaceHolder.delegate = newValue
+
+            guard let viewModel = newValue?.placeholderViewModel(in: self) else { return }
+            self.setupPlaceholder(with: viewModel)
         }
     }
     

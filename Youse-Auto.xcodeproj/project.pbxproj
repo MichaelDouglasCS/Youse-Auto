@@ -880,6 +880,11 @@
 				TargetAttributes = {
 					61DC0B99211E33B400D28BDA = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					61DC0BAD211E33B600D28BDA = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1300,7 +1305,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.michaeldouglas.Youse-Auto";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mdcs.Youse-Auto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1319,7 +1324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.michaeldouglas.Youse-Auto";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mdcs.Youse-Auto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

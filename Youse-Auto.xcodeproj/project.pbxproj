@@ -1298,6 +1298,7 @@
 			baseConfigurationReference = 3EC424F9F5F97A5CA6A2930D /* Pods-Youse-Auto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q582659G6;
 				INFOPLIST_FILE = "$(SRCROOT)/Youse-Auto/Resources/Supporting Files/Info.plist";
@@ -1307,6 +1308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mdcs.Youse-Auto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1317,6 +1319,7 @@
 			baseConfigurationReference = 8676AC03CAE5862C0730F501 /* Pods-Youse-Auto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q582659G6;
 				INFOPLIST_FILE = "$(SRCROOT)/Youse-Auto/Resources/Supporting Files/Info.plist";
@@ -1326,6 +1329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.mdcs.Youse-Auto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

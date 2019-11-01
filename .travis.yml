@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode9.4
+osx_image: xcode10.2
 xcode_project: Youse-Auto.xcworkspace
 xcode_scheme: Youse-Auto
 xcode_sdk: iphonesimulator11.4

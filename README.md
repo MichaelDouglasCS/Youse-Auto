@@ -10,7 +10,7 @@
 
 The goal of the test is to implement an app where we can see the car repair shop based to user localization. The app should show a list of workshops and be able to navigate to the details of each one.
 
-<img src="/Screenshots/Home-Header.png" width="210"> <img src="/Screenshots/Home-Center.png" width="210"> <img src="/Screenshots/Details-Header.png" width="210"> <img src="/Screenshots/Details-Footer.png" width="210">
+<img src="/Screenshots/Home-Header.png" width="200"> <img src="/Screenshots/Home-Center.png" width="200"> <img src="/Screenshots/Details-Header.png" width="200"> <img src="/Screenshots/Details-Footer.png" width="200">
 
 ## Getting Started
 
